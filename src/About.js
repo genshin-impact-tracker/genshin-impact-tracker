@@ -53,7 +53,7 @@ export default function About() {
 
 					<Grid item xs={12} sm={12} md={12}>
 						<Typography className={classes.title} variant="h6">Current Bugs</Typography>
-						<Typography>The Traveler is currently disabled for the time being due to causing the entire site to crash.</Typography><br />
+						<Typography>None at this time.</Typography><br />
 					</Grid>
 				
 					<Grid item xs={12} sm={12} md={12}>
