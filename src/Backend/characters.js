@@ -564,7 +564,7 @@ export const characters = [
 				fourStar: { item: "Turquoise Chunk", value: 0 },
 				fiveStar: { item: "Turquoise Gemstone", value: 0 },
 			},
-			boss: { item: "Maguu Kishin", value: 0 },
+			boss: { item: "Marionnette Core", value: 0 },
 			common: {
 				oneStar: { item: "Recruit's Insignia", value: 0 },
 				twoStar: { item: "Sergeant's Insignia", value: 0 },
@@ -904,7 +904,7 @@ export const characters = [
 				fourStar: { item: "Turquoise Chunk", value: 0 },
 				fiveStar: { item: "Turquoise Gemstone", value: 0 },
 			},
-			boss: { item: "Maguu Kishin", value: 0 },
+			boss: { item: "Marionnette Core", value: 0 },
 			common: {
 				oneStar: { item: "Weathered Nectar", value: 0 },
 				twoStar: { item: "Shimmering Nectar", value: 0 },
