@@ -55,6 +55,8 @@ function a11yProps(index) {
 	};
 }
 
+const url = "http://genshin-impact-tracker.github.io/genshin-impact-tracker"
+
 const useStyles = makeStyles((theme) => ({
 	card: {
 		height: '100%',
@@ -236,12 +238,12 @@ export default function Display() {
 
 			{/* Characters */}
 			<TabPanel value={tab} index={0}>
-				<CharacterList search={searchVal} updateCharacters={updateCharacters} />
+				<CharacterList search={searchVal} url={url} updateCharacters={updateCharacters} />
 			</TabPanel>
 
 			{/* Items */}
 			<TabPanel value={tab} index={1}>
-				<ItemList search={searchVal} updateItems={updateItems} />
+				<ItemList search={searchVal} url={url} updateItems={updateItems} />
 			</TabPanel>
 
 			{/* About */}

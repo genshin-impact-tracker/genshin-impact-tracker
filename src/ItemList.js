@@ -134,7 +134,7 @@ export default function ItemList(props) {
 					{(props.search === "" ? totalOwned : props.updateItems)
 						.map((ite) => (
 							<Grid item key={ite.item} xs={12} sm={6} md={4}>
-								<Item item={ite.item} array={itemss} maxItems={maxItems} className={classes.item} />
+								<Item item={ite.item} url={props.url} array={itemss} maxItems={maxItems} className={classes.item} />
 							</Grid>))
 					}
 				</Grid>

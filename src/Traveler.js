@@ -323,12 +323,12 @@ export default function Traveler(props) {
 				<Grid container className={classes.grid}>
 					<CardMedia onClick={onToggleChange} square="true" component="img" 
 						className={classes.media}
-						image={'/Characters/Aether.png'}
+						image={url+'/Characters/Aether.png'}
 						title={props.chara.name+"A"} />
 					
 					<CardMedia onClick={onToggleChange} square="true" component="img" 
 						className={classes.media}
-						image={'/Characters/Lumine.png'}
+						image={url+'/Characters/Lumine.png'}
 						title={props.chara.name + "B"} />
 				</Grid>
 

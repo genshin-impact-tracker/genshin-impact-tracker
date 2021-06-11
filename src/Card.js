@@ -124,53 +124,14 @@ export default function Card(props) {
 	props.chara.talent2 = tall2;
 	props.chara.talent3 = tall3;
 
-	// const [ active, setActive ] = useState(false);
 	const [ levelState, setLevelState ] = useState({ level: asc, prevLevel: 0 })
 	const [ checked, setChecked ] = useState(ascChecked);
 	const [ talentState, setTalentState ] = useState({ talent1: tall1, talent2: tall2, talent3: tall3 });
 
 	const ascLevels = [ 1, 2, 3, 4, 5, 6];
-	// const talLevels = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 	const activeIcon = '/Icons/' + props.chara.element + '.png';
 	const inactiveIcon = '/Icons/' + props.chara.element + '-b.png';
-
-	// useEffect(() => {
-	// 	console.log('test hi 2')
-	// 	console.log(props.chara.ascension)
-	// 	const newPrev = levelState.level;
-	// 	setLevelState({level: props.chara.ascension, prevLevel: newPrev})
-	// 	console.log(levelState)
-	// 	console.log(totalAscended)
-	// }, [props.chara.ascension])
-
-	// const setElementStyles = () => {
-	// 	const card = document.getElementById(props.chara.name)
-
-	// 	if (props.chara.element === "pyro" && !active)
-	// 		card.className = classes.pyro;
-	// 	else if (props.chara.element === "cryo" && !active)
-	// 		card.className = classes.cryo;
-	// 	else if (props.chara.element === "geo" && !active)
-	// 		card.className = classes.geo;
-	// 	else if (props.chara.element === "dendro" && !active)
-	// 		card.className = classes.dendro;
-	// 	else if (props.chara.element === "electro" && !active)
-	// 		card.className = classes.electro;
-	// 	else if (props.chara.element === "anemo" && !active)
-	// 		card.className = classes.anemo;
-	// 	else if (props.chara.element === "hydro" && !active)
-	// 		card.className = classes.hydro;
-	// 	else
-	// 		card.className = classes.element;
-	// }
-
-	// const onCardClick = (event) => {
-	// 	setActive(!active)
-	// 	setElementStyles();
-	// };
-
-	// let prevLevel = 0;
 
 	const onAscensionChange = (level) => {
 		addValues(level);
@@ -198,7 +159,6 @@ export default function Card(props) {
 			props.chara.properties.boss.value = values.ascension.boss.value[level]
 			props.chara.properties.region.value = values.ascension.region.value[level]
 		}
-		console.log(levelState, props.chara)
 	}
 
 	// Sets all ascension item values to 0
@@ -245,7 +205,6 @@ export default function Card(props) {
 			props.chara.talent3 = level;
 		}
 
-		console.log(talentState, props.chara)
 		localStorage.setItem(props.chara.name, JSON.stringify(props.chara))
 	}
 
@@ -288,9 +247,6 @@ export default function Card(props) {
 	const onToggleChange = (event) => {
 		setChecked(!checked)
 		if (checked) {
-			console.log('test')
-			// setLevelState({...levelState, level: 0})
-
 			// Need to set character values as 0
 			resetValues();
 			props.chara.ascension = 0;
@@ -344,7 +300,7 @@ export default function Card(props) {
 				<Grid container className={classes.grid}>
 					<CardMedia onClick={onToggleChange} square="true" component="img" 
 						className={classes.media}
-						image={'/Characters/' + props.chara.name + '.png'}
+						image={url+'/Characters/' + props.chara.name + '.png'}
 						title={props.chara.name} />
 				</Grid>
 

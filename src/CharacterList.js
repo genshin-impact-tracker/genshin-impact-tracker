@@ -63,10 +63,11 @@ export default function CharacterList(props) {
 										checked={travChecked} 
 										setChecked={(bool) => setTravChecked(bool)} 
 										level={levelState} 
+										url={props.url}
 										setLevelState={(level) => setLevelState(level)} 
 										className={classes.card} />
 								:
-									<Card chara={chara} className={classes.card} />
+									<Card chara={chara} url={props.url} className={classes.card} />
 								)}
 							</Grid>
 						))}
