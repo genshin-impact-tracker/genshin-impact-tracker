@@ -39,7 +39,7 @@ export default function About() {
 
 						<Typography className={classes.text} component={'span'}>This project was made by enmae through the desire of knowing exactly 
 							how many items you need left after ascending both a character and their talents.
-							You can find the full code [here].</Typography> <br />
+							You can find the full code <a href="https://github.com/genshin-impact-tracker/genshin-impact-tracker">here</a>.</Typography> <br />
 						<Typography className={classes.text} component={'span'}>This web app was made entirely from React.js.</Typography><br />
 					</Grid>
 
@@ -53,8 +53,7 @@ export default function About() {
 
 					<Grid item xs={12} sm={12} md={12}>
 						<Typography className={classes.title} variant="h6">Current Bugs</Typography>
-						<Typography>The Traveler right now is not sure what ascension it wants to be when you change tabs. 
-							For now, the Traveler will be disabled until this issue is resolved.</Typography><br />
+						<Typography>None at this time.</Typography><br />
 					</Grid>
 				
 					<Grid item xs={12} sm={12} md={12}>

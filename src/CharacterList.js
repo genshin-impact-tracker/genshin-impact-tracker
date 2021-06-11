@@ -26,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
 
 const newCharacters = travelerChar.concat(characters)
 console.log(newCharacters)
-let load = 0;
 
 export default function CharacterList(props) {
 	const classes = useStyles();
@@ -37,24 +36,15 @@ export default function CharacterList(props) {
 	// Basically, if both traveler anemo and geo are null, set the ascension to 0
 	// if traveler geo is not null but traveler anemo is, set asc to traveler geo.asc
 	// if they're both not null, pick the largest number out of the two
-	let isAnemoNull = null;
-	let isGeoNull = null;
-	let asc = null;
-	let travAscChecked = null;
-	if (load == 0) {
-		isAnemoNull = (travelerAnemo == null)
-		isGeoNull = (travelerGeo == null)
+	const isAnemoNull = (travelerAnemo == null)
+	const isGeoNull = (travelerGeo == null)
 
-		asc = (isAnemoNull) ?
+	const asc = (isAnemoNull) ?
 					(isGeoNull) ? 
 						0 : travelerGeo.ascension
 					: (travelerAnemo.ascension > travelerGeo.ascension) ? 
 						travelerAnemo.ascension : travelerGeo.ascension
-		// console.log(asc)
-
-		travAscChecked = (asc > 0 ? true : false)
-		load++;
-	}
+	const travAscChecked = (asc > 0 ? true : false)
 
 	const [ levelState, setLevelState ] = useState({ level: asc, prevLevel: asc })
 	const [ travChecked, setTravChecked ] = useState(travAscChecked);
