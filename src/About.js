@@ -53,7 +53,8 @@ export default function About() {
 
 					<Grid item xs={12} sm={12} md={12}>
 						<Typography className={classes.title} variant="h6">Current Bugs</Typography>
-						<Typography>None at this time.</Typography><br />
+						<Typography>The Traveler right now is not sure what ascension it wants to be when you change tabs. 
+							For now, the Traveler will be disabled until this issue is resolved.</Typography><br />
 					</Grid>
 				
 					<Grid item xs={12} sm={12} md={12}>

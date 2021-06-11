@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 
 import { characters } from './Backend/characters'
 import { travelerChar } from './Backend/traveler'
-import { values, traveler } from './Backend/values'
 import Card from './Card'
 import Traveler from './Traveler'
 
@@ -51,7 +50,7 @@ export default function CharacterList(props) {
 						0 : travelerGeo.ascension
 					: (travelerAnemo.ascension > travelerGeo.ascension) ? 
 						travelerAnemo.ascension : travelerGeo.ascension
-		console.log(asc)
+		// console.log(asc)
 
 		travAscChecked = (asc > 0 ? true : false)
 		load++;
