@@ -130,8 +130,8 @@ export default function Card(props) {
 
 	const ascLevels = [ 1, 2, 3, 4, 5, 6];
 
-	const activeIcon = '/Icons/' + props.chara.element + '.png';
-	const inactiveIcon = '/Icons/' + props.chara.element + '-b.png';
+	const activeIcon = props.url + '/Icons/' + props.chara.element + '.png';
+	const inactiveIcon = props.url + '/Icons/' + props.chara.element + '-b.png';
 
 	const onAscensionChange = (level) => {
 		addValues(level);
@@ -300,7 +300,7 @@ export default function Card(props) {
 				<Grid container className={classes.grid}>
 					<CardMedia onClick={onToggleChange} square="true" component="img" 
 						className={classes.media}
-						image={url+'/Characters/' + props.chara.name + '.png'}
+						image={props.url+'/Characters/' + props.chara.name + '.png'}
 						title={props.chara.name} />
 				</Grid>
 

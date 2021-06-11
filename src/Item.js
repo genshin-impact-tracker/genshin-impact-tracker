@@ -92,7 +92,7 @@ export default function Item(props) {
 				<Grid container className={classes.grid}>
 					<CardMedia square="true" component="img" 
 						className={classes.media}
-						image={url+'/Items/' + props.item + '.png'}
+						image={props.url+'/Items/' + props.item + '.png'}
 						title={props.item} />
 				</Grid>
 

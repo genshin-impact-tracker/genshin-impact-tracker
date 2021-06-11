@@ -76,8 +76,8 @@ export default function Traveler(props) {
 
 	const ascLevels = [ 1, 2, 3, 4, 5, 6];
 
-	const activeIcon = '/Icons/' + props.chara.element + '.png';
-	const inactiveIcon = '/Icons/' + props.chara.element + '-b.png';
+	const activeIcon = props.url + '/Icons/' + props.chara.element + '.png';
+	const inactiveIcon = props.url + '/Icons/' + props.chara.element + '-b.png';
 
 	// props.level == null ? props.setLevelState(0) : props.setLevelState(props.levelState)
 	// const [ levelState, props.setLevelState ] = useState({ level: asc, prevLevel: 0 })
@@ -323,12 +323,12 @@ export default function Traveler(props) {
 				<Grid container className={classes.grid}>
 					<CardMedia onClick={onToggleChange} square="true" component="img" 
 						className={classes.media}
-						image={url+'/Characters/Aether.png'}
+						image={props.url+'/Characters/Aether.png'}
 						title={props.chara.name+"A"} />
 					
 					<CardMedia onClick={onToggleChange} square="true" component="img" 
 						className={classes.media}
-						image={url+'/Characters/Lumine.png'}
+						image={props.url+'/Characters/Lumine.png'}
 						title={props.chara.name + "B"} />
 				</Grid>
 
