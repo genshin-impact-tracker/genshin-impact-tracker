@@ -207,46 +207,45 @@ export default function Traveler(props) {
 	}
 
 	// resetting all talent values to base number
-	const resetTalentValues = (talent, element) => {
+	const resetTalentValues = (chara, talent, element) => {
 		if ((talent === "tal2" || talent === "tal3") && element === "geo") {
 			// setting talent book values
-			props.chara.properties.talentGeo.twoStar.value[talent] = traveler.talent.twoStar.value[1]
-			props.chara.properties.talentGeo.levelThreeSix.value[talent] = traveler.talent.levelThreeSix.value[1]
-			props.chara.properties.talentGeo.levelFour.value[talent] = traveler.talent.levelFour.value[1]
-			props.chara.properties.talentGeo.levelFive.value[talent] = traveler.talent.levelFive.value[1]
-			props.chara.properties.talentGeo.levelSevenTen.value[talent] = traveler.talent.levelSevenTen.value[1]
-			props.chara.properties.talentGeo.levelEight.value[talent] = traveler.talent.levelEight.value[1]
-			props.chara.properties.talentGeo.levelNine.value[talent] = traveler.talent.levelNine.value[1]
+			chara.properties.talentGeo.twoStar.value[talent] = traveler.talent.twoStar.value[1]
+			chara.properties.talentGeo.levelThreeSix.value[talent] = traveler.talent.levelThreeSix.value[1]
+			chara.properties.talentGeo.levelFour.value[talent] = traveler.talent.levelFour.value[1]
+			chara.properties.talentGeo.levelFive.value[talent] = traveler.talent.levelFive.value[1]
+			chara.properties.talentGeo.levelSevenTen.value[talent] = traveler.talent.levelSevenTen.value[1]
+			chara.properties.talentGeo.levelEight.value[talent] = traveler.talent.levelEight.value[1]
+			chara.properties.talentGeo.levelNine.value[talent] = traveler.talent.levelNine.value[1]
 			
 			// setting talent common items values
-			props.chara.properties.talCommonGeo.oneStar.value[talent] = values.talent.common.oneStar.value[1]
-			props.chara.properties.talCommonGeo.twoStar.value[talent] = values.talent.common.twoStar.value[1]
-			props.chara.properties.talCommonGeo.threeStar.value[talent] = values.talent.common.threeStar.value[1]
+			chara.properties.talCommonGeo.oneStar.value[talent] = values.talent.common.oneStar.value[1]
+			chara.properties.talCommonGeo.twoStar.value[talent] = values.talent.common.twoStar.value[1]
+			chara.properties.talCommonGeo.threeStar.value[talent] = values.talent.common.threeStar.value[1]
 	
 			// setting crown and boss values
-			props.chara.properties.talBossGeo.value[talent] = values.talent.boss.value[1]
+			chara.properties.talBossGeo.value[talent] = values.talent.boss.value[1]
 
 		} else {
 			// setting talent book values
-			props.chara.properties.talent.twoStar.value[talent] = traveler.talent.twoStar.value[1]
-			props.chara.properties.talent.levelThreeSix.value[talent] = traveler.talent.levelThreeSix.value[1]
-			props.chara.properties.talent.levelFour.value[talent] = traveler.talent.levelFour.value[1]
-			props.chara.properties.talent.levelFive.value[talent] = traveler.talent.levelFive.value[1]
-			props.chara.properties.talent.levelSevenTen.value[talent] = traveler.talent.levelSevenTen.value[1]
-			props.chara.properties.talent.levelEight.value[talent] = traveler.talent.levelEight.value[1]
-			props.chara.properties.talent.levelNine.value[talent] = traveler.talent.levelNine.value[1]
+			chara.properties.talent.twoStar.value[talent] = traveler.talent.twoStar.value[1]
+			chara.properties.talent.levelThreeSix.value[talent] = traveler.talent.levelThreeSix.value[1]
+			chara.properties.talent.levelFour.value[talent] = traveler.talent.levelFour.value[1]
+			chara.properties.talent.levelFive.value[talent] = traveler.talent.levelFive.value[1]
+			chara.properties.talent.levelSevenTen.value[talent] = traveler.talent.levelSevenTen.value[1]
+			chara.properties.talent.levelEight.value[talent] = traveler.talent.levelEight.value[1]
+			chara.properties.talent.levelNine.value[talent] = traveler.talent.levelNine.value[1]
 			
 			// setting talent common items values
-			props.chara.properties.talCommon.oneStar.value[talent] = values.talent.common.oneStar.value[1]
-			props.chara.properties.talCommon.twoStar.value[talent] = values.talent.common.twoStar.value[1]
-			props.chara.properties.talCommon.threeStar.value[talent] = values.talent.common.threeStar.value[1]
+			chara.properties.talCommon.oneStar.value[talent] = values.talent.common.oneStar.value[1]
+			chara.properties.talCommon.twoStar.value[talent] = values.talent.common.twoStar.value[1]
+			chara.properties.talCommon.threeStar.value[talent] = values.talent.common.threeStar.value[1]
 	
 			// setting crown and boss values
-			props.chara.properties.talBoss.value[talent] = values.talent.boss.value[1]
+			chara.properties.talBoss.value[talent] = values.talent.boss.value[1]
 		}
 
-		props.chara.properties.crown.value[talent] = values.talent.crown.value[1]
-		setTalentState({ talent1: 1, talent2: 1, talent3: 1 })
+		chara.properties.crown.value[talent] = values.talent.crown.value[1]
 	}
 
 	const setInputToOnes = (element) => {
@@ -270,17 +269,21 @@ export default function Traveler(props) {
 			resetValues();
 			props.chara.ascension = 0;
 
-			let el = (props.chara.element === "anemo") ? "geo" : "anemo";
+			let char = null;
+			if (props.chara.element === "anemo")
+				char = travelerChar[1];
+			else
+				char = travelerChar[0]
 
 			// one for current mc's element
-			resetTalentValues("tal1", props.chara.element);
-			resetTalentValues("tal2", props.chara.element);
-			resetTalentValues("tal3", props.chara.element);
+			resetTalentValues(props.chara, "tal1", props.chara.element);
+			resetTalentValues(props.chara, "tal2", props.chara.element);
+			resetTalentValues(props.chara, "tal3", props.chara.element);
 
 			// one for other mc element
-			resetTalentValues("tal1", el);
-			resetTalentValues("tal2", el);
-			resetTalentValues("tal3", el);
+			resetTalentValues(char, "tal1", char.element);
+			resetTalentValues(char, "tal2", char.element);
+			resetTalentValues(char, "tal3", char.element);
 
 			// setting all input values to one
 			setInputToOnes("anemo")
@@ -288,8 +291,8 @@ export default function Traveler(props) {
 
 			// setting talent state
 			setTalentState({ talent1: 1, talent2: 1, talent3: 1})
-			// console.log(props.level, talentState, props.chara)
 			localStorage.setItem(props.chara.name + " " + props.chara.element, JSON.stringify(props.chara))
+			localStorage.setItem(char.name + " " + char.element, JSON.stringify(char));
 		}
 	}
 
