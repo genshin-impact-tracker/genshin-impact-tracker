@@ -50,6 +50,11 @@ export default function About() {
 							 respond as soon as I can. I hope that you can enjoy this web app, and that it helps you track your character
 							 ascensions! :)</Typography><br />
 					</Grid>
+
+					<Grid item xs={12} sm={12} md={12}>
+						<Typography className={classes.title} variant="h6">Current Bugs</Typography>
+						<Typography>The Traveler is currently disabled for the time being due to causing the entire site to crash.</Typography><br />
+					</Grid>
 				
 					<Grid item xs={12} sm={12} md={12}>
 						<Typography className={classes.title} variant="h6">Credits</Typography>

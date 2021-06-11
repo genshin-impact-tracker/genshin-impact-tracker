@@ -314,21 +314,25 @@ export default function Traveler(props) {
 			<Card id={props.chara.name}>
 				<Checkbox checked={props.checked}
 					id={props.chara.name}
-					onChange={onToggleChange}
+					// onChange={onToggleChange}
 					name="owned"
 					checkedIcon={<CheckedIconSwitch />}
 					icon={<IconSwitch />}
 				 />
 
 				<Grid container className={classes.grid}>
-					<CardMedia onClick={onToggleChange} square="true" component="img" 
+					<CardMedia 
+						// onClick={onToggleChange} 
+						square="true" component="img" 
 						className={classes.media}
-						image={props.url+'/Characters/Aether.png'}
+						image={props.url+'/Characters/aether.png'}
 						title={props.chara.name+"A"} />
 					
-					<CardMedia onClick={onToggleChange} square="true" component="img" 
+					<CardMedia 
+						// onClick={onToggleChange} 
+						square="true" component="img" 
 						className={classes.media}
-						image={props.url+'/Characters/Lumine.png'}
+						image={props.url+'/Characters/lumine.png'}
 						title={props.chara.name + "B"} />
 				</Grid>
 
