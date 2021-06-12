@@ -33,8 +33,7 @@ export const characters = [
 				threeStar: { item: "Forbidden Scroll", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
-	}, 
-	{ 
+	}, { 
 		name: "amber",
 		element: "pyro",
 		ascension: 0,
@@ -102,8 +101,7 @@ export const characters = [
 				threeStar: { item: "Famous Knife", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
-	},
-	{ 
+	},{ 
 		name: "barbara",
 		element: "hydro",
 		ascension: 0,
@@ -137,8 +135,7 @@ export const characters = [
 				threeStar: { item: "Forbidden Scroll", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
-	},
-	{ 
+	},{ 
 		name: "beidou",
 		element: "electro",
 		ascension: 0,
@@ -172,8 +169,7 @@ export const characters = [
 				threeStar: { item: "Golden Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
-	},
-	{ 
+	},{ 
 		name: "bennett",
 		element: "pyro",
 		ascension: 0,
@@ -207,8 +203,7 @@ export const characters = [
 				threeStar: { item: "Golden Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
-	},
-	{ 
+	},{ 
 		name: "childe",
 		element: "hydro",
 		ascension: 0,
@@ -242,8 +237,7 @@ export const characters = [
 				threeStar: { item: "Lieutenant's Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
-	},
-	{ 
+	},{ 
 		name: "chongyun",
 		element: "cryo",
 		ascension: 0,
@@ -277,8 +271,7 @@ export const characters = [
 				threeStar: { item: "Ominous Mask", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
-	},
-	{ 
+	},{ 
 		name: "diluc",
 		element: "pyro",
 		ascension: 0,
@@ -566,9 +559,9 @@ export const characters = [
 			},
 			boss: { item: "Marionnette Core", value: 0 },
 			common: {
-				oneStar: { item: "Recruit's Insignia", value: 0 },
-				twoStar: { item: "Sergeant's Insignia", value: 0 },
-				threeStar: { item: "Lieutenant's Insignia", value: 0 },
+				oneStar: { item: "Treasure Hoarder Insignia", value: 0 },
+				twoStar: { item: "Silver Raven Insignia", value: 0 },
+				threeStar: { item: "Gold Raven Insignia", value: 0 },
 			},
 			region: { item: "Sea Ganoderma", value: 0 },
 			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
@@ -579,9 +572,9 @@ export const characters = [
 			},
 			talBoss: { item: "Gilded Scale", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			talCommon: {
-				oneStar: { item: "Recruit's Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
-				twoStar: { item: "Sergeant's Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
-				threeStar: { item: "Lieutenant's Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				oneStar: { item: "Treasure Hoarder Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				twoStar: { item: "Silver Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Gold Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
 	},{ 
