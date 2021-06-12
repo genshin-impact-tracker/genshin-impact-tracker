@@ -527,7 +527,7 @@ export const characters = [
 			common: {
 				oneStar: { item: "Treasure Hoarder Insignia", value: 0 },
 				twoStar: { item: "Silver Raven Insignia", value: 0 },
-				threeStar: { item: "Gold Raven Insignia", value: 0 },
+				threeStar: { item: "Golden Raven Insignia", value: 0 },
 			},
 			region: { item: "Calla Lily", value: 0 },
 			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
@@ -540,7 +540,7 @@ export const characters = [
 			talCommon: {
 				oneStar: { item: "Treasure Hoarder Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 				twoStar: { item: "Silver Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
-				threeStar: { item: "Gold Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Golden Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
 	},{  
@@ -561,7 +561,7 @@ export const characters = [
 			common: {
 				oneStar: { item: "Treasure Hoarder Insignia", value: 0 },
 				twoStar: { item: "Silver Raven Insignia", value: 0 },
-				threeStar: { item: "Gold Raven Insignia", value: 0 },
+				threeStar: { item: "Golden Raven Insignia", value: 0 },
 			},
 			region: { item: "Sea Ganoderma", value: 0 },
 			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
@@ -574,7 +574,7 @@ export const characters = [
 			talCommon: {
 				oneStar: { item: "Treasure Hoarder Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 				twoStar: { item: "Silver Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
-				threeStar: { item: "Gold Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Golden Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
 	},{ 
@@ -1105,7 +1105,7 @@ export const characters = [
 			common: {
 				oneStar: { item: "Treasure Hoarder Insignia", value: 0 },
 				twoStar: { item: "Silver Raven Insignia", value: 0 },
-				threeStar: { item: "Gold Raven Insignia", value: 0 },
+				threeStar: { item: "Golden Raven Insignia", value: 0 },
 			},
 			region: { item: "Violetgrass", value: 0 },
 			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
@@ -1118,7 +1118,7 @@ export const characters = [
 			talCommon: {
 				oneStar: { item: "Treasure Hoarder Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 				twoStar: { item: "Silver Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
-				threeStar: { item: "Gold Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Golden Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
 	},{ 
@@ -1139,7 +1139,7 @@ export const characters = [
 			common: {
 				oneStar: { item: "Treasure Hoarder Insignia", value: 0 },
 				twoStar: { item: "Silver Raven Insignia", value: 0 },
-				threeStar: { item: "Gold Raven Insignia", value: 0 },
+				threeStar: { item: "Golden Raven Insignia", value: 0 },
 			},
 			region: { item: "Noctilucous Jade", value: 0 },
 			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
@@ -1152,7 +1152,7 @@ export const characters = [
 			talCommon: {
 				oneStar: { item: "Treasure Hoarder Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 				twoStar: { item: "Silver Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
-				threeStar: { item: "Gold Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Golden Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
 	},{ 
