@@ -58,9 +58,10 @@ export default function About() {
 				
 					<Grid item xs={12} sm={12} md={12}>
 						<Typography className={classes.title} variant="h6">Credits</Typography>
-						<Typography>Character Drawn Icons: <a target="_" href="https://twitter.com/FateTempest">@FateTempest</a></Typography>
-						<Typography>Official Character icons: <a target="_" href="https://genshin-impact.fandom.com/wiki/Characters/List">Genshin Impact Wiki</a></Typography>
+						<Typography>Character Drawn Icons: <a target="_" href="https://twitter.com/FateTempest">FateTempest</a></Typography>
+						{/* <Typography>Official Character icons: <a target="_" href="https://genshin-impact.fandom.com/wiki/Characters/List">Genshin Impact Wiki</a></Typography> */}
 						<Typography>Official Item Icons: <a target="_" href="https://genshin-impact.fandom.com/wiki/Materials">Genshin Impact Wiki</a></Typography>
+						<Typography>Elemental Vector Icons: <a target="_" href="https://twitter.com/hollichoo">Hollichoo</a></Typography>
 					</Grid>
 				</Grid>
 			</Container>

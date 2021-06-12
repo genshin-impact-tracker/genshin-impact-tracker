@@ -532,9 +532,9 @@ export const characters = [
 			},
 			boss: { item: "Hoarfrost Core", value: 0 },
 			common: {
-				oneStar: { item: "Recruit's Insignia", value: 0 },
-				twoStar: { item: "Sergeant's Insignia", value: 0 },
-				threeStar: { item: "Lieutenant's Insignia", value: 0 },
+				oneStar: { item: "Treasure Hoarder Insignia", value: 0 },
+				twoStar: { item: "Silver Raven Insignia", value: 0 },
+				threeStar: { item: "Gold Raven Insignia", value: 0 },
 			},
 			region: { item: "Calla Lily", value: 0 },
 			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
@@ -545,12 +545,12 @@ export const characters = [
 			},
 			talBoss: { item: "Spirit Locket of Boreas", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			talCommon: {
-				oneStar: { item: "Recruit's Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
-				twoStar: { item: "Sergeant's Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
-				threeStar: { item: "Lieutenant's Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				oneStar: { item: "Treasure Hoarder Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				twoStar: { item: "Silver Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Gold Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
-	},{ 
+	},{  
 		name: "kazuha",
 		element: "anemo",
 		ascension: 0,
