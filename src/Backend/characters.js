@@ -906,9 +906,9 @@ export const characters = [
 			region: { item: "Crystallized Bone Marrow", value: 0 },
 			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			talent: {
-				twoStar: { item: "Teachings of Heavenly Light", value: { tal1: 0, tal2: 0, tal3: 0 }},
-				threeStar: { item: "Guide to Heavenly Light", value: { tal1: 0, tal2: 0, tal3: 0 }},
-				fourStar: { item: "Philosophies of Heavenly Light", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				twoStar: { item: "Teachings of Light", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Guide to Light", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				fourStar: { item: "Philosophies of Light", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 			talBoss: { item: "Gilded Scale", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			talCommon: { 
@@ -1178,9 +1178,9 @@ export const characters = [
 			region: { item: "Narussa", value: 0 },
 			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			talent: {
-				twoStar: { item: "Teachings of Uyiko", value: { tal1: 0, tal2: 0, tal3: 0 }},
-				threeStar: { item: "Guide to Uyiko", value: { tal1: 0, tal2: 0, tal3: 0 }},
-				fourStar: { item: "Philosophies of Uyiko", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				twoStar: { item: "Teachings of Transience", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Guide to Transience", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				fourStar: { item: "Philosophies of Transience", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 			talBoss: { item: "Dragon Lord's Crown", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			talCommon: { 

@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 
-import { totalAscended, totalTalents, totalOwned } from './Backend/totals'
+import { totalOwned } from './Backend/totals'
 import { characters } from './Backend/characters'
 import { values } from './Backend/values'
-import Item from './Item'
+const Item = React.lazy(() => import('./Item'))
+// import Item from './Item'
 
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -74,8 +75,6 @@ export default function ItemList(props) {
 		return {["item"]: item.item, ["value"]: val}
 	})
 
-	console.log(itemss)
-
 	// making array of total number of items
 	// this is big sad ;w;
 	const maxVals = characters.map((chara) => {
@@ -134,7 +133,9 @@ export default function ItemList(props) {
 					{(props.search === "" ? totalOwned : props.updateItems)
 						.map((ite) => (
 							<Grid item key={ite.item} xs={12} sm={6} md={4}>
-								<Item item={ite.item} url={props.url} array={itemss} maxItems={maxItems} className={classes.item} />
+								<Suspense fallback={<div>Loading...</div>}>
+									<Item item={ite.item} array={itemss} url={props.url} maxItems={maxItems} className={classes.item} />
+								</Suspense>
 							</Grid>))
 					}
 				</Grid>

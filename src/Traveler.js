@@ -64,11 +64,9 @@ export default function Traveler(props) {
 	const char = JSON.parse(localStorage.getItem(props.chara.name + " " + props.chara.element))
 
 	// making sure the default values are not null from local storage
-	// const asc = ((char == null || char.ascension == null) ? 0 : char.ascension)
 	const tall1 = ((char == null || char.talent1 == null) ? 1 : char.talent1)
 	const tall2 = ((char == null || char.talent1 == null) ? 1 : char.talent2)
 	const tall3 = ((char == null || char.talent1 == null) ? 1 : char.talent3)
-	// const ascChecked = (asc > 0 ? true : false)
 
 	props.chara.talent1 = tall1;
 	props.chara.talent2 = tall2;
@@ -78,10 +76,6 @@ export default function Traveler(props) {
 
 	const activeIcon = props.url + '/Icons/' + props.chara.element + '.png';
 	const inactiveIcon = props.url + '/Icons/' + props.chara.element + '-b.png';
-
-	// props.level == null ? props.setLevelState(0) : props.setLevelState(props.levelState)
-	// const [ levelState, props.setLevelState ] = useState({ level: asc, prevLevel: 0 })
-	// const [ checked, setChecked ] = useState(props.checked);
 	const [ talentState, setTalentState ] = useState({ talent1: tall1, talent2: tall2, talent3: tall3 });
 
 	const onAscensionChange = (level) => {
@@ -89,7 +83,17 @@ export default function Traveler(props) {
 		props.setLevelState({ level: level, prevLevel: props.chara.ascension})
 		props.chara.ascension = level;
 
+		// setting both traveller levels since it's important
+		let char = null;
+		if (props.chara.element === "anemo")
+			char = travelerChar[1];
+		else
+			char = travelerChar[0]
+		
+		char.ascension = level;
+
 		localStorage.setItem(props.chara.name + " " + props.chara.element, JSON.stringify(props.chara))
+		localStorage.setItem(char.name + " " + char.element, JSON.stringify(char))
 	}
 
 	// Sets all the ascension values corresponding to ascension level
@@ -109,7 +113,6 @@ export default function Traveler(props) {
 			// setting region values
 			props.chara.properties.region.value = values.ascension.region.value[level]
 		}
-		// console.log(props.level, props.chara)
 	}
 
 	// Sets all ascension item values to 0
@@ -157,7 +160,6 @@ export default function Traveler(props) {
 			props.chara.talent3 = level;
 		}
 
-		// console.log(talentState, props.chara)
 		// setting level state to stop weird resetting of ascension level
 		props.setLevelState({ level: props.chara.ascension, prevLevel: props.chara.ascension})
 		props.chara.ascension = props.level.level;

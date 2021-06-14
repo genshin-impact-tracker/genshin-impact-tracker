@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { Suspense, useState } from 'react'
 
 import { characters } from './Backend/characters'
 import { travelerChar } from './Backend/traveler'
-import Card from './Card'
+const Card = React.lazy(() => import('./Card'))
 import Traveler from './Traveler'
 
 import Container from '@material-ui/core/Container'
@@ -39,11 +39,19 @@ export default function CharacterList(props) {
 	const isAnemoNull = (travelerAnemo == null)
 	const isGeoNull = (travelerGeo == null)
 
-	const asc = (isAnemoNull) ?
-					(isGeoNull) ? 
-						0 : travelerGeo.ascension
-					: (travelerAnemo.ascension > travelerGeo.ascension) ? 
-						travelerAnemo.ascension : travelerGeo.ascension
+	let asc = null;
+
+	if (isAnemoNull && isGeoNull)
+		asc = 0;
+	else if (isAnemoNull && !isGeoNull)
+		asc = travelerGeo.ascension
+	else if (isGeoNull && !isAnemoNull)
+		asc = travelerAnemo.ascension
+	else if (travelerAnemo.ascension > travelerGeo.ascension)
+		asc = travelerAnemo.ascension
+	else
+		asc = travelerGeo.ascension
+		
 	const travAscChecked = (asc > 0 ? true : false)
 
 	const [ levelState, setLevelState ] = useState({ level: asc, prevLevel: asc })
@@ -65,7 +73,9 @@ export default function CharacterList(props) {
 										setLevelState={(level) => setLevelState(level)} 
 										className={classes.card} />
 								:
-									<Card chara={chara} url={props.url} className={classes.card} />
+									<Suspense fallback={<div>Loading...</div>}>
+										<Card chara={chara} url={props.url} className={classes.card} />
+									</Suspense>
 								)}
 							</Grid>
 						))}
