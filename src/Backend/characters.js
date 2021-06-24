@@ -557,7 +557,7 @@ export const characters = [
 				fourStar: { item: "Turquoise Chunk", value: 0 },
 				fiveStar: { item: "Turquoise Gemstone", value: 0 },
 			},
-			boss: { item: "Marionnette Core", value: 0 },
+			boss: { item: "Marionette Core", value: 0 },
 			common: {
 				oneStar: { item: "Treasure Hoarder Insignia", value: 0 },
 				twoStar: { item: "Silver Raven Insignia", value: 0 },
@@ -897,7 +897,7 @@ export const characters = [
 				fourStar: { item: "Turquoise Chunk", value: 0 },
 				fiveStar: { item: "Turquoise Gemstone", value: 0 },
 			},
-			boss: { item: "Marionnette Core", value: 0 },
+			boss: { item: "Marionette Core", value: 0 },
 			common: {
 				oneStar: { item: "Weathered Nectar", value: 0 },
 				twoStar: { item: "Shimmering Nectar", value: 0 },

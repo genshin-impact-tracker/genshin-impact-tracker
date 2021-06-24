@@ -39,8 +39,9 @@ export default function About() {
 
 						<Typography className={classes.text} component={'span'}>This project was made by enmae through the desire of knowing exactly 
 							how many items you need left after ascending both a character and their talents.
-							You can find the full code <a href="https://github.com/genshin-impact-tracker/genshin-impact-tracker">here</a>.</Typography> <br />
-						<Typography className={classes.text} component={'span'}>This web app was made entirely from React.js.</Typography><br />
+							You can find the full code <a target="_" href="https://github.com/genshin-impact-tracker/genshin-impact-tracker">here</a>.</Typography> <br />
+						<Typography className={classes.text} component={'span'}>This web app was made entirely from React.js and is not affiliated
+						 with Mihoyo or Genshin Impact in any way.</Typography><br />
 					</Grid>
 
 					<Grid item xs={12} sm={12} md={12}>
@@ -59,7 +60,7 @@ export default function About() {
 					<Grid item xs={12} sm={12} md={12}>
 						<Typography className={classes.title} variant="h6">Credits</Typography>
 						<Typography>Character Drawn Icons: <a target="_" href="https://twitter.com/FateTempest">FateTempest</a></Typography>
-						{/* <Typography>Official Character icons: <a target="_" href="https://genshin-impact.fandom.com/wiki/Characters/List">Genshin Impact Wiki</a></Typography> */}
+						<Typography>Official Character icons: <a target="_" href="https://genshin-impact.fandom.com/wiki/Characters/List">Genshin Impact Wiki</a></Typography>
 						<Typography>Official Item Icons: <a target="_" href="https://genshin-impact.fandom.com/wiki/Materials">Genshin Impact Wiki</a></Typography>
 						<Typography>Elemental Vector Icons: <a target="_" href="https://twitter.com/hollichoo">Hollichoo</a></Typography>
 					</Grid>
