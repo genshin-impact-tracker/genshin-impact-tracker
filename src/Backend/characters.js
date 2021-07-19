@@ -81,13 +81,13 @@ export const characters = [
 				fourStar: { item: "Jade Chunk", value: 0 },
 				fiveStar: { item: "Jade Gemstone", value: 0 },
 			},
-			boss: { item: "The Heart of Constant Organ", value: 0 },
+			boss: { item: "Perpetual Heart", value: 0 },
 			common: {
-				oneStar: { item: "Dilapidated Knife", value: 0 },
-				twoStar: { item: "Tan Shadow Knife", value: 0 },
-				threeStar: { item: "Famous Knife", value: 0 },
+				oneStar: { item: "Old Handguard", value: 0 },
+				twoStar: { item: "Kageuchi Handguard", value: 0 },
+				threeStar: { item: "Famed Handguard", value: 0 },
 			},
-			region: { item: "Fei Sakura Hydrangea", value: 0 },
+			region: { item: "Sakura Bloom", value: 0 },
 			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			talent: {
 				twoStar: { item: "Teachings of Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
@@ -96,9 +96,9 @@ export const characters = [
 			},
 			talBoss: { item: "Bloodjade Branch", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			talCommon: { 
-				oneStar: { item: "Dilapidated Knife", value: { tal1: 0, tal2: 0, tal3: 0 }},
-				twoStar: { item: "Tan Shadow Knife", value: { tal1: 0, tal2: 0, tal3: 0 }},
-				threeStar: { item: "Famous Knife", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				oneStar: { item: "Old Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				twoStar: { item: "Kageuchi Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Famed Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
 	},{ 
@@ -903,7 +903,7 @@ export const characters = [
 				twoStar: { item: "Shimmering Nectar", value: 0 },
 				threeStar: { item: "Energy Nectar", value: 0 },
 			},
-			region: { item: "Crystallized Bone Marrow", value: 0 },
+			region: { item: "Crystal Marrow", value: 0 },
 			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			talent: {
 				twoStar: { item: "Teachings of Light", value: { tal1: 0, tal2: 0, tal3: 0 }},
@@ -1169,13 +1169,13 @@ export const characters = [
 				fourStar: { item: "Agate Chunk", value: 0 },
 				fiveStar: { item: "Agate Gemstone", value: 0 },
 			},
-			boss: { item: "Smoldering Orb", value: 0 },
+			boss: { item: "Smoldering Pearl", value: 0 },
 			common: {
 				oneStar: { item: "Divining Scroll", value: 0 },
 				twoStar: { item: "Sealed Scroll", value: 0 },
 				threeStar: { item: "Forbidden Scroll", value: 0 },
 			},
-			region: { item: "Narussa", value: 0 },
+			region: { item: "Naku Weed", value: 0 },
 			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			talent: {
 				twoStar: { item: "Teachings of Transience", value: { tal1: 0, tal2: 0, tal3: 0 }},
