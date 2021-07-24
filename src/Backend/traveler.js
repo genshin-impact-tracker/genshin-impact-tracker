@@ -36,8 +36,7 @@ export const travelerChar = [
 				threeStar: { item: "Forbidden Scroll", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
-	}, 
-	{ 
+	}, { 
 		name: "traveler",
 		element: "geo",
 		ascension: 0,
@@ -87,6 +86,43 @@ export const travelerChar = [
 				oneStar: { item: "Firm Arrowhead", value: { tal2: 0, tal3: 0 }},
 				twoStar: { item: "Sharp Arrowhead", value: { tal2: 0, tal3: 0 }},
 				threeStar: { item: "Weathered Arrowhead", value: { tal2: 0, tal3: 0 }},
+			},
+		}
+	}, { 
+		name: "traveler",
+		element: "electro",
+		ascension: 0,
+		talent1: 1,
+		talent2: 1,
+		talent3: 1,
+		properties: {
+			ascension: { 
+				twoStar: { item: "Brilliant Diamond Sliver", value: 0 },
+				threeStar: { item: "Brilliant Diamond Fragment", value: 0 },
+				fourStar: { item: "Brilliant Diamond Chunk", value: 0 },
+				fiveStar: { item: "Brilliant Diamond Gemstone", value: 0 },
+			},
+			common: {
+				oneStar: { item: "Damaged Mask", value: 0 },
+				twoStar: { item: "Stained Mask", value: 0 },
+				threeStar: { item: "Ominous Mask", value: 0 },
+			},
+			region: { item: "Windwheel Aster", value: 0 },
+			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			talent: {
+				twoStar: { item: "Teachings of Transience", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				levelThreeSix: { item: "Guide to Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				levelFour: { item: "Guide to Light", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				levelFive: { item: "Guide to Transience", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				levelSevenTen: { item: "Philosophies of Light", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				levelEight: { item: "Philosophies of Transience", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				levelNine: { item: "Philosophies of Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			},
+			talBoss: { item: "Dragon Lord's Crown", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			talCommon: { 
+				oneStar: { item: "Old Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				twoStar: { item: "Kageuchi Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Famed Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
 	},

@@ -32,16 +32,18 @@ export default function CharacterList(props) {
 
 	const travelerAnemo = JSON.parse(localStorage.getItem("traveler anemo"))
 	const travelerGeo = JSON.parse(localStorage.getItem("traveler geo"))
+	const travelerElectro = JSON.parse(localStorage.getItem("traveler electro"))
 
 	// Basically, if both traveler anemo and geo are null, set the ascension to 0
 	// if traveler geo is not null but traveler anemo is, set asc to traveler geo.asc
 	// if they're both not null, pick the largest number out of the two
 	const isAnemoNull = (travelerAnemo == null)
 	const isGeoNull = (travelerGeo == null)
+	const isElectroNull = (travelerElectro == null)
 
 	let asc = null;
 
-	if (isAnemoNull && isGeoNull)
+	if (isAnemoNull && isGeoNull && isElectroNull)
 		asc = 0;
 	else if (isAnemoNull && !isGeoNull)
 		asc = travelerGeo.ascension
@@ -51,6 +53,13 @@ export default function CharacterList(props) {
 		asc = travelerAnemo.ascension
 	else
 		asc = travelerGeo.ascension
+
+	// then set the ascension number to the electro ascension value
+	// if the electro ascension value is greater than the current ascension
+	// value set by the previous checks
+	if (!isElectroNull)
+		if(asc < travelerElectro.ascension)
+			asc = travelerElectro.ascension
 		
 	const travAscChecked = (asc > 0 ? true : false)
 

@@ -65,8 +65,8 @@ export default function Traveler(props) {
 
 	// making sure the default values are not null from local storage
 	const tall1 = ((char == null || char.talent1 == null) ? 1 : char.talent1)
-	const tall2 = ((char == null || char.talent1 == null) ? 1 : char.talent2)
-	const tall3 = ((char == null || char.talent1 == null) ? 1 : char.talent3)
+	const tall2 = ((char == null || char.talent2 == null) ? 1 : char.talent2)
+	const tall3 = ((char == null || char.talent3 == null) ? 1 : char.talent3)
 
 	props.chara.talent1 = tall1;
 	props.chara.talent2 = tall2;
@@ -83,17 +83,26 @@ export default function Traveler(props) {
 		props.setLevelState({ level: level, prevLevel: props.chara.ascension})
 		props.chara.ascension = level;
 
-		// setting both traveller levels since it's important
+		// setting traveller levels since it's important
 		let char = null;
-		if (props.chara.element === "anemo")
+		let char1 = null;
+		if (props.chara.element === "anemo"){
 			char = travelerChar[1];
-		else
+			char1 = travelerChar[2];
+		} else if (props.chara.element === "geo") {
+			char = travelerChar[0];
+			char1 = travelerChar[2];
+		} else if (props.chara.element === "electro") {
 			char = travelerChar[0]
+			char1 = travelerChar[1];
+		}
 		
 		char.ascension = level;
+		char1.ascnesion = level;
 
 		localStorage.setItem(props.chara.name + " " + props.chara.element, JSON.stringify(props.chara))
 		localStorage.setItem(char.name + " " + char.element, JSON.stringify(char))
+		localStorage.setItem(char1.name + " " + char1.element, JSON.stringify(char1))
 	}
 
 	// Sets all the ascension values corresponding to ascension level
@@ -248,6 +257,12 @@ export default function Traveler(props) {
 		}
 
 		chara.properties.crown.value[talent] = values.talent.crown.value[1]
+
+		// setting the base values of the chara talent to 1 so that it saves
+		// properly in the local storage
+		chara.talent1 = 1;
+		chara.talent2 = 1;
+		chara.talent3 = 1;
 	}
 
 	const setInputToOnes = (element) => {
@@ -272,10 +287,17 @@ export default function Traveler(props) {
 			props.chara.ascension = 0;
 
 			let char = null;
-			if (props.chara.element === "anemo")
+			let char1 = null;
+			if (props.chara.element === "anemo"){
 				char = travelerChar[1];
-			else
+				char1 = travelerChar[2];
+			} else if (props.chara.element === "geo") {
+				char = travelerChar[0];
+				char1 = travelerChar[2];
+			} else if (props.chara.element === "electro") {
 				char = travelerChar[0]
+				char1 = travelerChar[1];
+			}
 
 			// one for current mc's element
 			resetTalentValues(props.chara, "tal1", props.chara.element);
@@ -287,14 +309,21 @@ export default function Traveler(props) {
 			resetTalentValues(char, "tal2", char.element);
 			resetTalentValues(char, "tal3", char.element);
 
+			// one for third mc element
+			resetTalentValues(char1, "tal1", char1.element);
+			resetTalentValues(char1, "tal2", char1.element);
+			resetTalentValues(char1, "tal3", char1.element);
+
 			// setting all input values to one
 			setInputToOnes("anemo")
 			setInputToOnes("geo")
+			setInputToOnes("electro")
 
 			// setting talent state
 			setTalentState({ talent1: 1, talent2: 1, talent3: 1})
 			localStorage.setItem(props.chara.name + " " + props.chara.element, JSON.stringify(props.chara))
 			localStorage.setItem(char.name + " " + char.element, JSON.stringify(char));
+			localStorage.setItem(char1.name + " " + char1.element, JSON.stringify(char1));
 		}
 	}
 
