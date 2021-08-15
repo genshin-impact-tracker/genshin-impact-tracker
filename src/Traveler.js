@@ -16,7 +16,7 @@ import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles'
 
 import { values, traveler } from './Backend/values'
-// import { travelerChar } from './Backend/traveler'
+import { travelerChar } from './Backend/traveler'
 
 const useStyles = makeStyles((theme) => ({
 	element: {
@@ -98,7 +98,7 @@ export default function Traveler(props) {
 		}
 		
 		char.ascension = level;
-		char1.ascnesion = level;
+		char1.ascension = level;
 
 		localStorage.setItem(props.chara.name + " " + props.chara.element, JSON.stringify(props.chara))
 		localStorage.setItem(char.name + " " + char.element, JSON.stringify(char))
