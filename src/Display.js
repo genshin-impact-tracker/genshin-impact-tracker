@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-// import { list } from './Backend/list'
 import { characters } from './Backend/characters'
 import { travelerChar } from './Backend/traveler'
 import { totalOwned } from './Backend/totals'
@@ -21,6 +20,8 @@ import InputBase from '@material-ui/core/InputBase'
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
+import Switch from '@material-ui/core/Switch';
+import Moon from '@material-ui/icons/Brightness2';
 
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
@@ -145,6 +146,38 @@ const useStyles = makeStyles((theme) => ({
 			backgroundColor: fade(theme.palette.common.white, 0.25),
 		},
 	},
+	darkMode: {
+		top: '4rem',
+		right: '0.75rem',
+		position: 'fixed',
+		[theme.breakpoints.up('sm')]: {
+			position: 'fixed',
+			top: '7.2rem',
+			right: '0.75rem',
+		},
+	},
+	dmBackground: {
+		backgroundColor: '#464646',
+	},
+	notDMBackground: {
+		backgroundColor: 'white',
+	},
+	switchBase: {
+		"&$checked": {
+			color: "white",
+			'& + $track': {
+				backgroundColor: 'white',
+			},
+		},
+	},
+	switch: {
+		"&$checked": {
+			color: "white",
+			'& + $track': {
+				backgroundColor: 'white',
+			},
+		},
+	},
 }));
 
 export default function Display() {
@@ -153,8 +186,10 @@ export default function Display() {
 	const [tab, setTab] = useState(0);
 	const [searchVal, setSearchVal] = useState("");
 
+	const dm = JSON.parse(localStorage.getItem("darkMode"));
+	const [isDarkMode, setDarkMode] = useState((dm != null) ? dm : false);
+
 	const handleChange = (event, newValue) => {
-		// console.log(newValue)
 		setTab(newValue);
 		window.scrollTo(top)
 	}
@@ -180,12 +215,18 @@ export default function Display() {
 		setSearchVal("")
 	}
 
+	// toggling dark mode
+	const onToggleDarkMode = (event) => {
+		setDarkMode(event.target.checked)
+		localStorage.setItem("darkMode", JSON.stringify(event.target.checked))
+	}
+
 	return (
 		<div>
 			{/* This div must exist for space */}
 			<div className={classes.appbar}>
 				{/* Appbar */}
-				<AppBar style={{backgroundColor: "#3f92c1"}} position="fixed">
+				<AppBar style={isDarkMode ? { backgroundColor: "#224a61" } : {backgroundColor: "#3f92c1"}} position="fixed">
 					{/* Search toolbar */}
 					<Toolbar>
 						<IconButton
@@ -213,7 +254,6 @@ export default function Display() {
 							/>
 
 							{ (searchVal != "") ? 
-								// <div className={classes.clearIcon}>
 									<IconButton className={classes.clearIcon} onClick={clearSearch}>
 										<ClearIcon style={{ color: '#ffffff' }} />
 									</IconButton>
@@ -227,7 +267,6 @@ export default function Display() {
 						value={tab} 
 						onChange={handleChange}
 						TabIndicatorProps={{style: { backgroundColor: "#f5e200" }}}
-						// inkBarStyle={{background: "#f5e200"}} 
 						aria-label="characters">
 							<Tab className={classes.toolbarItems} index={0} label="Characters" {...a11yProps(0)}></Tab>
 							<Tab className={classes.toolbarItems} index={1} label="Totals" {...a11yProps(1)}></Tab>
@@ -235,20 +274,24 @@ export default function Display() {
 					</Tabs>
 				</AppBar>
 			</div>
+		
+			<div className={classes.darkMode}>
+				<Switch checked={isDarkMode} checkedIcon={<Moon style={{color: "white"}} />} className={classes.switch} onChange={onToggleDarkMode} />
+			</div>
 
 			{/* Characters */}
-			<TabPanel value={tab} index={0}>
-				<CharacterList search={searchVal} url={url} updateCharacters={updateCharacters} />
+			<TabPanel className={isDarkMode ? classes.dmBackground : classes.notDMBackground} value={tab} index={0}>
+				<CharacterList isDarkMode={isDarkMode} search={searchVal} url={url} updateCharacters={updateCharacters} />
 			</TabPanel>
 
 			{/* Items */}
-			<TabPanel value={tab} index={1}>
-				<ItemList search={searchVal} url={url} updateItems={updateItems} />
+			<TabPanel className={isDarkMode ? classes.dmBackground : classes.notDMBackground} value={tab} index={1}>
+				<ItemList isDarkMode={isDarkMode} search={searchVal} url={url} updateItems={updateItems} />
 			</TabPanel>
 
 			{/* About */}
-			<TabPanel value={tab} index={2}>
-				<About />
+			<TabPanel className={isDarkMode ? classes.dmBackground : classes.notDMBackground} value={tab} index={2}>
+				<About isDarkMode={isDarkMode} />
 			</TabPanel>
 		</div>
 	);

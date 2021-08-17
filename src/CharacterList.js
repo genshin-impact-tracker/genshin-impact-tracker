@@ -8,11 +8,15 @@ import Traveler from './Traveler'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
+import CircularProgress from '@material-ui/core/CircularProgress'
 
 const useStyles = makeStyles((theme) => ({
 	cardGrid: {
-		paddingTop: theme.spacing(12),
+		paddingTop: theme.spacing(7),
 		paddingBottom: theme.spacing(8),
+		[theme.breakpoints.up('sm')]: {
+			paddingTop: theme.spacing(12),
+		},
 	},
 	card: {
 		height: '100%',
@@ -22,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
 	divMain: {
 		padding: theme.spacing(8,0,6)
 	},
+	circle: {
+		color: 'white',
+	}
 }))
 
 const newCharacters = travelerChar.concat(characters)
@@ -75,6 +82,7 @@ export default function CharacterList(props) {
 							<Grid item key={chara.name+"-"+chara.element} xs={12} sm={6} md={4}>
 								{(chara.name === "traveler" ? 
 									<Traveler chara={chara} 
+										isDarkMode={props.isDarkMode}
 										checked={travChecked} 
 										setChecked={(bool) => setTravChecked(bool)} 
 										level={levelState} 
@@ -82,8 +90,8 @@ export default function CharacterList(props) {
 										setLevelState={(level) => setLevelState(level)} 
 										className={classes.card} />
 								:
-									<Suspense fallback={<div>Loading...</div>}>
-										<Card chara={chara} url={props.url} className={classes.card} />
+									<Suspense fallback={<CircularProgress className={props.isDarkMode ? classes.circle : ""} disableShrink />}>
+										<Card isDarkMode={props.isDarkMode} chara={chara} url={props.url} className={classes.card} />
 									</Suspense>
 								)}
 							</Grid>

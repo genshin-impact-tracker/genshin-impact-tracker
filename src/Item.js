@@ -1,14 +1,10 @@
 import React, { useState } from 'react'
 
-// import { totalAscended, totalTalents, totalOwned } from './Backend/totals'
-// import { characters } from './Backend/characters'
-
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import { makeStyles } from '@material-ui/core/styles'
 import FormControl from '@material-ui/core/FormControl'
-// import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField';
 
@@ -25,6 +21,15 @@ const useStyles = makeStyles((theme) => ({
 	},
 	grid: {
 		justifyContent:'center'
+	},
+	dmText: {
+		color: 'white',
+	},
+	dmCard: {
+		backgroundColor: '#777777',
+	},
+	dmDisabled: {
+		color: '#cfcfcf',
 	},
 }))
 
@@ -87,7 +92,7 @@ export default function Item(props) {
 
 	return (
 		<div>
-			<Card id={props.item}>
+			<Card className={props.isDarkMode ? classes.dmCard : ""} id={props.item}>
 				{/* To be the item image later */}
 				<Grid container className={classes.grid}>
 					<CardMedia square="true" component="img" 
@@ -97,17 +102,20 @@ export default function Item(props) {
 				</Grid>
 
 				<CardContent className={classes.cardContent}>
-					<h2>{props.item}</h2>
+					<h2 className={props.isDarkMode ? classes.dmText : ""}>{props.item}</h2>
 
 					<FormControl component="fieldset">
 						<TextField id={props.item + "-total-owned"}
-							InputProps={{ inputProps: { min: 0 }}}
+							InputProps={props.isDarkMode ? { classes: {disabled: classes.dmDisabled}, className: classes.dmText, inputProps: { min: 0 }} : {inputProps: { min: 0 }}} 
+							InputLabelProps={props.isDarkMode ? {style: {color: 'white'}} : {}}
 							onChange={onOwnedChange}
 							label="Total Owned"
 							defaultValue={owned}
 							type="number" />
 
 						<TextField id={props.item + "-total-ascended"}
+							InputProps={props.isDarkMode ? { classes: {disabled: classes.dmDisabled}, className: classes.dmText} : {}} 
+							InputLabelProps={props.isDarkMode ? {style: {color: 'white'}} : {}}
 							disabled={true}
 							onChange={onAscendedChange}
 							label="Total Ascended"
@@ -118,6 +126,8 @@ export default function Item(props) {
 							Has the default value like this to initially set upon loading
 							to accurately display the amount needed */}
 						<TextField id={props.item + "-total-needed"}
+							InputProps={props.isDarkMode ? { classes: {disabled: classes.dmDisabled}, className: classes.dmText} : {}} 
+							InputLabelProps={props.isDarkMode ? {style: {color: 'white'}} : {}}
 							disabled={true}
 							label="Total Needed"
 							defaultValue={maxVal - itemNum - owned}

@@ -4,17 +4,23 @@ import { totalOwned } from './Backend/totals'
 import { characters } from './Backend/characters'
 import { values } from './Backend/values'
 const Item = React.lazy(() => import('./Item'))
-// import Item from './Item'
 
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles'
+import CircularProgress from '@material-ui/core/CircularProgress'
 
 const useStyles = makeStyles((theme) => ({
 	cardGrid: {
-		paddingTop: theme.spacing(12),
+		paddingTop: theme.spacing(7),
 		paddingBottom: theme.spacing(8),
+		[theme.breakpoints.up('sm')]: {
+			paddingTop: theme.spacing(12),
+		},
 	},
+	circle: {
+		color: 'white',
+	}
 }));
 
 export default function ItemList(props) {
@@ -133,8 +139,8 @@ export default function ItemList(props) {
 					{(props.search === "" ? totalOwned : props.updateItems)
 						.map((ite) => (
 							<Grid item key={ite.item} xs={12} sm={6} md={4}>
-								<Suspense fallback={<div>Loading...</div>}>
-									<Item item={ite.item} array={itemss} url={props.url} maxItems={maxItems} className={classes.item} />
+								<Suspense fallback={<CircularProgress className={props.isDarkMode ? classes.circle : ""} disableShrink />}>
+									<Item isDarkMode={props.isDarkMode} item={ite.item} array={itemss} url={props.url} maxItems={maxItems} className={classes.item} />
 								</Suspense>
 							</Grid>))
 					}

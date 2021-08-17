@@ -56,6 +56,15 @@ const useStyles = makeStyles((theme) => ({
 	grid: {
 		justifyContent: 'center',
 	},
+	dmText: {
+		color: 'white',
+	},
+	dmCard: {
+		backgroundColor: '#777777'
+	},
+	dmStar: {
+		color: 'white',
+	},
 }));
 
 export default function Traveler(props) {
@@ -345,7 +354,7 @@ export default function Traveler(props) {
 
 	return (
 		<div>
-			<Card id={props.chara.name}>
+			<Card className={props.isDarkMode ? classes.dmCard : ""} id={props.chara.name}>
 				<Checkbox checked={props.checked}
 					id={props.chara.name}
 					onChange={onToggleChange}
@@ -371,7 +380,7 @@ export default function Traveler(props) {
 				</Grid>
 
 				<CardContent className={classes.cardContent}>
-					<h2 style={{textTransform:"capitalize"}}>{props.chara.name} ({props.chara.element})</h2>
+					<h2 className={props.isDarkMode ? classes.dmText : ""} style={{textTransform:"capitalize"}}>{props.chara.name} ({props.chara.element})</h2>
 					<FormControl component="fieldset">
 						{/* Ascension Stars */}
 						<RadioGroup row name="ascension">
@@ -382,7 +391,10 @@ export default function Traveler(props) {
 										<IconButton disabled={!props.checked} 
 											style={{height: '20px', width: '20px'}} 
 											onClick={() => onAscensionChange(level)}>
-												{ props.level.level >= level ? <Star /> : <OutlineStar />}
+												{ props.level.level >= level ? 
+													<Star className={props.isDarkMode ? classes.dmStar : ""}/> 
+													: <OutlineStar className={props.isDarkMode ? classes.dmStar : ""}/>
+												}
 										</IconButton>
 									}>
 								</FormControlLabel>
@@ -391,9 +403,10 @@ export default function Traveler(props) {
 					</FormControl>
 
 					{/* Talents */}
-					<form className={classes.root} noValidate >
+					<form className={classes.root} noValidate>
 						<TextField disabled={!props.checked} 
-							InputProps={{ inputProps: { min: 1, max: 10 } }} 
+							InputProps={props.isDarkMode ? { className: classes.dmText, inputProps: { min: 1, max: 10 }} : {inputProps: { min: 1, max: 10 }}} 
+							InputLabelProps={props.isDarkMode ? {style: {color: 'white'}} : {}}
 							className={classes.talent} 
 							onChange={onTalentChange} 
 							style={{width: '4rem', textAlign: 'center'}} 
@@ -403,7 +416,8 @@ export default function Traveler(props) {
 							type="number" />
 
 						<TextField disabled={!props.checked} 
-							InputProps={{ inputProps: { min: 1, max: 10 } }} 
+							InputProps={props.isDarkMode ? { className: classes.dmText, inputProps: { min: 1, max: 10 }} : {inputProps: { min: 1, max: 10 }}} 
+							InputLabelProps={props.isDarkMode ? {style: {color: 'white'}} : {}}
 							className={classes.talent} 
 							onChange={onTalentChange} 
 							style={{width: '4rem', textAlign: 'center'}} 
@@ -413,7 +427,8 @@ export default function Traveler(props) {
 							type="number" />
 
 						<TextField disabled={!props.checked} 
-							InputProps={{ inputProps: { min: 1, max: 10 } }} 
+							InputProps={props.isDarkMode ? { className: classes.dmText, inputProps: { min: 1, max: 10 }} : {inputProps: { min: 1, max: 10 }}} 
+							InputLabelProps={props.isDarkMode ? {style: {color: 'white'}} : {}}
 							className={classes.talent} 
 							onChange={onTalentChange} 
 							style={{width: '4rem', textAlign: 'center'}} 

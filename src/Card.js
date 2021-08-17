@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 import MCard from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
@@ -15,7 +15,6 @@ import Grid from '@material-ui/core/Grid'
 
 import { makeStyles } from '@material-ui/core/styles'
 
-// import { totalAscended, totalTalents } from './Backend/totals'
 import { values } from './Backend/values'
 
 const useStyles = makeStyles((theme) => ({
@@ -104,13 +103,24 @@ const useStyles = makeStyles((theme) => ({
 	grid: {
 		justifyContent:'center'
 	},
+	dmText: {
+		color: 'white',
+	},
+	dmCard: {
+		backgroundColor: '#777777',
+	},
+	dmStar: {
+		color: 'white',
+	},
+	dmDisabled: {
+		color: '#cfcfcf',
+	},
 }));
 
 // Card.js
 export default function Card(props) {
 	const classes = useStyles();
 
-	// const ascChecked = props.chara.ascension === 0 ? false : true;
 	const char = JSON.parse(localStorage.getItem(props.chara.name))
 
 	// making sure the default values are not null from local storage
@@ -120,6 +130,7 @@ export default function Card(props) {
 	const tall3 = (char == null || char.talent1 == null) ? 1 : char.talent3
 	const ascChecked = (asc > 0 ? true : false)
 
+	// setting the properties of the character's talents
 	props.chara.talent1 = tall1;
 	props.chara.talent2 = tall2;
 	props.chara.talent3 = tall3;
@@ -288,7 +299,7 @@ export default function Card(props) {
 
 	return (
 		<div>
-			<MCard id={props.chara.name}>
+			<MCard className={props.isDarkMode ? classes.dmCard : ""} id={props.chara.name}>
 				<Checkbox checked={checked}
 					id={props.chara.name}
 					onChange={onToggleChange}
@@ -305,7 +316,7 @@ export default function Card(props) {
 				</Grid>
 
 				<CardContent className={classes.cardContent}>
-					<h2 style={{textTransform:"capitalize"}}>{props.chara.name}</h2>
+					<h2 className={props.isDarkMode ? classes.dmText : ""} style={{textTransform:"capitalize"}}>{props.chara.name}</h2>
 					<FormControl component="fieldset">
 						{/* Ascension Stars */}
 						<RadioGroup row name="ascension">
@@ -316,7 +327,10 @@ export default function Card(props) {
 										<IconButton disabled={!checked} 
 											style={{height: '20px', width: '20px'}} 
 											onClick={() => onAscensionChange(level)}>
-												{ levelState.level >= level ? <Star /> : <OutlineStar />}
+												{ levelState.level >= level ? 
+													<Star className={props.isDarkMode ? classes.dmStar : ""} /> 
+													: <OutlineStar className={props.isDarkMode ? classes.dmStar : ""} />
+												}
 										</IconButton>
 									}>
 								</FormControlLabel>
@@ -327,7 +341,8 @@ export default function Card(props) {
 					{/* Talents */}
 					<form className={classes.root} noValidate >
 						<TextField disabled={!checked} 
-							InputProps={{ inputProps: { min: 1, max: 10 } }} 
+							InputProps={props.isDarkMode ? { classes: {disabled: classes.dmDisabled}, className: classes.dmText, inputProps: { min: 1, max: 10 }} : {inputProps: { min: 1, max: 10 }}} 
+							InputLabelProps={props.isDarkMode ? {style: {color: 'white'}} : {}}
 							className={classes.talent} 
 							onChange={onTalentChange} 
 							style={{width: '4rem', textAlign: 'center'}} 
@@ -337,7 +352,8 @@ export default function Card(props) {
 							type="number" />
 
 						<TextField disabled={!checked} 
-							InputProps={{ inputProps: { min: 1, max: 10 } }} 
+							InputProps={props.isDarkMode ? { classes: {disabled: classes.dmDisabled}, className: classes.dmText, inputProps: { min: 1, max: 10 }} : {inputProps: { min: 1, max: 10 }}} 
+							InputLabelProps={props.isDarkMode ? {style: {color: 'white'}} : {}}
 							className={classes.talent} 
 							onChange={onTalentChange} 
 							style={{width: '4rem', textAlign: 'center'}} 
@@ -347,7 +363,8 @@ export default function Card(props) {
 							type="number" />
 
 						<TextField disabled={!checked} 
-							InputProps={{ inputProps: { min: 1, max: 10 } }} 
+							InputProps={props.isDarkMode ? { classes: {disabled: classes.dmDisabled}, className: classes.dmText, inputProps: { min: 1, max: 10 }} : {inputProps: { min: 1, max: 10 }}} 
+							InputLabelProps={props.isDarkMode ? {style: {color: 'white'}} : {}}
 							className={classes.talent} 
 							onChange={onTalentChange} 
 							style={{width: '4rem', textAlign: 'center'}} 
