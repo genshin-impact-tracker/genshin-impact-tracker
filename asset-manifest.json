@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/genshin-impact-tracker/static/css/main.eeeddbdb.chunk.css",
-    "main.js": "/genshin-impact-tracker/static/js/main.fe5bfc93.chunk.js",
-    "main.js.map": "/genshin-impact-tracker/static/js/main.fe5bfc93.chunk.js.map",
-    "runtime-main.js": "/genshin-impact-tracker/static/js/runtime-main.3549b0a6.js",
-    "runtime-main.js.map": "/genshin-impact-tracker/static/js/runtime-main.3549b0a6.js.map",
+    "main.js": "/genshin-impact-tracker/static/js/main.e5898e5b.chunk.js",
+    "main.js.map": "/genshin-impact-tracker/static/js/main.e5898e5b.chunk.js.map",
+    "runtime-main.js": "/genshin-impact-tracker/static/js/runtime-main.56b96263.js",
+    "runtime-main.js.map": "/genshin-impact-tracker/static/js/runtime-main.56b96263.js.map",
     "static/js/2.ad520945.chunk.js": "/genshin-impact-tracker/static/js/2.ad520945.chunk.js",
     "static/js/2.ad520945.chunk.js.map": "/genshin-impact-tracker/static/js/2.ad520945.chunk.js.map",
-    "static/js/3.f75bc348.chunk.js": "/genshin-impact-tracker/static/js/3.f75bc348.chunk.js",
-    "static/js/3.f75bc348.chunk.js.map": "/genshin-impact-tracker/static/js/3.f75bc348.chunk.js.map",
-    "static/js/4.4b752290.chunk.js": "/genshin-impact-tracker/static/js/4.4b752290.chunk.js",
-    "static/js/4.4b752290.chunk.js.map": "/genshin-impact-tracker/static/js/4.4b752290.chunk.js.map",
+    "static/js/3.503c7003.chunk.js": "/genshin-impact-tracker/static/js/3.503c7003.chunk.js",
+    "static/js/3.503c7003.chunk.js.map": "/genshin-impact-tracker/static/js/3.503c7003.chunk.js.map",
+    "static/js/4.dd657a37.chunk.js": "/genshin-impact-tracker/static/js/4.dd657a37.chunk.js",
+    "static/js/4.dd657a37.chunk.js.map": "/genshin-impact-tracker/static/js/4.dd657a37.chunk.js.map",
     "index.html": "/genshin-impact-tracker/index.html",
     "static/css/main.eeeddbdb.chunk.css.map": "/genshin-impact-tracker/static/css/main.eeeddbdb.chunk.css.map",
     "static/js/2.ad520945.chunk.js.LICENSE.txt": "/genshin-impact-tracker/static/js/2.ad520945.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.3549b0a6.js",
+    "static/js/runtime-main.56b96263.js",
     "static/js/2.ad520945.chunk.js",
     "static/css/main.eeeddbdb.chunk.css",
-    "static/js/main.fe5bfc93.chunk.js"
+    "static/js/main.e5898e5b.chunk.js"
   ]
 }
