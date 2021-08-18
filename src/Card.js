@@ -106,6 +106,9 @@ const useStyles = makeStyles((theme) => ({
 	dmText: {
 		color: 'white',
 	},
+	card: {
+		backgroundColor: '#f5f5f5',
+	},
 	dmCard: {
 		backgroundColor: '#777777',
 	},
@@ -299,7 +302,7 @@ export default function Card(props) {
 
 	return (
 		<div>
-			<MCard className={props.isDarkMode ? classes.dmCard : ""} id={props.chara.name}>
+			<MCard className={props.isDarkMode ? classes.dmCard : classes.card} id={props.chara.name}>
 				<Checkbox checked={checked}
 					id={props.chara.name}
 					onChange={onToggleChange}

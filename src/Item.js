@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
 	dmText: {
 		color: 'white',
 	},
+	card: {
+		backgroundColor: '#f5f5f5',
+	},
 	dmCard: {
 		backgroundColor: '#777777',
 	},
@@ -92,7 +95,7 @@ export default function Item(props) {
 
 	return (
 		<div>
-			<Card className={props.isDarkMode ? classes.dmCard : ""} id={props.item}>
+			<Card className={props.isDarkMode ? classes.dmCard : classes.card} id={props.item}>
 				{/* To be the item image later */}
 				<Grid container className={classes.grid}>
 					<CardMedia square="true" component="img" 

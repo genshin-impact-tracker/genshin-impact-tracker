@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
 	cardGrid: {
 		paddingTop: theme.spacing(12),
 		paddingBottom: theme.spacing(8),
-		height: '40.85rem'
+		height: '100%'
 	},
 	title: {
 		justifyContent: 'center',
@@ -85,7 +85,7 @@ export default function About(props) {
 
 					<Grid item xs={12} sm={12} md={12}>
 						<Typography className={props.isDarkMode ? classes.darkModeTitle : classes.title} variant="h6">Known Issues</Typography>
-						<Typography className={props.isDarkMode ? classes.darkModeText : classes.text}>The traveler information does not translate with ascended items or talents at this time. This is currently being fixed.</Typography><br />
+						<Typography className={props.isDarkMode ? classes.darkModeText : classes.text}>None at this time.</Typography><br />
 					</Grid>
 				
 					<Grid item xs={12} sm={12} md={12}>
