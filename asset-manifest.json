@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/genshin-impact-tracker/static/css/main.eeeddbdb.chunk.css",
-    "main.js": "/genshin-impact-tracker/static/js/main.021c487e.chunk.js",
-    "main.js.map": "/genshin-impact-tracker/static/js/main.021c487e.chunk.js.map",
+    "main.js": "/genshin-impact-tracker/static/js/main.d423d1d3.chunk.js",
+    "main.js.map": "/genshin-impact-tracker/static/js/main.d423d1d3.chunk.js.map",
     "runtime-main.js": "/genshin-impact-tracker/static/js/runtime-main.e968daac.js",
     "runtime-main.js.map": "/genshin-impact-tracker/static/js/runtime-main.e968daac.js.map",
     "static/js/2.ad520945.chunk.js": "/genshin-impact-tracker/static/js/2.ad520945.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.e968daac.js",
     "static/js/2.ad520945.chunk.js",
     "static/css/main.eeeddbdb.chunk.css",
-    "static/js/main.021c487e.chunk.js"
+    "static/js/main.d423d1d3.chunk.js"
   ]
 }
