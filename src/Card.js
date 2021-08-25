@@ -18,69 +18,6 @@ import { makeStyles } from '@material-ui/core/styles'
 import { values } from './Backend/values'
 
 const useStyles = makeStyles((theme) => ({
-	element: {
-		backgroundColor: '#ffffff',
-		boxShadow: '0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)',
-		'&:hover': {
-			cursor: 'pointer'
-		}
-	},
-	active: {
-		backgroundColor: '#e6b948',
-		boxShadow: '0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)',
-		'&:hover': {
-			cursor: 'pointer'
-		}
-	},
-	geo: {
-		backgroundColor: '#f6b03c',
-		boxShadow: '0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)',
-		'&:hover': {
-			cursor: 'pointer'
-		}
-	},
-	pyro: {
-		backgroundColor: '#ed4637',
-		boxShadow: '0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)',
-		'&:hover': {
-			cursor: 'pointer'
-		}
-	},
-	dendro: {
-		backgroundColor: '#6eac21',
-		boxShadow: '0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)',
-		'&:hover': {
-			cursor: 'pointer'
-		}
-	},
-	electro: {
-		backgroundColor: '#7454c1',
-		boxShadow: '0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)',
-		'&:hover': {
-			cursor: 'pointer'
-		}
-	},
-	anemo: {
-		backgroundColor: '#60d5b4',
-		boxShadow: '0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)',
-		'&:hover': {
-			cursor: 'pointer'
-		}
-	},
-	hydro: {
-		backgroundColor: '#40abdd',
-		boxShadow: '0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)',
-		'&:hover': {
-			cursor: 'pointer'
-		}
-	},
-	cryo: {
-		backgroundColor: '#8db1dd',
-		boxShadow: '0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)',
-		'&:hover': {
-			cursor: 'pointer'
-		}
-	},
 	cardContent: {
 		flexGrow: 1,
 	},
@@ -146,6 +83,28 @@ export default function Card(props) {
 
 	const activeIcon = props.url + '/Icons/' + props.chara.element + '.png';
 	const inactiveIcon = props.url + '/Icons/' + props.chara.element + '-b.png';
+
+	const elementStyles = {
+		"pyro": "#f85d5d",
+		"cryo": "#6ddef3",
+		"geo": "#f3bd6d",
+		"hydro": "#6d92f3",
+		"electro": "#ad6df3",
+		"anemo": "#6df3bd",
+		"dendro": "#77f36d",
+		"element": "#f5f5f5"
+	}
+
+	const dmElementStyles = {
+		"dmpyro": "#801717",
+		"dmcryo": "#177380",
+		"dmgeo": "#804e17",
+		"dmhydro": "#172c80",
+		"dmelectro": "#491780",
+		"dmanemo": "#178067",
+		"dmdendro": "#17801b",
+		"dmelement": "#777777"
+	}
 
 	const onAscensionChange = (level) => {
 		addValues(level);
@@ -302,7 +261,25 @@ export default function Card(props) {
 
 	return (
 		<div>
-			<MCard className={props.isDarkMode ? classes.dmCard : classes.card} id={props.chara.name}>
+			{/* TERNARY EXPRESSION TO SET UP ELEMENTAL DARK MODE OR LIGHT MODE STYLES
+				LOGIC IS AS FOLLOWS:
+					if !dm and !checked
+						regular light mode grey style
+					else if dm && checked
+						dark mode elemental style
+					else if checked
+						light mode elemental style
+					else
+						dark mode grey style
+			*/}
+			<MCard className={props.isDarkMode ? classes.dmCard : classes.card} 
+				style={(!props.isDarkMode && !checked) ? { backgroundColor: elementStyles["element"] } :
+						(props.isDarkMode && checked) ? { backgroundColor: dmElementStyles["dm" + props.chara.element] } :
+						(checked) ? { backgroundColor: elementStyles[props.chara.element] }	:
+						{ backgroundColor: dmElementStyles["dmelement"] }
+				} 
+				id={props.chara.name}
+			>
 				<Checkbox checked={checked}
 					id={props.chara.name}
 					onChange={onToggleChange}

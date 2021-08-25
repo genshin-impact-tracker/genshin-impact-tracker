@@ -90,6 +90,28 @@ export default function Traveler(props) {
 	const inactiveIcon = props.url + '/Icons/' + props.chara.element + '-b.png';
 	const [ talentState, setTalentState ] = useState({ talent1: tall1, talent2: tall2, talent3: tall3 });
 
+	const elementStyles = {
+		"pyro": "#f85d5d",
+		"cryo": "#6ddef3",
+		"geo": "#f3bd6d",
+		"hydro": "#6d92f3",
+		"electro": "#ad6df3",
+		"anemo": "#6df3bd",
+		"dendro": "#77f36d",
+		"element": "#f5f5f5"
+	}
+
+	const dmElementStyles = {
+		"dmpyro": "#801717",
+		"dmcryo": "#177380",
+		"dmgeo": "#804e17",
+		"dmhydro": "#172c80",
+		"dmelectro": "#491780",
+		"dmanemo": "#178067",
+		"dmdendro": "#17801b",
+		"dmelement": "#777777"
+	}
+
 	const onAscensionChange = (level) => {
 		addValues(level);
 		props.setLevelState({ level: level, prevLevel: props.chara.ascension})
@@ -357,7 +379,14 @@ export default function Traveler(props) {
 
 	return (
 		<div>
-			<Card className={props.isDarkMode ? classes.dmCard : classes.card} id={props.chara.name}>
+			<Card className={props.isDarkMode ? classes.dmCard : classes.card} 
+				style={(!props.isDarkMode && !checked) ? { backgroundColor: elementStyles["element"] } :
+						(props.isDarkMode && checked) ? { backgroundColor: dmElementStyles["dm" + props.chara.element] } :
+						(checked) ? { backgroundColor: elementStyles[props.chara.element] }	:
+						{ backgroundColor: dmElementStyles["dmelement"] }
+				} 
+				id={props.chara.name}
+			>
 				<Checkbox checked={props.checked}
 					id={props.chara.name}
 					onChange={onToggleChange}
