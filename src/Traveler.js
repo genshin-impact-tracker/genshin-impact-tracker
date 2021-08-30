@@ -380,9 +380,9 @@ export default function Traveler(props) {
 	return (
 		<div>
 			<Card className={props.isDarkMode ? classes.dmCard : classes.card} 
-				style={(!props.isDarkMode && !checked) ? { backgroundColor: elementStyles["element"] } :
-						(props.isDarkMode && checked) ? { backgroundColor: dmElementStyles["dm" + props.chara.element] } :
-						(checked) ? { backgroundColor: elementStyles[props.chara.element] }	:
+				style={(!props.isDarkMode && !props.checked) ? { backgroundColor: elementStyles["element"] } :
+						(props.isDarkMode && props.checked) ? { backgroundColor: dmElementStyles["dm" + props.chara.element] } :
+						(props.checked) ? { backgroundColor: elementStyles[props.chara.element] }	:
 						{ backgroundColor: dmElementStyles["dmelement"] }
 				} 
 				id={props.chara.name}

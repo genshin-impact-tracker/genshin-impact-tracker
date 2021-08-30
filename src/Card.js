@@ -178,6 +178,8 @@ export default function Card(props) {
 			props.chara.talent3 = level;
 		}
 
+		// Need to add this to stop the level from resetting ???
+		props.chara.ascension = levelState.level;
 		localStorage.setItem(props.chara.name, JSON.stringify(props.chara))
 	}
 
