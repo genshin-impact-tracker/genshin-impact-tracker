@@ -13,15 +13,27 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import IconButton from '@material-ui/core/IconButton'
+
 import SearchIcon from '@material-ui/icons/Search'
-import StarIcon from '@material-ui/icons/Star'
 import ClearIcon from '@material-ui/icons/Clear'
+import PeopleIcon from '@material-ui/icons/People'
+import ListIcon from '@material-ui/icons/ListAlt'
+import AboutIcon from '@material-ui/icons/Info'
+import MenuIcon from '@material-ui/icons/Menu'
+import HomeIcon from '@material-ui/icons/Home'
+
 import InputBase from '@material-ui/core/InputBase'
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
 import Switch from '@material-ui/core/Switch';
 import Moon from '@material-ui/icons/Brightness2';
+import Drawer from '@material-ui/core/SwipeableDrawer'
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
 
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
@@ -178,6 +190,24 @@ const useStyles = makeStyles((theme) => ({
 			},
 		},
 	},
+	phoneMenu: {
+		display: 'flex',
+		[theme.breakpoints.up('sm')]: {
+			display: 'none',
+		},
+	},
+	list: {
+		width: '75',
+		height: '100%',
+		color: 'white',
+		backgroundColor: '#464646'
+	},
+	span: {
+		height: '3.5rem', 
+		display: 'flex',
+		backgroundColor: "#224a61",
+		justifyContent: "flex-start"
+	},
 }));
 
 export default function Display() {
@@ -221,6 +251,51 @@ export default function Display() {
 		localStorage.setItem("darkMode", JSON.stringify(event.target.checked))
 	}
 
+	const onHomeButtonClick = (val) => {
+		setDrawerOpen(val)
+	}
+
+	const toggleDrawer = (open) => (event) => {
+		if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+			return;
+		}	
+	
+		setDrawerOpen(open)
+	};
+
+	const onListItemClick = (index) => {
+		setTab(index)
+		toggleDrawer(false);
+	}
+
+	const list = () => (
+		<div className={classes.list}
+			styles={isDarkMode ? { backgroundColor: "#464646" }  : { backgroundColor: "#ebebeb"}}
+			// role="presentation"
+			onClick={toggleDrawer(false)}
+			onKeyDown={toggleDrawer(false)}
+		>
+			<span className={classes.span} 
+				styles={isDarkMode ? { backgroundColor: "#224a61" } : { backgroundColor: "white"}}>
+				<ListItem key="Menu">
+					<ListItemIcon><MenuIcon style={{color: 'white'}} /></ListItemIcon>
+					<ListItemText primary={"Menu"} />
+				</ListItem>
+			</span>
+			<List>
+				{['Characters', 'Totals', 'About'].map((text, index) => (
+					<ListItem button key={text} onClick={() => onListItemClick(index)}>
+						<ListItemIcon>{(index == 0) ? <PeopleIcon style={{color: 'white'}} /> : 
+							(index == 2) ? <AboutIcon style={{color: 'white'}} /> : 
+							<ListIcon style={{color: 'white'}} />}</ListItemIcon>
+						<ListItemText primary={text} />
+					</ListItem>
+				))}
+			</List>
+			<Divider />
+		</div>
+	);
+
 	return (
 		<div>
 			{/* This div must exist for space */}
@@ -234,10 +309,12 @@ export default function Display() {
 							className={classes.menuButton}
 							color="inherit"
 							aria-label="open drawer"
+							onClick={() => onHomeButtonClick(!isDrawerOpen)}
 						>
-							<StarIcon />
+							<HomeIcon />
 						</IconButton>
-							<Typography className={classes.title} variant="h6">Genshin Impact Tracker</Typography>
+
+						<Typography className={classes.title} variant="h6">Genshin Impact Tracker</Typography>
 
 						<div className={classes.search}>
 							<div className={classes.searchIcon}>
@@ -272,6 +349,13 @@ export default function Display() {
 							<Tab className={classes.toolbarItems} index={1} label="Totals" {...a11yProps(1)}></Tab>
 							<Tab className={classes.toolbarItems} index={2} label="About" {...a11yProps(2)}></Tab>
 					</Tabs>
+
+					<Drawer className={classes.phoneMenu} anchor={'left'} 
+						open={isDrawerOpen}
+						onClose={toggleDrawer(false)}
+						onOpen={toggleDrawer(true)}>
+							{list()}
+					</Drawer>
 				</AppBar>
 			</div>
 		
