@@ -159,20 +159,22 @@ const useStyles = makeStyles((theme) => ({
 		},
 	},
 	darkMode: {
-		top: '4rem',
+		marginTop: '2rem',
 		right: '0.75rem',
 		position: 'fixed',
 		[theme.breakpoints.up('sm')]: {
 			position: 'fixed',
-			top: '7.2rem',
+			marginTop: '6.2rem',
 			right: '0.75rem',
 		},
 	},
 	dmBackground: {
 		backgroundColor: '#464646',
+		height: '100vh'
 	},
 	notDMBackground: {
 		backgroundColor: 'white',
+		height: '100vh'
 	},
 	switchBase: {
 		"&$checked": {
@@ -215,6 +217,7 @@ export default function Display() {
 
 	const [tab, setTab] = useState(0);
 	const [searchVal, setSearchVal] = useState("");
+	const [isDrawerOpen, setDrawerOpen] = useState(false);
 
 	const dm = JSON.parse(localStorage.getItem("darkMode"));
 	const [isDarkMode, setDarkMode] = useState((dm != null) ? dm : false);

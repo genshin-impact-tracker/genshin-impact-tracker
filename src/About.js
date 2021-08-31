@@ -7,9 +7,12 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
 	cardGrid: {
-		paddingTop: theme.spacing(12),
+		paddingTop: theme.spacing(4),
 		paddingBottom: theme.spacing(8),
-		height: '100%'
+		[theme.breakpoints.up('sm')]: {
+			paddingTop: theme.spacing(12),
+		},
+		height: '40.85rem'
 	},
 	title: {
 		justifyContent: 'center',
@@ -21,8 +24,7 @@ const useStyles = makeStyles((theme) => ({
 	text: {
 		justifyContent: 'center',
 		display: 'block',
-		margin: 'auto',    
-		width: '45rem',
+		margin: 'auto',
 		fontWeight: 400,
 	},
 	darkModeText: {
@@ -30,7 +32,6 @@ const useStyles = makeStyles((theme) => ({
 		justifyContent: 'center',
 		display: 'block',
 		margin: 'auto',
-		width: '45rem',
 		fontWeight: 400,
 	},
 	darkModeTitle: {
@@ -68,7 +69,7 @@ export default function About(props) {
 					<Grid item xs={12} sm={12} md={12}>
 						<Typography className={props.isDarkMode ? classes.darkModeTitle : classes.title} variant="h6">About Genshin Impact Tracker</Typography>
 
-						<Typography className={props.isDarkMode ? classes.darkModeText : classes.text} component={'span'}>This project was made by enmae through the desire of knowing exactly 
+						<Typography className={props.isDarkMode ? classes.darkModeText : classes.text}>This project was made by enmae through the desire of knowing exactly 
 							how many items you need left after ascending both a character and their talents.
 							You can find the full code <a className={props.isDarkMode ? classes.a : ""} target="_" href="https://github.com/genshin-impact-tracker/genshin-impact-tracker">here</a>.</Typography> <br />
 						<Typography className={props.isDarkMode ? classes.darkModeText : classes.text} component={'span'}>This web app was made entirely from React.js and is not affiliated

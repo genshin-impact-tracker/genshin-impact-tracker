@@ -240,7 +240,15 @@ export default function Card(props) {
 
 			// setting talent state
 			setTalentState({ talent1: 1, talent2: 1, talent3: 1})
+
+			// Setting props.chara.talents so the values are accurate in localstorage
+			props.chara.talent1 = 1;
+			props.chara.talent2 = 1;
+			props.chara.talent3 = 1;
+
 			console.log(levelState, talentState, props.chara)
+			
+			// saving character in localstorage
 			localStorage.setItem(props.chara.name, JSON.stringify(props.chara))
 		}
 	}
