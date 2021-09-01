@@ -170,11 +170,11 @@ const useStyles = makeStyles((theme) => ({
 	},
 	dmBackground: {
 		backgroundColor: '#464646',
-		height: '100vh'
+		// height: '100vh'
 	},
 	notDMBackground: {
 		backgroundColor: 'white',
-		height: '100vh'
+		// height: '100vh'
 	},
 	switchBase: {
 		"&$checked": {

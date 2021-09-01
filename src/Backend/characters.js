@@ -1,5 +1,4 @@
-export const characters = [
-	{ 
+export const characters = [{ 
 		name: "albedo",
 		element: "geo",
 		ascension: 0,
@@ -33,7 +32,41 @@ export const characters = [
 				threeStar: { item: "Forbidden Scroll", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
-	}, { 
+	},{ 
+		name: "aloy",
+		element: "cryo",
+		ascension: 0,
+		talent1: 1,
+		talent2: 1,
+		talent3: 1,
+		properties: {
+			ascension: { 
+				twoStar: { item: "Jade Sliver", value: 0 },
+				threeStar: { item: "Jade Fragment", value: 0 },
+				fourStar: { item: "Jade Chunk", value: 0 },
+				fiveStar: { item: "Jade Gemstone", value: 0 },
+			},
+			boss: { item: "Crystalline Bloom", value: 0 },
+			common: {
+				oneStar: { item: "Spectral Husk", value: 0 },
+				twoStar: { item: "Spectral Heart", value: 0 },
+				threeStar: { item: "Spectral Nucleus", value: 0 },
+			},
+			region: { item: "Crystal Marrow", value: 0 },
+			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			talent: {
+				twoStar: { item: "Teachings of Freedom", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Guide to Freedom", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				fourStar: { item: "Philosophies of Freedom", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			},
+			talBoss: { item: "Molten Moment", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			talCommon: { 
+				oneStar: { item: "Spectral Husk", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				twoStar: { item: "Spectral Heart", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Spectral Nucleus", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			},
+		}
+	},{ 
 		name: "amber",
 		element: "pyro",
 		ascension: 0,
@@ -95,6 +128,40 @@ export const characters = [
 				fourStar: { item: "Philosophies of Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 			talBoss: { item: "Bloodjade Branch", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			talCommon: { 
+				oneStar: { item: "Old Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				twoStar: { item: "Kageuchi Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Famed Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			},
+		}
+	},{ 
+		name: "baal",
+		element: "electro",
+		ascension: 0,
+		talent1: 1,
+		talent2: 1,
+		talent3: 1,
+		properties: {
+			ascension: { 
+				twoStar: { item: "Amethyst Sliver", value: 0 },
+				threeStar: { item: "Amethyst Fragment", value: 0 },
+				fourStar: { item: "Amethyst Chunk", value: 0 },
+				fiveStar: { item: "Amethyst Gemstone", value: 0 },
+			},
+			boss: { item: "Storm Beads", value: 0 },
+			common: {
+				oneStar: { item: "Old Handguard", value: 0 },
+				twoStar: { item: "Kageuchi Handguard", value: 0 },
+				threeStar: { item: "Famed Handguard", value: 0 },
+			},
+			region: { item: "Amakumo Fruit", value: 0 },
+			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			talent: {
+				twoStar: { item: "Teachings of Light", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Guide to Light", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				fourStar: { item: "Philosophies of Light", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			},
+			talBoss: { item: "Molten Moment", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			talCommon: { 
 				oneStar: { item: "Old Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
 				twoStar: { item: "Kageuchi Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
@@ -646,6 +713,40 @@ export const characters = [
 			},
 		}
 	},{ 
+		name: "kokomi",
+		element: "hydro",
+		ascension: 0,
+		talent1: 1,
+		talent2: 1,
+		talent3: 1,
+		properties: {
+			ascension: { 
+				twoStar: { item: "Lazurite Sliver", value: 0 },
+				threeStar: { item: "Lazurite Fragment", value: 0 },
+				fourStar: { item: "Lazurite Chunk", value: 0 },
+				fiveStar: { item: "Lazurite Gemstone", value: 0 },
+			},
+			boss: { item: "Dew of Repudiation", value: 0 },
+			common: {
+				oneStar: { item: "Spectral Husk", value: 0 },
+				twoStar: { item: "Spectral Heart", value: 0 },
+				threeStar: { item: "Spectral Nucleus", value: 0 },
+			},
+			region: { item: "Sango Pearl", value: 0 },
+			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			talent: {
+				twoStar: { item: "Teachings of Transience", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Guide to Transience", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				fourStar: { item: "Philosophies of Transience", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			},
+			talBoss: { item: "Hellfire Butterfly", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			talCommon: { 
+				oneStar: { item: "Spectral Husk", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				twoStar: { item: "Spectral Heart", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Spectral Nucleus", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			},
+		}
+	},{ 
 		name: "lisa",
 		element: "electro",
 		ascension: 0,
@@ -883,7 +984,41 @@ export const characters = [
 				threeStar: { item: "Lieutenant's Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
-	}, { 
+	},{ 
+		name: "sara",
+		element: "electro",
+		ascension: 0,
+		talent1: 1,
+		talent2: 1,
+		talent3: 1,
+		properties: {
+			ascension: { 
+				twoStar: { item: "Amethyst Sliver", value: 0 },
+				threeStar: { item: "Amethyst Fragment", value: 0 },
+				fourStar: { item: "Amethyst Chunk", value: 0 },
+				fiveStar: { item: "Amethyst Gemstone", value: 0 },
+			},
+			boss: { item: "Storm Beads", value: 0 },
+			common: {
+				oneStar: { item: "Damaged Mask", value: 0 },
+				twoStar: { item: "Stained Mask", value: 0 },
+				threeStar: { item: "Ominous Mask", value: 0 },
+			},
+			region: { item: "Dendrobrium", value: 0 },
+			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			talent: {
+				twoStar: { item: "Teachings of Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Guide to Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				fourStar: { item: "Philosophies of Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			},
+			talBoss: { item: "Ashen Heart", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			talCommon: { 
+				oneStar: { item: "Damaged Mask", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				twoStar: { item: "Stained Mask", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Ominous Mask", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			},
+		}
+	},{ 
 		name: "sayu",
 		element: "anemo",
 		ascension: 0,
