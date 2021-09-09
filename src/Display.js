@@ -367,17 +367,17 @@ export default function Display() {
 			</div>
 
 			{/* Characters */}
-			<TabPanel className={isDarkMode ? classes.dmBackground : classes.notDMBackground} value={tab} index={0}>
+			<TabPanel style={{overflowY: 'auto'}} className={isDarkMode ? classes.dmBackground : classes.notDMBackground} value={tab} index={0}>
 				<CharacterList isDarkMode={isDarkMode} search={searchVal} url={url} updateCharacters={updateCharacters} />
 			</TabPanel>
 
 			{/* Items */}
-			<TabPanel className={isDarkMode ? classes.dmBackground : classes.notDMBackground} value={tab} index={1}>
+			<TabPanel style={{overflowY: 'auto'}} className={isDarkMode ? classes.dmBackground : classes.notDMBackground} value={tab} index={1}>
 				<ItemList isDarkMode={isDarkMode} search={searchVal} url={url} updateItems={updateItems} />
 			</TabPanel>
 
 			{/* About */}
-			<TabPanel className={isDarkMode ? classes.dmBackground : classes.notDMBackground} value={tab} index={2}>
+			<TabPanel style={{overflowY: 'auto'}} className={isDarkMode ? classes.dmBackground : classes.notDMBackground} value={tab} index={2}>
 				<About isDarkMode={isDarkMode} />
 			</TabPanel>
 		</div>
