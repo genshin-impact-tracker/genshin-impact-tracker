@@ -1087,6 +1087,40 @@ export const characters = [{
 			},
 		}
 	},{ 
+	name: "thoma",
+	element: "pyro",
+	ascension: 0,
+	talent1: 1,
+	talent2: 1,
+	talent3: 1,
+	properties: {
+		ascension: { 
+			twoStar: { item: "Agate Sliver", value: 0 },
+			threeStar: { item: "Agate Fragment", value: 0 },
+			fourStar: { item: "Agate Chunk", value: 0 },
+			fiveStar: { item: "Agate Gemstone", value: 0 },
+		},
+		boss: { item: "Smoldering Pearl", value: 0 },
+		common: {
+			oneStar: { item: "Recruit's Insignia", value: 0 },
+			twoStar: { item: "Sergeant's Insignia", value: 0 },
+			threeStar: { item: "Lieutenant's Insignia", value: 0 },
+		},
+		region: { item: "Fluorescent Fungus", value: 0 },
+		crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talent: {
+			twoStar: { item: "Teachings of Transience", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Guide to Transience", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			fourStar: { item: "Philosophies of Transience", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+		talBoss: { item: "Hellfire Butterfly", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talCommon: { 
+			oneStar: { item: "Recruit's Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			twoStar: { item: "Sergeant's Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Lieutenant's Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+	}
+},{ 
 		name: "venti",
 		element: "anemo",
 		ascension: 0,
