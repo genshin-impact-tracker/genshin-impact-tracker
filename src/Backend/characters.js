@@ -1000,7 +1000,7 @@ export const characters = [{
 			},
 			boss: { item: "Marionette Core", value: 0 },
 			common: {
-				oneStar: { item: "Weathered Nectar", value: 0 },
+				oneStar: { item: "Whopperflower Nectar", value: 0 },
 				twoStar: { item: "Shimmering Nectar", value: 0 },
 				threeStar: { item: "Energy Nectar", value: 0 },
 			},
@@ -1013,7 +1013,7 @@ export const characters = [{
 			},
 			talBoss: { item: "Gilded Scale", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			talCommon: { 
-				oneStar: { item: "Weathered Nectar", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				oneStar: { item: "Whopperflower Nectar", value: { tal1: 0, tal2: 0, tal3: 0 }},
 				twoStar: { item: "Shimmering Nectar", value: { tal1: 0, tal2: 0, tal3: 0 }},
 				threeStar: { item: "Energy Nectar", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
