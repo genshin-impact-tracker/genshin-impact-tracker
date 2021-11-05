@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/genshin-impact-tracker/static/css/main.eeeddbdb.chunk.css",
-    "main.js": "/genshin-impact-tracker/static/js/main.2ff136b0.chunk.js",
-    "main.js.map": "/genshin-impact-tracker/static/js/main.2ff136b0.chunk.js.map",
-    "runtime-main.js": "/genshin-impact-tracker/static/js/runtime-main.2aa4bb22.js",
-    "runtime-main.js.map": "/genshin-impact-tracker/static/js/runtime-main.2aa4bb22.js.map",
-    "static/js/2.1c7a624f.chunk.js": "/genshin-impact-tracker/static/js/2.1c7a624f.chunk.js",
-    "static/js/2.1c7a624f.chunk.js.map": "/genshin-impact-tracker/static/js/2.1c7a624f.chunk.js.map",
-    "static/js/3.8bb55a15.chunk.js": "/genshin-impact-tracker/static/js/3.8bb55a15.chunk.js",
-    "static/js/3.8bb55a15.chunk.js.map": "/genshin-impact-tracker/static/js/3.8bb55a15.chunk.js.map",
-    "static/js/4.3b186b8c.chunk.js": "/genshin-impact-tracker/static/js/4.3b186b8c.chunk.js",
-    "static/js/4.3b186b8c.chunk.js.map": "/genshin-impact-tracker/static/js/4.3b186b8c.chunk.js.map",
+    "main.js": "/genshin-impact-tracker/static/js/main.d2fc1987.chunk.js",
+    "main.js.map": "/genshin-impact-tracker/static/js/main.d2fc1987.chunk.js.map",
+    "runtime-main.js": "/genshin-impact-tracker/static/js/runtime-main.bebe6677.js",
+    "runtime-main.js.map": "/genshin-impact-tracker/static/js/runtime-main.bebe6677.js.map",
+    "static/js/2.85ab26b2.chunk.js": "/genshin-impact-tracker/static/js/2.85ab26b2.chunk.js",
+    "static/js/2.85ab26b2.chunk.js.map": "/genshin-impact-tracker/static/js/2.85ab26b2.chunk.js.map",
+    "static/js/3.03629dcc.chunk.js": "/genshin-impact-tracker/static/js/3.03629dcc.chunk.js",
+    "static/js/3.03629dcc.chunk.js.map": "/genshin-impact-tracker/static/js/3.03629dcc.chunk.js.map",
+    "static/js/4.93aeef48.chunk.js": "/genshin-impact-tracker/static/js/4.93aeef48.chunk.js",
+    "static/js/4.93aeef48.chunk.js.map": "/genshin-impact-tracker/static/js/4.93aeef48.chunk.js.map",
     "index.html": "/genshin-impact-tracker/index.html",
     "static/css/main.eeeddbdb.chunk.css.map": "/genshin-impact-tracker/static/css/main.eeeddbdb.chunk.css.map",
-    "static/js/2.1c7a624f.chunk.js.LICENSE.txt": "/genshin-impact-tracker/static/js/2.1c7a624f.chunk.js.LICENSE.txt"
+    "static/js/2.85ab26b2.chunk.js.LICENSE.txt": "/genshin-impact-tracker/static/js/2.85ab26b2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.2aa4bb22.js",
-    "static/js/2.1c7a624f.chunk.js",
+    "static/js/runtime-main.bebe6677.js",
+    "static/js/2.85ab26b2.chunk.js",
     "static/css/main.eeeddbdb.chunk.css",
-    "static/js/main.2ff136b0.chunk.js"
+    "static/js/main.d2fc1987.chunk.js"
   ]
 }
