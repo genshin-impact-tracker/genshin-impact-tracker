@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+import CardItemDisplay from './CardItemDisplay'
+
 import MCard from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
@@ -12,6 +14,7 @@ import IconButton from '@material-ui/core/IconButton'
 import Checkbox from '@material-ui/core/Checkbox'
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid'
+import Collapse from '@material-ui/core/Collapse';
 
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -57,6 +60,17 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
+const ExpandMore = styled((props) => {
+	const { expand, ...other } = props;
+	return <IconButton {...other} />;
+})(({ theme, expand }) => ({
+	transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+	marginLeft: 'auto',
+	transition: theme.transitions.create('transform', {
+		duration: theme.transitions.duration.shortest,
+	}),
+}));
+
 // Card.js
 export default function Card(props) {
 	const classes = useStyles();
@@ -78,6 +92,8 @@ export default function Card(props) {
 	const [ levelState, setLevelState ] = useState({ level: asc, prevLevel: 0 })
 	const [ checked, setChecked ] = useState(ascChecked);
 	const [ talentState, setTalentState ] = useState({ talent1: tall1, talent2: tall2, talent3: tall3 });
+	const [ expandedAsc, setExpandedAsc ] = React.useState(false);
+	const [ expandedTal, setExpandedTal ] = React.useState(false);
 
 	const ascLevels = [ 1, 2, 3, 4, 5, 6];
 
@@ -105,6 +121,16 @@ export default function Card(props) {
 		"dmdendro": "#17801b",
 		"dmelement": "#777777"
 	}
+
+	// Set card asc expand as expanded or not
+	const handleAscExpandClick = () => {
+		setExpandedAsc(!expandedAsc);
+	};
+
+	// Set card tal expand as expanded or not
+	const handleTalExpandClick = () => {
+		setExpandedTal(!expandedTal);
+	};
 
 	const onAscensionChange = (level) => {
 		addValues(level);
@@ -363,6 +389,64 @@ export default function Card(props) {
 							defaultValue={talentState.talent3} 
 							type="number" />
 					</form>
+					
+					<span>
+						<h2 className={props.isDarkMode ? classes.dmText : ""} style={{display: 'inline-flex', marginBottom: "0px"}}>Ascension Items</h2>
+						<ExpandMore expand={expandedAsc}
+							onClick={handleAscExpandClick}
+							aria-expanded={expandedAsc}
+							aria-label="show more">
+								<MoreIcon />
+						</ExpandMore>
+					</span>
+
+					{/* Collapsable ascension material content on character card */}
+					<Collapse in={expandedAsc} timeout="auto" unmountOnExit>
+						<CardContent style={{paddingTop: '0px'}}>
+							<Grid container style={{display: 'inline-flex'}}>
+								{/* Gem Items */}
+								<CardItemDisplay isDarkMode={props.isDarkMode} item={props.chara.properties.ascension.fiveStar.item} />
+
+								{/* Common Enemy Items */}
+								<CardItemDisplay isDarkMode={props.isDarkMode} item={props.chara.properties.talCommon.oneStar.item} />
+
+								{/* Regional Item */}
+								<CardItemDisplay isDarkMode={props.isDarkMode} item={props.chara.properties.region.item} />
+
+								{/* Ascension Boss Item */}
+								<CardItemDisplay isDarkMode={props.isDarkMode} item={props.chara.properties.boss.item} />
+							</Grid>
+						</CardContent>
+					</Collapse>
+
+					<span>
+						<h2 className={props.isDarkMode ? classes.dmText : ""} style={{display: 'inline-flex', marginBottom: "0px"}}>Talent Items</h2>
+						<ExpandMore expand={expandedTal}
+							onClick={handleTalExpandClick}
+							aria-expanded={expandedTal}
+							aria-label="show more">
+								<MoreIcon />
+						</ExpandMore>
+					</span>
+
+					{/* Collapsable ascension material content on character card */}
+					<Collapse in={expandedTal} timeout="auto" unmountOnExit>
+						<CardContent style={{paddingTop: '0px'}}>
+							<Grid container style={{display: 'inline-flex'}}>
+								{/* Crown Items */}
+								<CardItemDisplay isDarkMode={props.isDarkMode} item={props.chara.properties.crown.item} />
+
+								{/* Common Talent Items */}
+								<CardItemDisplay isDarkMode={props.isDarkMode} item={props.chara.properties.talCommon.oneStar.item} />
+
+								{/* Talent Book Item */}
+								<CardItemDisplay isDarkMode={props.isDarkMode} item={props.chara.properties.talent.twoStar.item} />
+
+								{/* Talent Boss Item */}
+								<CardItemDisplay isDarkMode={props.isDarkMode} item={props.chara.properties.talBoss.item} />
+							</Grid>
+						</CardContent>
+					</Collapse>
 				</CardContent>
 			</MCard>
 		</div>
