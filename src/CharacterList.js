@@ -75,11 +75,11 @@ export default function CharacterList(props) {
 
 	return (
 		<div>
-			<Container className={classes.cardGrid} maxWidth="md">
+			<Container className={classes.cardGrid} maxWidth="lg">
 				<Grid container spacing={4}>
 					{(props.search === "" ? newCharacters : props.updateCharacters)
 						.map((chara) => (
-							<Grid item key={chara.name+"-"+chara.element} xs={12} sm={6} md={4}>
+							<Grid item key={chara.name+"-"+chara.element} xs={12} sm={6} md={4} lg={4}>
 								{(chara.name === "traveler" ? 
 									<Traveler chara={chara} 
 										isDarkMode={props.isDarkMode}
