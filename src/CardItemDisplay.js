@@ -18,7 +18,7 @@ export default function CardItemDisplay(props) {
 		<div>
 			<Grid item style={{display: 'inline-flex'}}>
 				<CardMedia square="true" component="img"
-					image={'/Items/' + props.item + '.png'}
+					image={props.url + '/Items/' + props.item + '.png'}
 					title={props.item}
 					style={{display: 'inline-flex', height: '50px', width: '50px'}}/>
 				<h4 className={props.isDarkMode ? classes.dmText : ""} 

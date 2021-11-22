@@ -6,8 +6,11 @@ import MCard from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import RadioGroup from '@material-ui/core/RadioGroup'
+
 import Star from '@material-ui/icons/Star'
 import OutlineStar from '@material-ui/icons/StarOutline'
+import MoreIcon from '@material-ui/icons/ExpandMore'
+
 import FormControl from '@material-ui/core/FormControl'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import IconButton from '@material-ui/core/IconButton'
@@ -16,7 +19,7 @@ import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid'
 import Collapse from '@material-ui/core/Collapse';
 
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, styled } from '@material-ui/core/styles'
 
 import { values } from './Backend/values'
 
@@ -389,7 +392,7 @@ export default function Card(props) {
 							defaultValue={talentState.talent3} 
 							type="number" />
 					</form>
-					
+
 					<span>
 						<h2 className={props.isDarkMode ? classes.dmText : ""} style={{display: 'inline-flex', marginBottom: "0px"}}>Ascension Items</h2>
 						<ExpandMore expand={expandedAsc}
@@ -405,16 +408,16 @@ export default function Card(props) {
 						<CardContent style={{paddingTop: '0px'}}>
 							<Grid container style={{display: 'inline-flex'}}>
 								{/* Gem Items */}
-								<CardItemDisplay isDarkMode={props.isDarkMode} item={props.chara.properties.ascension.fiveStar.item} />
+								<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.ascension.fiveStar.item} />
 
 								{/* Common Enemy Items */}
-								<CardItemDisplay isDarkMode={props.isDarkMode} item={props.chara.properties.talCommon.oneStar.item} />
+								<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.talCommon.oneStar.item} />
 
 								{/* Regional Item */}
-								<CardItemDisplay isDarkMode={props.isDarkMode} item={props.chara.properties.region.item} />
+								<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.region.item} />
 
 								{/* Ascension Boss Item */}
-								<CardItemDisplay isDarkMode={props.isDarkMode} item={props.chara.properties.boss.item} />
+								<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.boss.item} />
 							</Grid>
 						</CardContent>
 					</Collapse>
@@ -434,16 +437,16 @@ export default function Card(props) {
 						<CardContent style={{paddingTop: '0px'}}>
 							<Grid container style={{display: 'inline-flex'}}>
 								{/* Crown Items */}
-								<CardItemDisplay isDarkMode={props.isDarkMode} item={props.chara.properties.crown.item} />
+								<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.crown.item} />
 
 								{/* Common Talent Items */}
-								<CardItemDisplay isDarkMode={props.isDarkMode} item={props.chara.properties.talCommon.oneStar.item} />
+								<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.talCommon.oneStar.item} />
 
 								{/* Talent Book Item */}
-								<CardItemDisplay isDarkMode={props.isDarkMode} item={props.chara.properties.talent.twoStar.item} />
+								<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.talent.twoStar.item} />
 
 								{/* Talent Boss Item */}
-								<CardItemDisplay isDarkMode={props.isDarkMode} item={props.chara.properties.talBoss.item} />
+								<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.talBoss.item} />
 							</Grid>
 						</CardContent>
 					</Collapse>
