@@ -441,6 +441,40 @@ export const characters = [{
 			},
 		}
 	},{ 
+		name: "gorou",
+		element: "geo",
+		ascension: 0,
+		talent1: 1,
+		talent2: 1,
+		talent3: 1,
+		properties: {
+			ascension: { 
+				twoStar: { item: "Topaz Sliver", value: 0 },
+				threeStar: { item: "Topaz Fragment", value: 0 },
+				fourStar: { item: "Topaz Chunk", value: 0 },
+				fiveStar: { item: "Topaz Gemstone", value: 0 },
+			},
+			boss: { item: "Perpetual Heart", value: 0 },
+			common: {
+				oneStar: { item: "Spectral Husk", value: 0 },
+				twoStar: { item: "Spectral Heart", value: 0 },
+				threeStar: { item: "Spectral Nucleus", value: 0 },
+			},
+			region: { item: "Sango Pearl", value: 0 },
+			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			talent: {
+				twoStar: { item: "Teachings of Light", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Guide to Light", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				fourStar: { item: "Philosophies of Light", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			},
+			talBoss: { item: "Molten Moment", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			talCommon: {
+				oneStar: { item: "Spectral Husk", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				twoStar: { item: "Spectral Heart", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Spectral Nucleus", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			},
+		}
+	},{ 
 		name: "hu tao",
 		element: "pyro",
 		ascension: 0,
@@ -472,6 +506,40 @@ export const characters = [{
 				oneStar: { item: "Whopperflower Nectar", value: { tal1: 0, tal2: 0, tal3: 0 }},
 				twoStar: { item: "Shimmering Nectar", value: { tal1: 0, tal2: 0, tal3: 0 }},
 				threeStar: { item: "Energy Nectar", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			},
+		}
+	},{ 
+		name: "itto",
+		element: "geo",
+		ascension: 0,
+		talent1: 1,
+		talent2: 1,
+		talent3: 1,
+		properties: {
+			ascension: { 
+				twoStar: { item: "Topaz Sliver", value: 0 },
+				threeStar: { item: "Topaz Fragment", value: 0 },
+				fourStar: { item: "Topaz Chunk", value: 0 },
+				fiveStar: { item: "Topaz Gemstone", value: 0 },
+			},
+			boss: { item: "Riftborn Regalia", value: 0 },
+			common: {
+				oneStar: { item: "Slime Condensate", value: 0 },
+				twoStar: { item: "Slime Secretions", value: 0 },
+				threeStar: { item: "Slime Concentrate", value: 0 },
+			},
+			region: { item: "Onikabuto", value: 0 },
+			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			talent: {
+				twoStar: { item: "Teachings of Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Guide to Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				fourStar: { item: "Philosophies of Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			},
+			talBoss: { item: "Ashen Heart", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			talCommon: {
+				oneStar: { item: "Slime Condensate", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				twoStar: { item: "Slime Secretions", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Slime Concentrate", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
 	},{ 
