@@ -64,6 +64,7 @@ export let totalOwned = [
 	{ item: "Smoldering Pearl", amount: 0 },
 	{ item: "Storm Beads", amount: 0 },
 	{ item: "Dew of Repudiation", amount: 0 },
+	{ item: "Riftborn Regalia", amount: 0 },
 	{ item: "Agate Sliver", amount: 0 },
 	{ item: "Agate Fragment", amount: 0 },
 	{ item: "Agate Chunk", amount: 0 },
