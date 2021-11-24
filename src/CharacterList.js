@@ -48,25 +48,38 @@ export default function CharacterList(props) {
 	const isGeoNull = (travelerGeo == null)
 	const isElectroNull = (travelerElectro == null)
 
+	// defining asc outside of if statement
 	let asc = null;
 
-	if (isAnemoNull && isGeoNull && isElectroNull)
-		asc = 0;
-	else if (isAnemoNull && !isGeoNull)
-		asc = travelerGeo.ascension
-	else if (isGeoNull && !isAnemoNull)
-		asc = travelerAnemo.ascension
-	else if (travelerAnemo.ascension > travelerGeo.ascension)
-		asc = travelerAnemo.ascension
-	else
-		asc = travelerGeo.ascension
+	// If none of the travelers are null (since this runs before data is loaded)
+	if (!(isAnemoNull && isGeoNull && isElectroNull)) {
+		// Checking setting biggestVal to be greatest value
+		let biggestVal = (travelerAnemo.ascension > travelerGeo.ascension) ? travelerAnemo.ascension : travelerGeo.ascension;
+		biggestVal = (travelerElectro.ascension > biggestVal) ? travelerElectro.ascension : biggestVal;
 
-	// then set the ascension number to the electro ascension value
-	// if the electro ascension value is greater than the current ascension
-	// value set by the previous checks
-	if (!isElectroNull)
-		if(asc < travelerElectro.ascension)
-			asc = travelerElectro.ascension
+		// Sum all ascension values together
+		let sum = travelerAnemo.ascension + travelerGeo.ascension + travelerElectro.ascension;
+		// Average the sum by the greatest value (so we can see what multiple of the biggest value the sum is)
+		// ie: 5+5+5 = 15, biggest val is 5, 15 / 5 = 3
+		let avg = sum / biggestVal;
+		console.log(sum, avg, biggestVal)
+		
+		// If the average equals the amount of element traveler types
+		if (avg == 3)
+			asc = biggestVal;
+		else {
+			// Else: set all values to be biggestVal and update the travelers
+			travelerAnemo.ascension = biggestVal;
+			travelerGeo.ascension = biggestVal;
+			travelerElectro.ascension = biggestVal;
+			asc = biggestVal;
+
+			// setting biggestVal into local storage
+			localStorage.setItem("traveler anemo", JSON.stringify(travelerAnemo))
+			localStorage.setItem("traveler geo", JSON.stringify(travelerGeo))
+			localStorage.setItem("traveler electro", JSON.stringify(travelerElectro))
+		}
+	}
 		
 	const travAscChecked = (asc > 0 ? true : false)
 

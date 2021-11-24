@@ -80,6 +80,7 @@ export default function Traveler(props) {
 	const tall2 = ((char == null || char.talent2 == null) ? 1 : char.talent2)
 	const tall3 = ((char == null || char.talent3 == null) ? 1 : char.talent3)
 
+	props.chara.ascension = char.ascension;
 	props.chara.talent1 = tall1;
 	props.chara.talent2 = tall2;
 	props.chara.talent3 = tall3;
@@ -203,9 +204,6 @@ export default function Traveler(props) {
 			props.chara.talent3 = level;
 		}
 
-		// setting level state to stop weird resetting of ascension level
-		props.setLevelState({ level: props.chara.ascension, prevLevel: props.chara.ascension})
-		props.chara.ascension = props.level.level;
 		localStorage.setItem(props.chara.name + " " + props.chara.element, JSON.stringify(props.chara))
 	}
 
@@ -316,10 +314,6 @@ export default function Traveler(props) {
 		if (props.checked) {
 			props.setLevelState({...props.level, level: 0})
 
-			// Need to set character values as 0
-			resetValues();
-			props.chara.ascension = 0;
-
 			let char = null;
 			let char1 = null;
 			if (props.chara.element === "anemo"){
@@ -332,6 +326,12 @@ export default function Traveler(props) {
 				char = travelerChar[0]
 				char1 = travelerChar[1];
 			}
+
+			// Need to set character values as 0
+			resetValues();
+			props.chara.ascension = 0;
+			char.ascension = 0;
+			char1.ascension = 0;
 
 			// one for current mc's element
 			resetTalentValues(props.chara, "tal1", props.chara.element);
