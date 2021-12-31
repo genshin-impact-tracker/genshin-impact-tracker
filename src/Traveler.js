@@ -80,7 +80,7 @@ export default function Traveler(props) {
 	const tall2 = ((char == null || char.talent2 == null) ? 1 : char.talent2)
 	const tall3 = ((char == null || char.talent3 == null) ? 1 : char.talent3)
 
-	props.chara.ascension = char.ascension;
+	props.chara.ascension = (char === null) ? 0 : char.ascension;
 	props.chara.talent1 = tall1;
 	props.chara.talent2 = tall2;
 	props.chara.talent3 = tall3;

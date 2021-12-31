@@ -52,7 +52,7 @@ export default function CharacterList(props) {
 	let asc = null;
 
 	// If none of the travelers are null (since this runs before data is loaded)
-	if (!(isAnemoNull && isGeoNull && isElectroNull)) {
+	if (!isAnemoNull && !isGeoNull && !isElectroNull) {
 		// Checking setting biggestVal to be greatest value
 		let biggestVal = (travelerAnemo.ascension > travelerGeo.ascension) ? travelerAnemo.ascension : travelerGeo.ascension;
 		biggestVal = (travelerElectro.ascension > biggestVal) ? travelerElectro.ascension : biggestVal;
@@ -79,6 +79,8 @@ export default function CharacterList(props) {
 			localStorage.setItem("traveler geo", JSON.stringify(travelerGeo))
 			localStorage.setItem("traveler electro", JSON.stringify(travelerElectro))
 		}
+	} else if (isAnemoNull && isGeoNull && isElectroNull) {
+		asc = 0;
 	}
 		
 	const travAscChecked = (asc > 0 ? true : false)

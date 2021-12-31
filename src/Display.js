@@ -68,7 +68,7 @@ function a11yProps(index) {
 	};
 }
 
-const url = "http://genshin-impact-tracker.github.io/genshin-impact-tracker"
+const url = "https://genshin-impact-tracker.github.io/genshin-impact-tracker"
 
 const useStyles = makeStyles((theme) => ({
 	card: {

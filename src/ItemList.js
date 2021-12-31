@@ -374,12 +374,12 @@ export default function ItemList(props) {
 	})
 
 	return (
-		<div className={classes.body}>
-			<Container className={classes.cardGrid} maxWidth="md">
+		<div>
+			<Container className={classes.cardGrid} maxWidth="lg">
 				<Grid container spacing={4}>
 					{(props.search === "" ? totalOwned : props.updateItems)
 						.map((ite) => (
-							<Grid item key={ite.item} xs={12} sm={6} md={4}>
+							<Grid item key={ite.item} xs={12} sm={6} md={4} lg={4}>
 								<Suspense fallback={<CircularProgress className={props.isDarkMode ? classes.circle : ""} disableShrink />}>
 									<Item isDarkMode={props.isDarkMode} item={ite.item} array={charItems} maxItems={maxItems} url={props.url} className={classes.item} />
 								</Suspense>

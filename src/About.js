@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
 		[theme.breakpoints.up('sm')]: {
 			paddingTop: theme.spacing(12),
 		},
-		height: '40.85rem'
 	},
 	title: {
 		justifyContent: 'center',
