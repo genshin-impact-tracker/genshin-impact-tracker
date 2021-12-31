@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import PropTypes from 'prop-types';
 
 import { characters } from './Backend/characters'
@@ -7,6 +8,7 @@ import { totalOwned } from './Backend/totals'
 import ItemList from './ItemList'
 import CharacterList from './CharacterList'
 import About from './About'
+import TableDisplay from './TableDisplay'
 
 import { fade, makeStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
@@ -222,6 +224,8 @@ export default function Display() {
 	const dm = JSON.parse(localStorage.getItem("darkMode"));
 	const [isDarkMode, setDarkMode] = useState((dm != null) ? dm : false);
 
+	const isMobile = useMediaQuery({ query: `(max-width: 600px)` });
+
 	const handleChange = (event, newValue) => {
 		setTab(newValue);
 		window.scrollTo(top)
@@ -255,7 +259,8 @@ export default function Display() {
 	}
 
 	const onHomeButtonClick = (val) => {
-		setDrawerOpen(val)
+		if (isMobile)
+			setDrawerOpen(val)
 	}
 
 	const toggleDrawer = (open) => (event) => {
@@ -274,10 +279,9 @@ export default function Display() {
 	const list = () => (
 		<div className={classes.list}
 			styles={isDarkMode ? { backgroundColor: "#464646" }  : { backgroundColor: "#ebebeb"}}
-			// role="presentation"
 			onClick={toggleDrawer(false)}
-			onKeyDown={toggleDrawer(false)}
-		>
+			onKeyDown={toggleDrawer(false)}>
+
 			<span className={classes.span} 
 				styles={isDarkMode ? { backgroundColor: "#224a61" } : { backgroundColor: "white"}}>
 				<ListItem key="Menu">
@@ -286,11 +290,12 @@ export default function Display() {
 				</ListItem>
 			</span>
 			<List>
-				{['Characters', 'Totals', 'About'].map((text, index) => (
+				{['Characters', 'Totals', 'Table', 'About'].map((text, index) => (
 					<ListItem button key={text} onClick={() => onListItemClick(index)}>
-						<ListItemIcon>{(index == 0) ? <PeopleIcon style={{color: 'white'}} /> : 
-							(index == 2) ? <AboutIcon style={{color: 'white'}} /> : 
-							<ListIcon style={{color: 'white'}} />}</ListItemIcon>
+						<ListItemIcon>{(index == 0) ? <PeopleIcon style={{color: 'white'}} /> 
+							: (index == 2) ? <TableIcon style={{color: 'white'}} />
+							:  (index == 3) ? <AboutIcon style={{color: 'white'}} /> 
+							: <ListIcon style={{color: 'white'}} />}</ListItemIcon>
 						<ListItemText primary={text} />
 					</ListItem>
 				))}
@@ -314,7 +319,7 @@ export default function Display() {
 							aria-label="open drawer"
 							onClick={() => onHomeButtonClick(!isDrawerOpen)}
 						>
-							<HomeIcon />
+							{ isMobile ? <MenuIcon /> : <HomeIcon /> }
 						</IconButton>
 
 						<Typography className={classes.title} variant="h6">Genshin Impact Tracker</Typography>
@@ -350,7 +355,8 @@ export default function Display() {
 						aria-label="characters">
 							<Tab className={classes.toolbarItems} index={0} label="Characters" {...a11yProps(0)}></Tab>
 							<Tab className={classes.toolbarItems} index={1} label="Totals" {...a11yProps(1)}></Tab>
-							<Tab className={classes.toolbarItems} index={2} label="About" {...a11yProps(2)}></Tab>
+							<Tab className={classes.toolbarItems} index={2} label="Table" {...a11yProps(2)}></Tab>
+							<Tab className={classes.toolbarItems} index={3} label="About" {...a11yProps(3)}></Tab>
 					</Tabs>
 
 					<Drawer className={classes.phoneMenu} anchor={'left'} 
@@ -376,8 +382,13 @@ export default function Display() {
 				<ItemList isDarkMode={isDarkMode} search={searchVal} url={url} updateItems={updateItems} />
 			</TabPanel>
 
-			{/* About */}
+			{/* Item Table */}
 			<TabPanel style={{overflowY: 'auto'}} className={isDarkMode ? classes.dmBackground : classes.notDMBackground} value={tab} index={2}>
+				<TableDisplay url={url} isDarkMode={isDarkMode} />
+			</TabPanel>
+
+			{/* About */}
+			<TabPanel style={{overflowY: 'auto'}} className={isDarkMode ? classes.dmBackground : classes.notDMBackground} value={tab} index={3}>
 				<About isDarkMode={isDarkMode} />
 			</TabPanel>
 		</div>
