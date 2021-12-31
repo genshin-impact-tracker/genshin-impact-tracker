@@ -3,10 +3,10 @@ export const gemChars = [
     { item: "Agate Fragment", chars: ["Amber", "Bennett", "Diluc", "Klee", "Hu Tao", "Thoma", "Xiangling", "Xinyan", "Yanfei", "Yoimiya"]},
     { item: "Agate Chunk", chars: ["Amber", "Bennett", "Diluc", "Klee", "Hu Tao", "Thoma", "Xiangling", "Xinyan", "Yanfei", "Yoimiya"]},
     { item: "Agate Gemstone", chars: ["Amber", "Bennett", "Diluc", "Klee", "Hu Tao", "Thoma", "Xiangling", "Xinyan", "Yanfei", "Yoimiya"]},
-    { item: "Lazurite Sliver", chars: ["Ayato", "Barbara", "Kokomi", "Mona", "Tartaglia", "Xingqiu"]},
-    { item: "Lazurite Fragment", chars: ["Ayato", "Barbara", "Kokomi", "Mona", "Tartaglia", "Xingqiu"]},
-    { item: "Lazurite Chunk", chars: ["Ayato", "Barbara", "Kokomi", "Mona", "Tartaglia", "Xingqiu"]},
-    { item: "Lazurite Gemstone", chars: ["Ayato", "Barbara", "Kokomi", "Mona", "Tartaglia", "Xingqiu"]},
+    { item: "Lazurite Sliver", chars: ["Barbara", "Kokomi", "Mona", "Tartaglia", "Xingqiu"]},
+    { item: "Lazurite Fragment", chars: ["Barbara", "Kokomi", "Mona", "Tartaglia", "Xingqiu"]},
+    { item: "Lazurite Chunk", chars: ["Barbara", "Kokomi", "Mona", "Tartaglia", "Xingqiu"]},
+    { item: "Lazurite Gemstone", chars: ["Barbara", "Kokomi", "Mona", "Tartaglia", "Xingqiu"]},
     { item: "Amethyst Sliver", chars: ["Beidou", "Fischl", "Keqing", "Lisa", "Raiden", "Razor", "Sara"]},
     { item: "Amethyst Fragment", chars: ["Beidou", "Fischl", "Keqing", "Lisa", "Raiden", "Razor", "Sara"]},
     { item: "Amethyst Chunk", chars: ["Beidou", "Fischl", "Keqing", "Lisa", "Raiden", "Razor", "Sara"]},
@@ -140,7 +140,7 @@ export const talCommon = [
 ]
 
 export const crowns = [
-    { item: "Crown of Sagehood", chars: ["Aether", "Albedo", "Aloy", "Amber", "Ayaka", "Ayato", "Barbara", "Beidou", "Bennett", "Chongyun", "Diluc", "Diona", "Eula", "Fischl", "Ganyu", "Gorou", "Hu Tao", "Itto", "Jean", "Kaeya", "Kazuha", "Keqing", "Klee", "Kokomi", "Lisa", "Lumine", "Mona", "Ningguang", "Noelle", "Qiqi", "Raiden", "Razor", "Rosaria", "Sara", "Sayu", "Sucrose", "Tartaglia", "Thoma", "Venti", "Xiao", "Xiangling", "Xingqiu", "Xinyan", "Yanfei", "Yoimiya", "Zhongli"]}
+    { item: "Crown of Sagehood", chars: ["Aether", "Albedo", "Aloy", "Amber", "Ayaka", "Barbara", "Beidou", "Bennett", "Chongyun", "Diluc", "Diona", "Eula", "Fischl", "Ganyu", "Gorou", "Hu Tao", "Itto", "Jean", "Kaeya", "Kazuha", "Keqing", "Klee", "Kokomi", "Lisa", "Lumine", "Mona", "Ningguang", "Noelle", "Qiqi", "Raiden", "Razor", "Rosaria", "Sara", "Sayu", "Sucrose", "Tartaglia", "Thoma", "Venti", "Xiao", "Xiangling", "Xingqiu", "Xinyan", "Yanfei", "Yoimiya", "Zhongli"]}
 ]
 
 export const books = [
