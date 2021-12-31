@@ -17,12 +17,14 @@ const useStyles = makeStyles((theme) => ({
 		position: 'relative',
 		backgroundColor: '#f5f5f5',
 		marginBottom: '5rem',
+        maxWidth: '60rem',
 	},
 	dmTable: {
 		top: '3rem',
 		position: 'relative',
 		backgroundColor: '#777777',
 		marginBottom: '5rem',
+        maxWidth: '60rem',
 	},
 	cell: {
 		color: "black",
@@ -53,7 +55,7 @@ export default function ItemTable(props) {
 	const classes = useStyles();
 
 	return (
-		<div>
+		<div style={{justifyContent: 'center', display: 'flex'}}>
 			<TableContainer className={props.isDarkMode ? classes.dmTable : classes.table} component={Paper}>
 				<Table sx={{ minWidth: 700 }}>
 					<TableHead>
