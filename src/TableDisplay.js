@@ -119,7 +119,7 @@ const bossList = [
 	createData("Dew of Repudiation", 0, 0, 0),
 	createData("Storm Beads", 0, 0, 0),
 	createData("Riftborn Regalia", 0, 0, 0),
-	// createData("Dragonheir's False Fin"	, 0, 0, 0),
+	createData("Dragonheir's False Fin"	, 0, 0, 0),
 ]
 
 const bookList = [
