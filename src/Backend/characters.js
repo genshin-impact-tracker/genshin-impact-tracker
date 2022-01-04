@@ -1087,6 +1087,40 @@ export const characters = [{
 			},
 		}
 	},{ 
+		name: "shenhe",
+		element: "cryo",
+		ascension: 0,
+		talent1: 1,
+		talent2: 1,
+		talent3: 1,
+		properties: {
+			ascension: { 
+				twoStar: { item: "Jade Sliver", value: 0 },
+				threeStar: { item: "Jade Fragment", value: 0 },
+				fourStar: { item: "Jade Chunk", value: 0 },
+				fiveStar: { item: "Jade Gemstone", value: 0 },
+			},
+			boss: { item: "Dragonheir's False Fin", value: 0 },
+			common: {
+				oneStar: { item: "Whopperflower Nectar", value: 0 },
+				twoStar: { item: "Shimmering Nectar", value: 0 },
+				threeStar: { item: "Energy Nectar", value: 0 },
+			},
+			region: { item: "Qingxin", value: 0 },
+			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			talent: {
+				twoStar: { item: "Teachings of Prosperity", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Guide to Prosperity", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				fourStar: { item: "Philosophies of Prosperity", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			},
+			talBoss: { item: "Hellfire Butterfly", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			talCommon: { 
+				oneStar: { item: "Whopperflower Nectar", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				twoStar: { item: "Shimmering Nectar", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Energy Nectar", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			},
+		}
+	},{ 
 		name: "sucrose",
 		element: "anemo",
 		ascension: 0,
@@ -1424,6 +1458,40 @@ export const characters = [{
 				oneStar: { item: "Divining Scroll", value: { tal1: 0, tal2: 0, tal3: 0 }},
 				twoStar: { item: "Sealed Scroll", value: { tal1: 0, tal2: 0, tal3: 0 }},
 				threeStar: { item: "Forbidden Scroll", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			},
+		}
+	},{ 
+		name: "yun jin",
+		element: "geo",
+		ascension: 0,
+		talent1: 1,
+		talent2: 1,
+		talent3: 1,
+		properties: {
+			ascension: { 
+				twoStar: { item: "Topaz Sliver", value: 0 },
+				threeStar: { item: "Topaz Fragment", value: 0 },
+				fourStar: { item: "Topaz Chunk", value: 0 },
+				fiveStar: { item: "Topaz Gemstone", value: 0 },
+			},
+			boss: { item: "Riftborn Regalia", value: 0 },
+			common: {
+				oneStar: { item: "Damaged Mask", value: 0 },
+				twoStar: { item: "Stained Mask", value: 0 },
+				threeStar: { item: "Ominous Mask", value: 0 },
+			},
+			region: { item: "Glaze Lily", value: 0 },
+			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			talent: {
+				twoStar: { item: "Teachings of Diligence", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Guide to Diligence", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				fourStar: { item: "Philosophies of Diligence", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			},
+			talBoss: { item: "Ashen Heart", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			talCommon: {
+				oneStar: { item: "Damaged Mask", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				twoStar: { item: "Stained Mask", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Ominous Mask", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
 	},{ 
