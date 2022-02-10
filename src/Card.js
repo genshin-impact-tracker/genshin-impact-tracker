@@ -85,7 +85,9 @@ export default function Card(props) {
 	const tall1 = (char == null || char.talent1 == null) ? 1 : char.talent1
 	const tall2 = (char == null || char.talent1 == null) ? 1 : char.talent2
 	const tall3 = (char == null || char.talent1 == null) ? 1 : char.talent3
+
 	const ascChecked = (asc > 0 ? true : false)
+	props.chara.owned = (char && char.owned) ? char.owned : ascChecked;
 
 	// setting the properties of the character's talents
 	props.chara.talent1 = tall1;
@@ -93,7 +95,7 @@ export default function Card(props) {
 	props.chara.talent3 = tall3;
 
 	const [ levelState, setLevelState ] = useState({ level: asc, prevLevel: 0 })
-	const [ checked, setChecked ] = useState(ascChecked);
+	const [ checked, setChecked ] = useState(props.chara.owned);
 	const [ talentState, setTalentState ] = useState({ talent1: tall1, talent2: tall2, talent3: tall3 });
 	const [ expandedAsc, setExpandedAsc ] = React.useState(false);
 	const [ expandedTal, setExpandedTal ] = React.useState(false);
@@ -250,6 +252,8 @@ export default function Card(props) {
 	// when the checked status of the toggle button changes
 	const onToggleChange = (event) => {
 		setChecked(!checked)
+		props.chara.owned = !checked;
+
 		if (checked) {
 			// Need to set character values as 0
 			resetValues();
@@ -276,10 +280,9 @@ export default function Card(props) {
 			props.chara.talent3 = 1;
 
 			console.log(levelState, talentState, props.chara)
-			
-			// saving character in localstorage
-			localStorage.setItem(props.chara.name, JSON.stringify(props.chara))
 		}
+		// saving character in localstorage
+		localStorage.setItem(props.chara.name, JSON.stringify(props.chara))
 	}
 
 	const IconSwitch = () => {
