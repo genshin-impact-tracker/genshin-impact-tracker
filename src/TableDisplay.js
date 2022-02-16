@@ -168,9 +168,9 @@ const talBossList = [
 	createData("Molten Moment", 0, 0, 0),
 	createData("Hellfire Butterfly", 0, 0, 0),
 	createData("Ashen Heart", 0, 0, 0),
-	createData("The Meaning of Aeons", 0, 0, 0),
 	createData("Mudra of the Malefic General", 0, 0, 0),
 	createData("Tears of the Calamitous God", 0, 0, 0),	
+	createData("The Meaning of Aeons", 0, 0, 0),
 ]
 
 const crownList = [

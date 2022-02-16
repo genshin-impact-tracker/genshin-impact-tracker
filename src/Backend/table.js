@@ -189,7 +189,7 @@ export const talBossMats = [
     { item: "Molten Moment", chars: ["Aloy", "Gorou", "Raiden"]},
     { item: "Hellfire Butterfly", chars: ["Kokomi", "Shenhe", "Thoma"]},
     { item: "Ashen Heart", chars: ["Itto", "Sara", "Yun Jin"]},
-    { item: "The Meaning of Aeons", chars: ["Yae Miko"]},
     { item: "Mudra of the Malefic General", chars: []},
     { item: "Tears of the Calamitous God", chars: []},
+    { item: "The Meaning of Aeons", chars: ["Yae Miko"]},
 ]
