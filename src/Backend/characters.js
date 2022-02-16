@@ -1475,6 +1475,42 @@ export const characters = [{
 		},
 	}
 },{ 
+	name: "yae miko",
+	element: "electro",
+	ascension: 0,
+	owned: false,
+	fav: false,
+	talent1: 1,
+	talent2: 1,
+	talent3: 1,
+	properties: {
+		ascension: { 
+			twoStar: { item: "Amethyst Sliver", value: 0 },
+			threeStar: { item: "Amethyst Fragment", value: 0 },
+			fourStar: { item: "Amethyst Chunk", value: 0 },
+			fiveStar: { item: "Amethyst Gemstone", value: 0 },
+		},
+		boss: { item: "Dragonheir's False Fin", value: 0 },
+		common: {
+			oneStar: { item: "Old Handguard", value: 0 },
+			twoStar: { item: "Kageuchi Handguard", value: 0 },
+			threeStar: { item: "Famed Handguard", value: 0 },
+		},
+		region: { item: "Sea Ganoderma", value: 0 },
+		crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talent: {
+			twoStar: { item: "Teachings of Light", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Guide to Light", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			fourStar: { item: "Philosophies of Light", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+		talBoss: { item: "The Meaning of Aeons", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talCommon: {
+			oneStar: { item: "Old Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			twoStar: { item: "Kageuchi Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Famed Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+	}
+},{ 
 	name: "yanfei",
 	element: "pyro",
 	ascension: 0,

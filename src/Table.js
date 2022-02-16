@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: '#f5f5f5',
 		marginBottom: '5rem',
         maxWidth: '60rem',
+		maxHeight: '30rem',
 	},
 	dmTable: {
 		top: '3rem',
@@ -25,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: '#777777',
 		marginBottom: '5rem',
         maxWidth: '60rem',
+		maxHeight: '30rem',
 	},
 	cell: {
 		color: "black",
