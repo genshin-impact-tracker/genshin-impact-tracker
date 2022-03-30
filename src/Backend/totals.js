@@ -66,6 +66,7 @@ export let totalOwned = [
 	{ item: "Dew of Repudiation", amount: 0 },
 	{ item: "Riftborn Regalia", amount: 0 },
 	{ item: "Dragonheir's False Fin", amount: 0 },
+	{ item: "Runic Fang", amount: 0 },
 	{ item: "Agate Sliver", amount: 0 },
 	{ item: "Agate Fragment", amount: 0 },
 	{ item: "Agate Chunk", amount: 0 },

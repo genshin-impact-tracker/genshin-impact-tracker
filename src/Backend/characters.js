@@ -143,6 +143,42 @@ export const characters = [{
 		},
 	}
 },{ 
+	name: "ayato",
+	element: "hydro",
+	ascension: 0,
+	owned: false,
+	fav: false,
+	talent1: 1,
+	talent2: 1,
+	talent3: 1,
+	properties: {
+		ascension: { 
+			twoStar: { item: "Lazurite Sliver", value: 0 },
+			threeStar: { item: "Lazurite Fragment", value: 0 },
+			fourStar: { item: "Lazurite Chunk", value: 0 },
+			fiveStar: { item: "Lazurite Gemstone", value: 0 },
+		},
+		boss: { item: "Dew of Repuidation", value: 0 },
+		common: {
+			oneStar: { item: "Old Handguard", value: 0 },
+			twoStar: { item: "Kageuchi Handguard", value: 0 },
+			threeStar: { item: "Famed Handguard", value: 0 },
+		},
+		region: { item: "Sakura Bloom", value: 0 },
+		crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talent: {
+			twoStar: { item: "Teachings of Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Guide to Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			fourStar: { item: "Philosophies of Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+		talBoss: { item: "Mudra of the Malefic General", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talCommon: { 
+			oneStar: { item: "Old Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			twoStar: { item: "Kageuchi Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Famed Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+	}
+},{ 
 	name: "barbara",
 	element: "hydro",
 	ascension: 0,
