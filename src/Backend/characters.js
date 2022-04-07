@@ -158,7 +158,7 @@ export const characters = [{
 			fourStar: { item: "Lazurite Chunk", value: 0 },
 			fiveStar: { item: "Lazurite Gemstone", value: 0 },
 		},
-		boss: { item: "Dew of Repuidation", value: 0 },
+		boss: { item: "Dew of Repudiation", value: 0 },
 		common: {
 			oneStar: { item: "Old Handguard", value: 0 },
 			twoStar: { item: "Kageuchi Handguard", value: 0 },

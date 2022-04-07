@@ -89,6 +89,9 @@ export const commons = [
     { item: "Spectral Husk", chars: ["Aloy", "Gorou", "Kokomi"] },
     { item: "Spectral Heart", chars: ["Aloy", "Gorou", "Kokomi"] },
     { item: "Spectral Nucleus", chars: ["Aloy", "Gorou", "Kokomi"] },
+    { item: "Fungal Spores", chars: [] },
+    { item: "Luminescent Pollen", chars: [] },
+    { item: "Crystalline Cyst Dust", chars: [] },
 ]
 
 export const bossMats = [
@@ -138,6 +141,9 @@ export const talCommon = [
     { item: "Spectral Husk", chars: ["Aloy", "Gorou", "Kokomi"] },
     { item: "Spectral Heart", chars: ["Aloy", "Gorou", "Kokomi"] },
     { item: "Spectral Nucleus", chars: ["Aloy", "Gorou", "Kokomi"] },
+    { item: "Fungal Spores", chars: [] },
+    { item: "Luminescent Pollen", chars: [] },
+    { item: "Crystalline Cyst Dust", chars: [] },
 ]
 
 export const crowns = [

@@ -102,6 +102,9 @@ const commonList = [
 	createData("Spectral Husk", 0, 0, 0),
 	createData("Spectral Heart", 0, 0, 0),
 	createData("Spectral Nucleus", 0, 0, 0),
+	createData("Fungal Spores", 0, 0, 0),
+	createData("Luminescent Pollen", 0, 0, 0),
+	createData("Crystalline Cyst Dust", 0, 0, 0),
 ]
 
 const bossList = [
