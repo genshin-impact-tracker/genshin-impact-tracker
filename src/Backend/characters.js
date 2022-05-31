@@ -827,6 +827,42 @@ export const characters = [{
 		},
 	}
 },{ 
+	name: "kuki shinobu",
+	element: "electro",
+	ascension: 0,
+	owned: false,
+	fav: false,
+	talent1: 1,
+	talent2: 1,
+	talent3: 1,
+	properties: {
+		ascension: { 
+			twoStar: { item: "Amethyst Sliver", value: 0 },
+			threeStar: { item: "Amethyst Fragment", value: 0 },
+			fourStar: { item: "Amethyst Chunk", value: 0 },
+			fiveStar: { item: "Amethyst Gemstone", value: 0 },
+		},
+		boss: { item: "Runic Fang", value: 0 },
+		common: {
+			oneStar: { item: "Spectral Husk", value: 0 },
+			twoStar: { item: "Spectral Heart", value: 0 },
+			threeStar: { item: "Spectral Nucleus", value: 0 },
+		},
+		region: { item: "Naku Weed", value: 0 },
+		crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talent: {
+			twoStar: { item: "Teachings of Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Guide to Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			fourStar: { item: "Philosophies of Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+		talBoss: { item: "Tears of the Calamitous God", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talCommon: {
+			oneStar: { item: "Spectral Husk", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			twoStar: { item: "Spectral Heart", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Spectral Nucleus", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+	}
+},{ 
 	name: "lisa",
 	element: "electro",
 	ascension: 0,
@@ -1580,6 +1616,42 @@ export const characters = [{
 			oneStar: { item: "Treasure Hoarder Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			twoStar: { item: "Silver Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			threeStar: { item: "Golden Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+	}
+},{ 
+	name: "yelan",
+	element: "hydro",
+	ascension: 0,
+	owned: false,
+	fav: false,
+	talent1: 1,
+	talent2: 1,
+	talent3: 1,
+	properties: {
+		ascension: { 
+			twoStar: { item: "Lazurite Sliver", value: 0 },
+			threeStar: { item: "Lazurite Fragment", value: 0 },
+			fourStar: { item: "Lazurite Chunk", value: 0 },
+			fiveStar: { item: "Lazurite Gemstone", value: 0 },
+		},
+		boss: { item: "Runic Fang", value: 0 },
+		common: {
+			oneStar: { item: "Recruit's Insignia", value: 0 },
+			twoStar: { item: "Sergeant's Insignia", value: 0 },
+			threeStar: { item: "Lieutenant's Insignia", value: 0 },
+		},
+		region: { item: "Starconch", value: 0 },
+		crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talent: {
+			twoStar: { item: "Teachings of Prosperity", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Guide to Prosperity", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			fourStar: { item: "Philosophies of Prosperity", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+		talBoss: { item: "Gilded Scale", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talCommon: {
+			oneStar: { item: "Recruit's Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			twoStar: { item: "Sergeant's Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Lieutenant's Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 		},
 	}
 },{ 
