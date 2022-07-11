@@ -538,6 +538,42 @@ export const characters = [{
 			threeStar: { item: "Spectral Nucleus", value: { tal1: 0, tal2: 0, tal3: 0 }},
 		},
 	}
+},{  
+	name: "heizou",
+	element: "anemo",
+	ascension: 0,
+	owned: false,
+	fav: false,
+	talent1: 1,
+	talent2: 1,
+	talent3: 1,
+	properties: {
+		ascension: { 
+			twoStar: { item: "Turquoise Sliver", value: 0 },
+			threeStar: { item: "Turquoise Fragment", value: 0 },
+			fourStar: { item: "Turquoise Chunk", value: 0 },
+			fiveStar: { item: "Turquoise Gemstone", value: 0 },
+		},
+		boss: { item: "Runic Fang", value: 0 },
+		common: {
+			oneStar: { item: "Treasure Hoarder Insignia", value: 0 },
+			twoStar: { item: "Silver Raven Insignia", value: 0 },
+			threeStar: { item: "Golden Raven Insignia", value: 0 },
+		},
+		region: { item: "Onikabuto", value: 0 },
+		crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talent: {
+			twoStar: { item: "Teachings of Transience", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Guide to Transience", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			fourStar: { item: "Philosophies of Transience", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+		talBoss: { item: "The Meaning of Aeons", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talCommon: {
+			oneStar: { item: "Treasure Hoarder Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			twoStar: { item: "Silver Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Golden Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+	}
 },{ 
 	name: "hu tao",
 	element: "pyro",
@@ -821,42 +857,6 @@ export const characters = [{
 		},
 		talBoss: { item: "Hellfire Butterfly", value: { tal1: 0, tal2: 0, tal3: 0 }},
 		talCommon: { 
-			oneStar: { item: "Spectral Husk", value: { tal1: 0, tal2: 0, tal3: 0 }},
-			twoStar: { item: "Spectral Heart", value: { tal1: 0, tal2: 0, tal3: 0 }},
-			threeStar: { item: "Spectral Nucleus", value: { tal1: 0, tal2: 0, tal3: 0 }},
-		},
-	}
-},{ 
-	name: "kuki shinobu",
-	element: "electro",
-	ascension: 0,
-	owned: false,
-	fav: false,
-	talent1: 1,
-	talent2: 1,
-	talent3: 1,
-	properties: {
-		ascension: { 
-			twoStar: { item: "Amethyst Sliver", value: 0 },
-			threeStar: { item: "Amethyst Fragment", value: 0 },
-			fourStar: { item: "Amethyst Chunk", value: 0 },
-			fiveStar: { item: "Amethyst Gemstone", value: 0 },
-		},
-		boss: { item: "Runic Fang", value: 0 },
-		common: {
-			oneStar: { item: "Spectral Husk", value: 0 },
-			twoStar: { item: "Spectral Heart", value: 0 },
-			threeStar: { item: "Spectral Nucleus", value: 0 },
-		},
-		region: { item: "Naku Weed", value: 0 },
-		crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
-		talent: {
-			twoStar: { item: "Teachings of Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
-			threeStar: { item: "Guide to Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
-			fourStar: { item: "Philosophies of Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
-		},
-		talBoss: { item: "Tears of the Calamitous God", value: { tal1: 0, tal2: 0, tal3: 0 }},
-		talCommon: {
 			oneStar: { item: "Spectral Husk", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			twoStar: { item: "Spectral Heart", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			threeStar: { item: "Spectral Nucleus", value: { tal1: 0, tal2: 0, tal3: 0 }},
@@ -1256,6 +1256,42 @@ export const characters = [{
 			oneStar: { item: "Whopperflower Nectar", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			twoStar: { item: "Shimmering Nectar", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			threeStar: { item: "Energy Nectar", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+	}
+},{ 
+	name: "shinobu",
+	element: "electro",
+	ascension: 0,
+	owned: false,
+	fav: false,
+	talent1: 1,
+	talent2: 1,
+	talent3: 1,
+	properties: {
+		ascension: { 
+			twoStar: { item: "Amethyst Sliver", value: 0 },
+			threeStar: { item: "Amethyst Fragment", value: 0 },
+			fourStar: { item: "Amethyst Chunk", value: 0 },
+			fiveStar: { item: "Amethyst Gemstone", value: 0 },
+		},
+		boss: { item: "Runic Fang", value: 0 },
+		common: {
+			oneStar: { item: "Spectral Husk", value: 0 },
+			twoStar: { item: "Spectral Heart", value: 0 },
+			threeStar: { item: "Spectral Nucleus", value: 0 },
+		},
+		region: { item: "Naku Weed", value: 0 },
+		crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talent: {
+			twoStar: { item: "Teachings of Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Guide to Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			fourStar: { item: "Philosophies of Elegance", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+		talBoss: { item: "Tears of the Calamitous God", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talCommon: {
+			oneStar: { item: "Spectral Husk", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			twoStar: { item: "Spectral Heart", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Spectral Nucleus", value: { tal1: 0, tal2: 0, tal3: 0 }},
 		},
 	}
 },{ 
