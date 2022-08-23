@@ -411,16 +411,16 @@ export default function Card(props) {
 						<CardContent style={{paddingTop: '0px'}}>
 							<Grid container style={{display: 'inline-flex'}}>
 								{/* Gem Items */}
-								<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.ascension.fiveStar.item} />
+								<CardItemDisplay url={props.url} display={true} isDarkMode={props.isDarkMode} item={props.chara.properties.ascension.fiveStar.item} />
 
 								{/* Common Enemy Items */}
-								<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.talCommon.oneStar.item} />
+								<CardItemDisplay url={props.url} display={true} isDarkMode={props.isDarkMode} item={props.chara.properties.talCommon.oneStar.item} />
 
 								{/* Regional Item */}
-								<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.region.item} />
+								<CardItemDisplay url={props.url} display={true} isDarkMode={props.isDarkMode} item={props.chara.properties.region.item} />
 
 								{/* Ascension Boss Item */}
-								<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.boss.item} />
+								<CardItemDisplay url={props.url} display={true} isDarkMode={props.isDarkMode} item={props.chara.properties.boss.item} />
 							</Grid>
 						</CardContent>
 					</Collapse>
@@ -440,16 +440,16 @@ export default function Card(props) {
 						<CardContent style={{paddingTop: '0px'}}>
 							<Grid container style={{display: 'inline-flex'}}>
 								{/* Crown Items */}
-								<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.crown.item} />
+								<CardItemDisplay url={props.url} display={true} isDarkMode={props.isDarkMode} item={props.chara.properties.crown.item} />
 
 								{/* Common Talent Items */}
-								<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.talCommon.oneStar.item} />
+								<CardItemDisplay url={props.url} display={true} isDarkMode={props.isDarkMode} item={props.chara.properties.talCommon.oneStar.item} />
 
 								{/* Talent Book Item */}
-								<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.talent.twoStar.item} />
+								<CardItemDisplay url={props.url} display={true} isDarkMode={props.isDarkMode} item={props.chara.properties.talent.twoStar.item} />
 
 								{/* Talent Boss Item */}
-								<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.talBoss.item} />
+								<CardItemDisplay url={props.url} display={true} isDarkMode={props.isDarkMode} item={props.chara.properties.talBoss.item} />
 							</Grid>
 						</CardContent>
 					</Collapse>

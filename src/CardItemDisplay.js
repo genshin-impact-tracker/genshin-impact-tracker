@@ -21,10 +21,11 @@ export default function CardItemDisplay(props) {
 					image={props.url + '/Items/' + props.item + '.png'}
 					title={props.item}
 					style={{display: 'inline-flex', height: '50px', width: '50px'}}/>
-				<h4 className={props.isDarkMode ? classes.dmText : ""} 
-					style={{display: 'inline-flex', margin: "12px 0px"}}>
-						{props.item}
-				</h4>
+				{ props.display ? 
+					<h4 className={props.isDarkMode ? classes.dmText : ""} 
+						style={{display: 'inline-flex', margin: "12px 0px"}}>
+							{props.item}
+					</h4> : null }
 			</Grid>
 		</div>
 	)

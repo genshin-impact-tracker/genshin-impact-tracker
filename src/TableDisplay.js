@@ -36,10 +36,10 @@ const gems = [
 	createData("Topaz Fragment", 0, 0, 0),
 	createData("Topaz Chunk", 0, 0, 0),
 	createData("Topaz Gemstone", 0, 0, 0),
-	// createData("Emerald Sliver", 0, 0, 0),
-	// createData("Emerald Fragment", 0, 0, 0),
-	// createData("Emerald Chunk", 0, 0, 0),
-	// createData("Emerald Gemstone", 0, 0, 0),
+	createData("Emerald Sliver", 0, 0, 0),
+	createData("Emerald Fragment", 0, 0, 0),
+	createData("Emerald Chunk", 0, 0, 0),
+	createData("Emerald Gemstone", 0, 0, 0),
 	createData("Brilliant Diamond Sliver", 0, 0, 0),
 	createData("Brilliant Diamond Fragment", 0, 0, 0),
 	createData("Brilliant Diamond Chunk", 0, 0, 0),
@@ -72,6 +72,14 @@ const localSpecialtyList = [
 	createData("Sango Pearl", 0, 0, 0),
 	createData("Amakumo Fruit", 0, 0, 0),
 	createData("Fluorescent Fungus", 0, 0, 0),
+	createData("Sumeru Rose", 0, 0, 0),
+	createData("Padisarah", 0, 0, 0),
+	createData("Zaytun Peach", 0, 0, 0),
+	createData("Harra Fruit", 0, 0, 0),
+	createData("Viboya", 0, 0, 0),
+	createData("Kalpalata Lotus", 0, 0, 0),
+	createData("Nilotpala Lotus", 0, 0, 0),
+	createData("Rukkhashava Mushrooms", 0, 0, 0),
 ];
 
 const commonList = [
@@ -105,6 +113,9 @@ const commonList = [
 	createData("Fungal Spores", 0, 0, 0),
 	createData("Luminescent Pollen", 0, 0, 0),
 	createData("Crystalline Cyst Dust", 0, 0, 0),
+	createData("Faded Red Satin", 0, 0, 0),
+	createData("Trimmed Red Silk", 0, 0, 0),
+	createData("Rich Red Brocade", 0, 0, 0),
 ]
 
 const bossList = [
@@ -122,8 +133,10 @@ const bossList = [
 	createData("Dew of Repudiation", 0, 0, 0),
 	createData("Storm Beads", 0, 0, 0),
 	createData("Riftborn Regalia", 0, 0, 0),
-	createData("Dragonheir's False Fin"	, 0, 0, 0),
-	createData("Runic Fang" , 0, 0, 0),
+	createData("Dragonheir's False Fin", 0, 0, 0),
+	createData("Runic Fang", 0, 0, 0),
+	createData("Majestic Hooked Beak", 0, 0, 0),
+	createData("Thunderclap Fruitcore", 0, 0, 0),
 ]
 
 const bookList = [
@@ -154,6 +167,15 @@ const bookList = [
 	createData("Teachings of Light", 0, 0, 0),
 	createData("Guide to Light", 0, 0, 0),
 	createData("Philosophies of Light", 0, 0, 0),
+	createData("Teachings of Admonition", 0, 0, 0),
+	createData("Guide to Admonition", 0, 0, 0),
+	createData("Philosophies of Admonition", 0, 0, 0),
+	createData("Teachings of Ingenuity", 0, 0, 0),
+	createData("Guide to Ingenuity", 0, 0, 0),
+	createData("Philosophies of Ingenuity", 0, 0, 0),
+	createData("Teachings of Praxis", 0, 0, 0),
+	createData("Guide to Praxis", 0, 0, 0),
+	createData("Philosophies of Praxis", 0, 0, 0),
 ]
 
 const talBossList = [

@@ -5,18 +5,23 @@ import CardContent from '@material-ui/core/CardContent'
 import Grid from '@material-ui/core/Grid'
 import CardMedia from '@material-ui/core/CardMedia'
 import RadioGroup from '@material-ui/core/RadioGroup'
-import Star from '@material-ui/icons/Star'
-import OutlineStar from '@material-ui/icons/StarOutline'
 import FormControl from '@material-ui/core/FormControl'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import IconButton from '@material-ui/core/IconButton'
 import Checkbox from '@material-ui/core/Checkbox'
 import TextField from '@material-ui/core/TextField';
+import Collapse from '@material-ui/core/Collapse';
 
-import { makeStyles } from '@material-ui/core/styles'
+import Star from '@material-ui/icons/Star'
+import OutlineStar from '@material-ui/icons/StarOutline'
+import MoreIcon from '@material-ui/icons/ExpandMore'
+
+import { makeStyles, styled } from '@material-ui/core/styles'
 
 import { values, traveler } from './Backend/values'
 import { travelerChar } from './Backend/traveler'
+
+import CardItemDisplay from './CardItemDisplay'
 
 const useStyles = makeStyles((theme) => ({
 	element: {
@@ -113,70 +118,99 @@ export default function Traveler(props) {
 		"dmelement": "#777777"
 	}
 
+	// Set card asc expand as expanded or not
+	const handleAscExpandClick = () => {
+		setExpandedAsc(!expandedAsc);
+	};
+
+	// Set card tal expand as expanded or not
+	const handleTalExpandClick = () => {
+		setExpandedTal(!expandedTal);
+	};
+
 	const onAscensionChange = (level) => {
 		addValues(level);
 		props.setLevelState({ level: level, prevLevel: props.chara.ascension})
 		props.chara.ascension = level;
 
-		// setting traveller levels since it's important
-		let char = null;
-		let char1 = null;
-		if (props.chara.element === "anemo"){
-			char = travelerChar[1];
-			char1 = travelerChar[2];
-		} else if (props.chara.element === "geo") {
-			char = travelerChar[0];
-			char1 = travelerChar[2];
-		} else if (props.chara.element === "electro") {
-			char = travelerChar[0]
-			char1 = travelerChar[1];
-		}
-		
-		char.ascension = level;
-		char1.ascension = level;
+		// taking the current changed traveler version and setting all traveler levels
+		// required to do as all ascension levels are equal across all trav types
+		setCharacter(props.chara.ascension);
+	}
 
-		localStorage.setItem(props.chara.name + " " + props.chara.element, JSON.stringify(props.chara))
-		localStorage.setItem(char.name + " " + char.element, JSON.stringify(char))
-		localStorage.setItem(char1.name + " " + char1.element, JSON.stringify(char1))
+	const setCharacter = (level) => {
+		// setting all travelers to the same ascension
+		// saving updated version to local storage
+		for (let i = 0; i < travelerChar.length; i++) {
+			travelerChar[i].ascension = level;
+			localStorage.setItem(travelerChar[i].name + " " + travelerChar[i].element, JSON.stringify(travelerChar[i]))
+		}
 	}
 
 	// Sets all the ascension values corresponding to ascension level
 	const addValues = (level) => {
 		if (level != props.level.prevLevel) {
-			// setting ascension gem values
-			props.chara.properties.ascension.twoStar.value = values.ascension.asc.twoStar.value[level]
-			props.chara.properties.ascension.threeStar.value = values.ascension.asc.threeStar.value[level]
-			props.chara.properties.ascension.fourStar.value = values.ascension.asc.fourStar.value[level]
-			props.chara.properties.ascension.fiveStar.value = values.ascension.asc.fiveStar.value[level]
-
-			// setting ascension common items values
-			props.chara.properties.common.oneStar.value = values.ascension.common.oneStar.value[level]
-			props.chara.properties.common.twoStar.value = values.ascension.common.twoStar.value[level]
-			props.chara.properties.common.threeStar.value = values.ascension.common.threeStar.value[level]
-
-			// setting region values
-			props.chara.properties.region.value = values.ascension.region.value[level]
+			// setting character ascension item values
+			setValues(props.chara, level)
 		}
 	}
 
-	// Sets all ascension item values to 0
-	const resetValues = () => {
+	// One function to set all property values
+	const setValues = (char, level) => {
 		// setting ascension gem values
-		props.chara.properties.ascension.twoStar.value = values.ascension.asc.twoStar.value[0]
-		props.chara.properties.ascension.threeStar.value = values.ascension.asc.threeStar.value[0]
-		props.chara.properties.ascension.fourStar.value = values.ascension.asc.fourStar.value[0]
-		props.chara.properties.ascension.fiveStar.value = values.ascension.asc.fiveStar.value[0]
+		char.properties.ascension.twoStar.value = values.ascension.asc.twoStar.value[level]
+		char.properties.ascension.threeStar.value = values.ascension.asc.threeStar.value[level]
+		char.properties.ascension.fourStar.value = values.ascension.asc.fourStar.value[level]
+		char.properties.ascension.fiveStar.value = values.ascension.asc.fiveStar.value[level]
 
 		// setting ascension common items values
-		props.chara.properties.common.oneStar.value = values.ascension.common.oneStar.value[0]
-		props.chara.properties.common.twoStar.value = values.ascension.common.twoStar.value[0]
-		props.chara.properties.common.threeStar.value = values.ascension.common.threeStar.value[0]
+		char.properties.common.oneStar.value = values.ascension.common.oneStar.value[level]
+		char.properties.common.twoStar.value = values.ascension.common.twoStar.value[level]
+		char.properties.common.threeStar.value = values.ascension.common.threeStar.value[level]
 
 		// setting region values
-		props.chara.properties.region.value = values.ascension.region.value[0]
+		char.properties.region.value = values.ascension.region.value[level]
+	}
 
-		// may need to change to both at 0
-		props.setLevelState({ level: 0, prevLevel: props.level.level})
+	const setTalentValues = (char, tal, level) => {
+		// if it is the second or third talent && element is geo
+		if ((tal === "tal2" || tal === "tal3") && char.element === "geo") {
+			// setting talent book values
+			char.properties.talentGeo.twoStar.value[tal] = traveler.talent.twoStar.value[level]
+			char.properties.talentGeo.levelThreeSix.value[tal] = traveler.talent.levelThreeSix.value[level]
+			char.properties.talentGeo.levelFour.value[tal] = traveler.talent.levelFour.value[level]
+			char.properties.talentGeo.levelFive.value[tal] = traveler.talent.levelFive.value[level]
+			char.properties.talentGeo.levelSevenTen.value[tal] = traveler.talent.levelSevenTen.value[level]
+			char.properties.talentGeo.levelEight.value[tal] = traveler.talent.levelEight.value[level]
+			char.properties.talentGeo.levelNine.value[tal] = traveler.talent.levelNine.value[level]
+
+			// setting talent common items values
+			char.properties.talCommonGeo.oneStar.value[tal] = values.talent.common.oneStar.value[level]
+			char.properties.talCommonGeo.twoStar.value[tal] = values.talent.common.twoStar.value[level]
+			char.properties.talCommonGeo.threeStar.value[tal] = values.talent.common.threeStar.value[level]
+
+			// setting crown and boss values
+			char.properties.talBossGeo.value[tal] = values.talent.boss.value[level]
+		} else {
+			// setting talent book values
+			char.properties.talent.twoStar.value[tal] = traveler.talent.twoStar.value[level]
+			char.properties.talent.levelThreeSix.value[tal] = traveler.talent.levelThreeSix.value[level]
+			char.properties.talent.levelFour.value[tal] = traveler.talent.levelFour.value[level]
+			char.properties.talent.levelFive.value[tal] = traveler.talent.levelFive.value[level]
+			char.properties.talent.levelSevenTen.value[tal] = traveler.talent.levelSevenTen.value[level]
+			char.properties.talent.levelEight.value[tal] = traveler.talent.levelEight.value[level]
+			char.properties.talent.levelNine.value[tal] = traveler.talent.levelNine.value[level]
+
+			// setting talent common items values
+			char.properties.talCommon.oneStar.value[tal] = values.talent.common.oneStar.value[level]
+			char.properties.talCommon.twoStar.value[tal] = values.talent.common.twoStar.value[level]
+			char.properties.talCommon.threeStar.value[tal] = values.talent.common.threeStar.value[level]
+
+			// setting crown and boss values
+			char.properties.talBoss.value[tal] = values.talent.boss.value[level]
+		} 
+
+		char.properties.crown.value[tal] = values.talent.crown.value[level]
 	}
 
 	// when talent input value gets changed
@@ -209,86 +243,12 @@ export default function Traveler(props) {
 
 	// setting talent values to character props
 	const addTalentValues = (tal, level) => {
-		// if it is the second or third talent && element is geo
-		if ((tal === "tal2" || tal === "tal3") && props.chara.element === "geo") {
-			// setting talent book values
-			props.chara.properties.talentGeo.twoStar.value[tal] = traveler.talent.twoStar.value[level]
-			props.chara.properties.talentGeo.levelThreeSix.value[tal] = traveler.talent.levelThreeSix.value[level]
-			props.chara.properties.talentGeo.levelFour.value[tal] = traveler.talent.levelFour.value[level]
-			props.chara.properties.talentGeo.levelFive.value[tal] = traveler.talent.levelFive.value[level]
-			props.chara.properties.talentGeo.levelSevenTen.value[tal] = traveler.talent.levelSevenTen.value[level]
-			props.chara.properties.talentGeo.levelEight.value[tal] = traveler.talent.levelEight.value[level]
-			props.chara.properties.talentGeo.levelNine.value[tal] = traveler.talent.levelNine.value[level]
-
-			// setting talent common items values
-			props.chara.properties.talCommonGeo.oneStar.value[tal] = values.talent.common.oneStar.value[level]
-			props.chara.properties.talCommonGeo.twoStar.value[tal] = values.talent.common.twoStar.value[level]
-			props.chara.properties.talCommonGeo.threeStar.value[tal] = values.talent.common.threeStar.value[level]
-
-			// setting crown and boss values
-			props.chara.properties.talBossGeo.value[tal] = values.talent.boss.value[level]
-		} else {
-			// setting talent book values
-			props.chara.properties.talent.twoStar.value[tal] = traveler.talent.twoStar.value[level]
-			props.chara.properties.talent.levelThreeSix.value[tal] = traveler.talent.levelThreeSix.value[level]
-			props.chara.properties.talent.levelFour.value[tal] = traveler.talent.levelFour.value[level]
-			props.chara.properties.talent.levelFive.value[tal] = traveler.talent.levelFive.value[level]
-			props.chara.properties.talent.levelSevenTen.value[tal] = traveler.talent.levelSevenTen.value[level]
-			props.chara.properties.talent.levelEight.value[tal] = traveler.talent.levelEight.value[level]
-			props.chara.properties.talent.levelNine.value[tal] = traveler.talent.levelNine.value[level]
-
-			// setting talent common items values
-			props.chara.properties.talCommon.oneStar.value[tal] = values.talent.common.oneStar.value[level]
-			props.chara.properties.talCommon.twoStar.value[tal] = values.talent.common.twoStar.value[level]
-			props.chara.properties.talCommon.threeStar.value[tal] = values.talent.common.threeStar.value[level]
-
-			// setting crown and boss values
-			props.chara.properties.talBoss.value[tal] = values.talent.boss.value[level]
-		} 
-
-		props.chara.properties.crown.value[tal] = values.talent.crown.value[level]
+		setTalentValues(props.chara, tal, level)
 	}
 
 	// resetting all talent values to base number
-	const resetTalentValues = (chara, talent, element) => {
-		if ((talent === "tal2" || talent === "tal3") && element === "geo") {
-			// setting talent book values
-			chara.properties.talentGeo.twoStar.value[talent] = traveler.talent.twoStar.value[1]
-			chara.properties.talentGeo.levelThreeSix.value[talent] = traveler.talent.levelThreeSix.value[1]
-			chara.properties.talentGeo.levelFour.value[talent] = traveler.talent.levelFour.value[1]
-			chara.properties.talentGeo.levelFive.value[talent] = traveler.talent.levelFive.value[1]
-			chara.properties.talentGeo.levelSevenTen.value[talent] = traveler.talent.levelSevenTen.value[1]
-			chara.properties.talentGeo.levelEight.value[talent] = traveler.talent.levelEight.value[1]
-			chara.properties.talentGeo.levelNine.value[talent] = traveler.talent.levelNine.value[1]
-			
-			// setting talent common items values
-			chara.properties.talCommonGeo.oneStar.value[talent] = values.talent.common.oneStar.value[1]
-			chara.properties.talCommonGeo.twoStar.value[talent] = values.talent.common.twoStar.value[1]
-			chara.properties.talCommonGeo.threeStar.value[talent] = values.talent.common.threeStar.value[1]
-	
-			// setting crown and boss values
-			chara.properties.talBossGeo.value[talent] = values.talent.boss.value[1]
-
-		} else {
-			// setting talent book values
-			chara.properties.talent.twoStar.value[talent] = traveler.talent.twoStar.value[1]
-			chara.properties.talent.levelThreeSix.value[talent] = traveler.talent.levelThreeSix.value[1]
-			chara.properties.talent.levelFour.value[talent] = traveler.talent.levelFour.value[1]
-			chara.properties.talent.levelFive.value[talent] = traveler.talent.levelFive.value[1]
-			chara.properties.talent.levelSevenTen.value[talent] = traveler.talent.levelSevenTen.value[1]
-			chara.properties.talent.levelEight.value[talent] = traveler.talent.levelEight.value[1]
-			chara.properties.talent.levelNine.value[talent] = traveler.talent.levelNine.value[1]
-			
-			// setting talent common items values
-			chara.properties.talCommon.oneStar.value[talent] = values.talent.common.oneStar.value[1]
-			chara.properties.talCommon.twoStar.value[talent] = values.talent.common.twoStar.value[1]
-			chara.properties.talCommon.threeStar.value[talent] = values.talent.common.threeStar.value[1]
-	
-			// setting crown and boss values
-			chara.properties.talBoss.value[talent] = values.talent.boss.value[1]
-		}
-
-		chara.properties.crown.value[talent] = values.talent.crown.value[1]
+	const resetTalentValues = (chara, tal, element) => {
+		setTalentValues(chara, tal, 1)
 
 		// setting the base values of the chara talent to 1 so that it saves
 		// properly in the local storage
@@ -312,52 +272,23 @@ export default function Traveler(props) {
 		props.setChecked(!props.checked)
 		
 		if (props.checked) {
-			props.setLevelState({...props.level, level: 0})
+			props.setLevelState({ level: 0, prevLevel: props.level.level})
 
-			let char = null;
-			let char1 = null;
-			if (props.chara.element === "anemo"){
-				char = travelerChar[1];
-				char1 = travelerChar[2];
-			} else if (props.chara.element === "geo") {
-				char = travelerChar[0];
-				char1 = travelerChar[2];
-			} else if (props.chara.element === "electro") {
-				char = travelerChar[0]
-				char1 = travelerChar[1];
+			for (let i = 0; i < travelerChar.length; i++) {
+				resetTalentValues(travelerChar[i], "tal1", travelerChar[i].element)
+				resetTalentValues(travelerChar[i], "tal2", travelerChar[i].element)
+				resetTalentValues(travelerChar[i], "tal3", travelerChar[i].element)
+
+				// set all input values to 1
+				setInputToOnes(travelerChar[i].element)
 			}
-
-			// Need to set character values as 0
-			resetValues();
-			props.chara.ascension = 0;
-			char.ascension = 0;
-			char1.ascension = 0;
-
-			// one for current mc's element
-			resetTalentValues(props.chara, "tal1", props.chara.element);
-			resetTalentValues(props.chara, "tal2", props.chara.element);
-			resetTalentValues(props.chara, "tal3", props.chara.element);
-
-			// one for other mc element
-			resetTalentValues(char, "tal1", char.element);
-			resetTalentValues(char, "tal2", char.element);
-			resetTalentValues(char, "tal3", char.element);
-
-			// one for third mc element
-			resetTalentValues(char1, "tal1", char1.element);
-			resetTalentValues(char1, "tal2", char1.element);
-			resetTalentValues(char1, "tal3", char1.element);
-
-			// setting all input values to one
-			setInputToOnes("anemo")
-			setInputToOnes("geo")
-			setInputToOnes("electro")
 
 			// setting talent state
 			setTalentState({ talent1: 1, talent2: 1, talent3: 1})
-			localStorage.setItem(props.chara.name + " " + props.chara.element, JSON.stringify(props.chara))
-			localStorage.setItem(char.name + " " + char.element, JSON.stringify(char));
-			localStorage.setItem(char1.name + " " + char1.element, JSON.stringify(char1));
+			setCharacter(0);
+
+			// may need to set both values to 0
+			props.setLevelState({ level: 0, prevLevel: props.level.level})
 		}
 	}
 
@@ -469,6 +400,78 @@ export default function Traveler(props) {
 							defaultValue={talentState.talent3} 
 							type="number" />
 					</form>
+					
+					<span>
+						<h2 className={props.isDarkMode ? classes.dmText : ""} style={{display: 'inline-flex', marginBottom: "0px"}}>Ascension Items</h2>
+						<ExpandMore expand={expandedAsc}
+							onClick={handleAscExpandClick}
+							aria-expanded={expandedAsc}
+							aria-label="show more">
+								<MoreIcon />
+						</ExpandMore>
+					</span>
+
+					{/* Collapsable ascension material content on character card */}
+					<Collapse in={expandedAsc} timeout="auto" unmountOnExit>
+						<CardContent style={{paddingTop: '0px'}}>
+							<Grid container style={{display: 'inline-flex'}}>
+								{/* Gem Items */}
+								<CardItemDisplay url={props.url} display={true} isDarkMode={props.isDarkMode} item={props.chara.properties.ascension.fiveStar.item} />
+
+								{/* Common Enemy Items */}
+								<CardItemDisplay url={props.url} display={true} isDarkMode={props.isDarkMode} item={props.chara.properties.common.oneStar.item} />
+
+								{/* Regional Item */}
+								<CardItemDisplay url={props.url} display={true} isDarkMode={props.isDarkMode} item={props.chara.properties.region.item} />
+							</Grid>
+						</CardContent>
+					</Collapse>
+
+					<span>
+						<h2 className={props.isDarkMode ? classes.dmText : ""} style={{display: 'inline-flex', marginBottom: "0px"}}>Talent Items</h2>
+						<ExpandMore expand={expandedTal}
+							onClick={handleTalExpandClick}
+							aria-expanded={expandedTal}
+							aria-label="show more">
+								<MoreIcon />
+						</ExpandMore>
+					</span>
+
+					{/* Collapsable ascension material content on character card */}
+					<Collapse in={expandedTal} timeout="auto" unmountOnExit>
+						<CardContent style={{paddingTop: '0px'}}>
+							<Grid container style={{display: 'inline-flex'}}>
+								{/* Crown Items */}
+								<CardItemDisplay url={props.url} display={true} isDarkMode={props.isDarkMode} item={props.chara.properties.crown.item} />
+
+								{/* Common Talent Items */}
+								<CardItemDisplay url={props.url} display={true} isDarkMode={props.isDarkMode} item={props.chara.properties.talCommon.oneStar.item} />
+
+								{/* Talent Book Item */}
+								{ props.chara.element == "geo" ? 
+									<span>
+										<Grid container style={{display: 'inline-flex'}}>
+											<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.talent.twoStar.item} />
+											<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.talent.levelThreeSix.item} />
+											<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.talent.levelFour.item} />
+											<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.talBoss.item} />
+										</Grid>
+										<Grid container style={{display: 'inline-flex'}}>
+											<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.talentGeo.twoStar.item} />
+											<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.talentGeo.levelThreeSix.item} />
+											<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.talentGeo.levelFour.item} /> 
+											<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.talBossGeo.item} />
+										</Grid>
+									</span>
+								: 	<Grid container style={{display: 'inline-flex'}}>
+										<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.talent.twoStar.item} />
+										<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.talent.levelThreeSix.item} />
+										<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.talent.levelFour.item} />
+										<CardItemDisplay url={props.url} isDarkMode={props.isDarkMode} item={props.chara.properties.talBoss.item} />
+									</Grid> }
+							</Grid>
+						</CardContent>
+					</Collapse>
 				</CardContent>
 			</Card>
 		</div>

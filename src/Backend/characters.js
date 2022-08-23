@@ -323,6 +323,42 @@ export const characters = [{
 		},
 	}
 },{ 
+	name: "collei",
+	element: "dendro",
+	ascension: 0,
+	owned: false,
+	fav: false,
+	talent1: 1,
+	talent2: 1,
+	talent3: 1,
+	properties: {
+		ascension: { 
+			twoStar: { item: "Emerald Sliver", value: 0 },
+			threeStar: { item: "Emerald Fragment", value: 0 },
+			fourStar: { item: "Emerald Chunk", value: 0 },
+			fiveStar: { item: "Emerald Gemstone", value: 0 },
+		},
+		boss: { item: "Majestic Hooked Beak", value: 0 },
+		common: {
+			oneStar: { item: "Firm Arrowhead", value: 0 },
+			twoStar: { item: "Sharp Arrowhead", value: 0 },
+			threeStar: { item: "Weathered Arrowhead", value: 0 },
+		},
+		region: { item: "Rukkhashava Mushrooms", value: 0 },
+		crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talent: {
+			twoStar: { item: "Teachings of Praxis", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Guide to Praxis", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			fourStar: { item: "Philosophies of Praxis", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+		talBoss: { item: "Tears of the Calamitous God", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talCommon: {
+			oneStar: { item: "Firm Arrowhead", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			twoStar: { item: "Sharp Arrowhead", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Weathered Arrowhead", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+	}
+},{ 
 	name: "diluc",
 	element: "pyro",
 	ascension: 0,
@@ -394,7 +430,43 @@ export const characters = [{
 			threeStar: { item: "Weathered Arrowhead", value: { tal1: 0, tal2: 0, tal3: 0 }},
 		},
 	}
-}, { 
+},{ 
+	name: "dori",
+	element: "electro",
+	ascension: 0,
+	owned: false,
+	fav: false,
+	talent1: 1,
+	talent2: 1,
+	talent3: 1,
+	properties: {
+		ascension: { 
+			twoStar: { item: "Amethyst Sliver", value: 0 },
+			threeStar: { item: "Amethyst Fragment", value: 0 },
+			fourStar: { item: "Amethyst Chunk", value: 0 },
+			fiveStar: { item: "Amethyst Gemstone", value: 0 },
+		},
+		boss: { item: "Thunderclap Fruitcore", value: 0 },
+		common: {
+			oneStar: { item: "Faded Red Satin", value: 0 },
+			twoStar: { item: "Trimmed Red Silk", value: 0 },
+			threeStar: { item: "Rich Red Brocade", value: 0 },
+		},
+		region: { item: "Kalpalata Lotus", value: 0 },
+		crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talent: {
+			twoStar: { item: "Teachings of Ingenuity", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Guide to Ingenuity", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			fourStar: { item: "Philosophies of Ingenuity", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+		talBoss: { item: "Bloodjade Branch", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talCommon: { 
+			oneStar: { item: "Faded Red Satin", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			twoStar: { item: "Trimmed Red Silk", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Rich Red Brocade", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+	}
+},{ 
 	name: "eula",
 	element: "cryo",
 	ascension: 0,
@@ -1400,6 +1472,42 @@ export const characters = [{
 			oneStar: { item: "Recruit's Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			twoStar: { item: "Sergeant's Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			threeStar: { item: "Lieutenant's Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+	}
+},{ 
+	name: "tighnari",
+	element: "dendro",
+	ascension: 0,
+	owned: false,
+	fav: false,
+	talent1: 1,
+	talent2: 1,
+	talent3: 1,
+	properties: {
+		ascension: { 
+			twoStar: { item: "Emerald Sliver", value: 0 },
+			threeStar: { item: "Emerald Fragment", value: 0 },
+			fourStar: { item: "Emerald Chunk", value: 0 },
+			fiveStar: { item: "Emerald Gemstone", value: 0 },
+		},
+		boss: { item: "Majestic Hooked Beak", value: 0 },
+		common: {
+			oneStar: { item: "Fungal Spores", value: 0 },
+			twoStar: { item: "Luminescent Pollen", value: 0 },
+			threeStar: { item: "Crystalline Cyst Dust", value: 0 },
+		},
+		region: { item: "Nilotpala Lotus", value: 0 },
+		crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talent: {
+			twoStar: { item: "Teachings of Admonition", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Guide to Admonition", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			fourStar: { item: "Philosophies of Admonition", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+		talBoss: { item: "The Meaning of Aeons", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talCommon: { 
+			oneStar: { item: "Fungal Spores", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			twoStar: { item: "Luminescent Pollen", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Crystalline Cyst Dust", value: { tal1: 0, tal2: 0, tal3: 0 }},
 		},
 	}
 },{ 
