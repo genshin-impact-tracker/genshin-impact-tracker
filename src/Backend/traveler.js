@@ -3,6 +3,8 @@ export const travelerChar = [
 		name: "traveler",
 		element: "anemo",
 		ascension: 0,
+		owned: false,
+		fav: false,
 		talent1: 1,
 		talent2: 1,
 		talent3: 1,
@@ -40,6 +42,8 @@ export const travelerChar = [
 		name: "traveler",
 		element: "geo",
 		ascension: 0,
+		owned: false,
+		fav: false,
 		talent1: 1,
 		talent2: 1,
 		talent3: 1,
@@ -88,10 +92,12 @@ export const travelerChar = [
 				threeStar: { item: "Weathered Arrowhead", value: { tal2: 0, tal3: 0 }},
 			},
 		}
-	}, { 
+	},{ 
 		name: "traveler",
 		element: "electro",
 		ascension: 0,
+		owned: false,
+		fav: false,
 		talent1: 1,
 		talent2: 1,
 		talent3: 1,
@@ -123,6 +129,45 @@ export const travelerChar = [
 				oneStar: { item: "Old Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
 				twoStar: { item: "Kageuchi Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
 				threeStar: { item: "Famed Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			},
+		}
+	},{ 
+		name: "traveler",
+		element: "dendro",
+		ascension: 0,
+		owned: false,
+		fav: false,
+		talent1: 1,
+		talent2: 1,
+		talent3: 1,
+		properties: {
+			ascension: { 
+				twoStar: { item: "Brilliant Diamond Sliver", value: 0 },
+				threeStar: { item: "Brilliant Diamond Fragment", value: 0 },
+				fourStar: { item: "Brilliant Diamond Chunk", value: 0 },
+				fiveStar: { item: "Brilliant Diamond Gemstone", value: 0 },
+			},
+			common: {
+				oneStar: { item: "Damaged Mask", value: 0 },
+				twoStar: { item: "Stained Mask", value: 0 },
+				threeStar: { item: "Ominous Mask", value: 0 },
+			},
+			region: { item: "Windwheel Aster", value: 0 },
+			crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			talent: {
+				twoStar: { item: "Teachings of Admonition", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				levelThreeSix: { item: "Guide to Ingenuity", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				levelFour: { item: "Guide to Praxis", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				levelFive: { item: "Guide to Admonition", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				levelSevenTen: { item: "Philosophies of Praxis", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				levelEight: { item: "Philosophies of Admonition", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				levelNine: { item: "Philosophies of Ingenuity", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			},
+			talBoss: { item: "Mudra of the Malefic General", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			talCommon: { 
+				oneStar: { item: "Fungal Spores", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				twoStar: { item: "Luminescent Pollen", value: { tal1: 0, tal2: 0, tal3: 0 }},
+				threeStar: { item: "Crystalline Cyst Dust", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			},
 		}
 	},

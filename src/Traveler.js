@@ -75,6 +75,17 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
+const ExpandMore = styled((props) => {
+	const { expand, ...other } = props;
+	return <IconButton {...other} />;
+})(({ theme, expand }) => ({
+	transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+	marginLeft: 'auto',
+	transition: theme.transitions.create('transform', {
+		duration: theme.transitions.duration.shortest,
+	}),
+}));
+
 export default function Traveler(props) {
 	const classes = useStyles();
 
@@ -95,6 +106,9 @@ export default function Traveler(props) {
 	const activeIcon = props.url + '/Icons/' + props.chara.element + '.png';
 	const inactiveIcon = props.url + '/Icons/' + props.chara.element + '-b.png';
 	const [ talentState, setTalentState ] = useState({ talent1: tall1, talent2: tall2, talent3: tall3 });
+	
+	const [ expandedAsc, setExpandedAsc ] = React.useState(false);
+	const [ expandedTal, setExpandedTal ] = React.useState(false);
 
 	const elementStyles = {
 		"pyro": "#f85d5d",
