@@ -85,7 +85,7 @@ export default function About(props) {
 
 					<Grid item xs={12} sm={12} md={12}>
 						<Typography className={props.isDarkMode ? classes.darkModeTitle : classes.title} variant="h6">Currently Working On</Typography>
-						<Typography className={props.isDarkMode ? classes.darkModeText : classes.text}>I will soon be updating the traveller to have ascension and talent items displayed.</Typography><br />
+						<Typography className={props.isDarkMode ? classes.darkModeText : classes.text}>Soon: To add filters and favourites</Typography><br />
 					</Grid>
 
 					<Grid item xs={12} sm={12} md={12}>

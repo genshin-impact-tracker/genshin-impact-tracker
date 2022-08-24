@@ -59,14 +59,10 @@ export const localSpecialties = [
     { item: "Sango Pearl", chars: ["Gorou", "Kokomi"]},
     { item: "Amakumo Fruit", chars: ["Raiden"]},
     { item: "Fluorescent Fungus", chars: ["Thoma"]},
-    { item: "Sumeru Rose", chars: []},
-    { item: "Padisarah", chars: []},
-    { item: "Zaytun Peach", chars: []},
-    { item: "Harra Fruit", chars: []},
-    { item: "Viboya", chars: []},
-    { item: "Kalpalata Lotus", chars: ["Dori"]},
-    { item: "Nilotpala Lotus", chars: ["Tighnari"]},
     { item: "Rukkhashava Mushrooms", chars: ["Collei"]},
+    { item: "Padisarah", chars: []},
+    { item: "Nilotpala Lotus", chars: ["Tighnari"]},
+    { item: "Kalpalata Lotus", chars: ["Dori"]},
 ]
 
 export const commons = [
