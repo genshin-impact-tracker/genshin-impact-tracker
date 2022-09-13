@@ -145,42 +145,49 @@ export default function Card(props) {
 		localStorage.setItem(props.chara.name, JSON.stringify(props.chara))
 	}
 
+	const setValue = (level) => {
+		// setting ascension gem values
+		props.chara.properties.ascension.twoStar.value = values.ascension.asc.twoStar.value[level]
+		props.chara.properties.ascension.threeStar.value = values.ascension.asc.threeStar.value[level]
+		props.chara.properties.ascension.fourStar.value = values.ascension.asc.fourStar.value[level]
+		props.chara.properties.ascension.fiveStar.value = values.ascension.asc.fiveStar.value[level]
+
+		// setting ascension common items values
+		props.chara.properties.common.oneStar.value = values.ascension.common.oneStar.value[level]
+		props.chara.properties.common.twoStar.value = values.ascension.common.twoStar.value[level]
+		props.chara.properties.common.threeStar.value = values.ascension.common.threeStar.value[level]
+
+		// setting region and boss values
+		props.chara.properties.boss.value = values.ascension.boss.value[level]
+		props.chara.properties.region.value = values.ascension.region.value[level]
+	}
+
+	const setTalentValue = (tal, level) => {
+		// setting talent book values
+		props.chara.properties.talent.twoStar.value[tal] = values.talent.book.twoStar.value[level]
+		props.chara.properties.talent.threeStar.value[tal] = values.talent.book.threeStar.value[level]
+		props.chara.properties.talent.fourStar.value[tal] = values.talent.book.fourStar.value[level]
+
+		// setting talent common items values
+		props.chara.properties.talCommon.oneStar.value[tal] = values.talent.common.oneStar.value[level]
+		props.chara.properties.talCommon.twoStar.value[tal] = values.talent.common.twoStar.value[level]
+		props.chara.properties.talCommon.threeStar.value[tal] = values.talent.common.threeStar.value[level]
+
+		// setting crown and boss values
+		props.chara.properties.talBoss.value[tal] = values.talent.boss.value[level]
+		props.chara.properties.crown.value[tal] = values.talent.crown.value[level]
+	}
+
 	// Sets all the ascension values corresponding to ascension level
 	const addValues = (level) => {
 		if (level != levelState.prevLevel) {
-			// setting ascension gem values
-			props.chara.properties.ascension.twoStar.value = values.ascension.asc.twoStar.value[level]
-			props.chara.properties.ascension.threeStar.value = values.ascension.asc.threeStar.value[level]
-			props.chara.properties.ascension.fourStar.value = values.ascension.asc.fourStar.value[level]
-			props.chara.properties.ascension.fiveStar.value = values.ascension.asc.fiveStar.value[level]
-
-			// setting ascension common items values
-			props.chara.properties.common.oneStar.value = values.ascension.common.oneStar.value[level]
-			props.chara.properties.common.twoStar.value = values.ascension.common.twoStar.value[level]
-			props.chara.properties.common.threeStar.value = values.ascension.common.threeStar.value[level]
-
-			// setting region and boss values
-			props.chara.properties.boss.value = values.ascension.boss.value[level]
-			props.chara.properties.region.value = values.ascension.region.value[level]
+			setValue(level)
 		}
 	}
 
 	// Sets all ascension item values to 0
 	const resetValues = () => {
-		// setting ascension gem values
-		props.chara.properties.ascension.twoStar.value = values.ascension.asc.twoStar.value[0]
-		props.chara.properties.ascension.threeStar.value = values.ascension.asc.threeStar.value[0]
-		props.chara.properties.ascension.fourStar.value = values.ascension.asc.fourStar.value[0]
-		props.chara.properties.ascension.fiveStar.value = values.ascension.asc.fiveStar.value[0]
-
-		// setting ascension common items values
-		props.chara.properties.common.oneStar.value = values.ascension.common.oneStar.value[0]
-		props.chara.properties.common.twoStar.value = values.ascension.common.twoStar.value[0]
-		props.chara.properties.common.threeStar.value = values.ascension.common.threeStar.value[0]
-
-		// setting region and boss values
-		props.chara.properties.boss.value = values.ascension.boss.value[0]
-		props.chara.properties.region.value = values.ascension.region.value[0]
+		setValue(0)
 
 		// may need to change to both at 0
 		setLevelState({ level: 0, prevLevel: levelState.level})
@@ -216,36 +223,16 @@ export default function Card(props) {
 
 	// setting talent values to character props
 	const addTalentValues = (tal, level) => {
-		// setting talent book values
-		props.chara.properties.talent.twoStar.value[tal] = values.talent.book.twoStar.value[level]
-		props.chara.properties.talent.threeStar.value[tal] = values.talent.book.threeStar.value[level]
-		props.chara.properties.talent.fourStar.value[tal] = values.talent.book.fourStar.value[level]
-
-		// setting talent common items values
-		props.chara.properties.talCommon.oneStar.value[tal] = values.talent.common.oneStar.value[level]
-		props.chara.properties.talCommon.twoStar.value[tal] = values.talent.common.twoStar.value[level]
-		props.chara.properties.talCommon.threeStar.value[tal] = values.talent.common.threeStar.value[level]
-
-		// setting crown and boss values
-		props.chara.properties.talBoss.value[tal] = values.talent.boss.value[level]
-		props.chara.properties.crown.value[tal] = values.talent.crown.value[level]
+		setTalentValue(tal, level)
 	}
 
 	// resetting all talent values to base number
-	const resetTalentValues = (talent) => {
-		// setting talent book values
-		props.chara.properties.talent.twoStar.value[talent] = values.talent.book.twoStar.value[1]
-		props.chara.properties.talent.threeStar.value[talent] = values.talent.book.threeStar.value[1]
-		props.chara.properties.talent.fourStar.value[talent] = values.talent.book.fourStar.value[1]
-		
-		// setting talent common items values
-		props.chara.properties.talCommon.oneStar.value[talent] = values.talent.common.oneStar.value[1]
-		props.chara.properties.talCommon.twoStar.value[talent] = values.talent.common.twoStar.value[1]
-		props.chara.properties.talCommon.threeStar.value[talent] = values.talent.common.threeStar.value[1]
-
-		// setting crown and boss values
-		props.chara.properties.talBoss.value[talent] = values.talent.boss.value[1]
-		props.chara.properties.crown.value[talent] = values.talent.crown.value[1]
+	const resetTalentValues = () => {
+		for (let i = 1; i < 4; i++) {
+			let tal = document.getElementById(props.chara.name+"talent"+i)
+			tal.value = 1;
+			setTalentValue(props.chara["talent"+i], 0)
+		}
 		setTalentState({ talent1: 1, talent2: 1, talent3: 1 })
 	}
 
@@ -255,21 +242,13 @@ export default function Card(props) {
 		props.chara.owned = !checked;
 
 		if (checked) {
+			setLevelState({...levelState, level: 0})
+
 			// Need to set character values as 0
 			resetValues();
 			props.chara.ascension = 0;
 
-			// getting the input elements
-			const tal1 = document.getElementById(props.chara.name+"talent1")
-			const tal2 = document.getElementById(props.chara.name+"talent2")
-			const tal3 = document.getElementById(props.chara.name+"talent3")
-			tal1.value = 1;
-			tal2.value = 1;
-			tal3.value = 1;
-
-			resetTalentValues("tal1");
-			resetTalentValues("tal2");
-			resetTalentValues("tal3");
+			resetTalentValues();
 
 			// setting talent state
 			setTalentState({ talent1: 1, talent2: 1, talent3: 1})
@@ -278,10 +257,9 @@ export default function Card(props) {
 			props.chara.talent1 = 1;
 			props.chara.talent2 = 1;
 			props.chara.talent3 = 1;
-
-			console.log(levelState, talentState, props.chara)
 		}
-		// saving character in localstorage
+
+		//Saving to localstorage
 		localStorage.setItem(props.chara.name, JSON.stringify(props.chara))
 	}
 
