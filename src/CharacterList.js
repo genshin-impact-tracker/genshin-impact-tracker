@@ -31,9 +31,6 @@ const useStyles = makeStyles((theme) => ({
 	}
 }))
 
-const newCharacters = travelerChar.concat(characters)
-console.log(newCharacters)
-
 export default function CharacterList(props) {
 	const classes = useStyles();
 
@@ -92,7 +89,7 @@ export default function CharacterList(props) {
 		<div>
 			<Container className={classes.cardGrid} maxWidth="lg">
 				<Grid container spacing={4}>
-					{(props.search === "" ? newCharacters : props.updateCharacters)
+					{(props.search === "" ? props.charList : props.updateCharacters)
 						.map((chara) => (
 							<Grid item key={chara.name+"-"+chara.element} xs={12} sm={6} md={4} lg={4}>
 								{(chara.name === "traveler" ? 
