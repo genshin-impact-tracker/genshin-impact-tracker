@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import PropTypes from 'prop-types';
 
@@ -215,11 +215,9 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-const charList = travelerChar.concat(characters.filter((chara) => {
-	return (chara.ascension > 0 || chara.owned);
-}).concat(characters.filter((chara) => {
-	return (chara.ascension == 0 && !chara.owned) || !chara.owned;
-})))
+const charList = travelerChar.concat(characters.sort(function(x, y) {
+	return (+y.owned) - (+x.owned) || x.name.localeCompare(y.name)
+}))
 
 export default function Display() {
 	const classes = useStyles();
@@ -227,7 +225,7 @@ export default function Display() {
 	const [tab, setTab] = useState(0);
 	const [searchVal, setSearchVal] = useState("");
 	const [isDrawerOpen, setDrawerOpen] = useState(false);
-	const [sortedList, setList] = useState(charList)
+	const [ sortedList, setList ] = useState(charList)
 
 	const dm = JSON.parse(localStorage.getItem("darkMode"));
 	const [isDarkMode, setDarkMode] = useState((dm != null) ? dm : false);
@@ -244,16 +242,6 @@ export default function Display() {
 		setSearchVal(event.target.value.toLowerCase().trim())
 	}
 
-	// On webpage refresh, reset state for sorted list
-	// Both useEffects required
-	useEffect(() => {
-		setList(JSON.parse(sessionStorage.getItem("sortedList")));
-	}, [])
-
-	useEffect(() => {
-		sessionStorage.setItem("sortedList", JSON.stringify(sortedList));
-	}, [sortedList])
-
 	// filtered character list
 	let updateCharacters = travelerChar.concat(characters).filter((chara) => {
 		return chara.name.indexOf(searchVal) > -1 || chara.element.indexOf(searchVal) > -1;
@@ -263,6 +251,16 @@ export default function Display() {
 	let updateItems = totalOwned.filter((item) => {
 		return item.item.toLowerCase().indexOf(searchVal) > -1;
 	}, [])
+
+	// On webpage refresh, reset state for sorted list
+	// Both useEffects required
+	useEffect(() => {
+		setList(JSON.parse(sessionStorage.getItem("sortedList")));
+	}, [])
+
+	useEffect(() => {
+		sessionStorage.setItem("sortedList", JSON.stringify(sortedList));
+	}, [sortedList])
 
 	const clearSearch = (event) => {
 		const search = document.getElementById("charSearch");
@@ -392,7 +390,7 @@ export default function Display() {
 
 			{/* Characters */}
 			<TabPanel style={{overflowY: 'auto'}} className={isDarkMode ? classes.dmBackground : classes.notDMBackground} value={tab} index={0}>
-				<CharacterList isDarkMode={isDarkMode} search={searchVal} url={url} updateCharacters={updateCharacters} charList={sortedList} />
+				<CharacterList isDarkMode={isDarkMode} search={searchVal} url={url} updateCharacters={updateCharacters} charList={sortedList} setList={setList} />
 			</TabPanel>
 
 			{/* Items */}

@@ -1,7 +1,5 @@
 import React, { Suspense, useState } from 'react'
 
-import { characters } from './Backend/characters'
-import { travelerChar } from './Backend/traveler'
 const Card = React.lazy(() => import('./Card'))
 import Traveler from './Traveler'
 
@@ -103,7 +101,7 @@ export default function CharacterList(props) {
 										className={classes.card} />
 								:
 									<Suspense fallback={<CircularProgress className={props.isDarkMode ? classes.circle : ""} disableShrink />}>
-										<Card isDarkMode={props.isDarkMode} chara={chara} url={props.url} className={classes.card} />
+										<Card isDarkMode={props.isDarkMode} chara={chara} url={props.url} className={classes.card} charList={props.charList} setList={props.setList} />
 									</Suspense>
 								)}
 							</Grid>

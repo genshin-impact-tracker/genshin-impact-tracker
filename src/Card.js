@@ -22,6 +22,8 @@ import Collapse from '@material-ui/core/Collapse';
 import { makeStyles, styled } from '@material-ui/core/styles'
 
 import { values } from './Backend/values'
+import { travelerChar } from './Backend/traveler'
+import { characters } from './Backend/characters'
 
 const useStyles = makeStyles((theme) => ({
 	cardContent: {
@@ -261,6 +263,14 @@ export default function Card(props) {
 
 		//Saving to localstorage
 		localStorage.setItem(props.chara.name, JSON.stringify(props.chara))
+		updateList()
+	}
+
+	const updateList = () => {
+		const list = travelerChar.concat(characters.sort(function(x, y) {
+			return (+y.owned) - (+x.owned) || x.name.localeCompare(y.name)
+		}))
+		props.setList(list)
 	}
 
 	const IconSwitch = () => {
