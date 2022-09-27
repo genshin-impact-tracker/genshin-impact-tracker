@@ -90,7 +90,7 @@ export default function About(props) {
 
 					<Grid item xs={12} sm={12} md={12}>
 						<Typography className={props.isDarkMode ? classes.darkModeTitle : classes.title} variant="h6">Known Issues</Typography>
-						<Typography className={props.isDarkMode ? classes.darkModeText : classes.text}>None at this time.</Typography><br />
+						<Typography className={props.isDarkMode ? classes.darkModeText : classes.text}>Displaying characters enabled first does not reliably work 100% of the time. Working on fixing this issue.</Typography><br />
 					</Grid>
 				
 					<Grid item xs={12} sm={12} md={12}>

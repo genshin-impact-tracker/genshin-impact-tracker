@@ -7,6 +7,7 @@ import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
 import CircularProgress from '@material-ui/core/CircularProgress'
+import { characters } from './Backend/characters'
 
 const useStyles = makeStyles((theme) => ({
 	cardGrid: {
@@ -87,7 +88,7 @@ export default function CharacterList(props) {
 		<div>
 			<Container className={classes.cardGrid} maxWidth="lg">
 				<Grid container spacing={4}>
-					{(props.search === "" ? props.charList : props.updateCharacters)
+					{(props.search === "" ? (props.charList ? props.charList : characters) : props.updateCharacters)
 						.map((chara) => (
 							<Grid item key={chara.name+"-"+chara.element} xs={12} sm={6} md={4} lg={4}>
 								{(chara.name === "traveler" ? 

@@ -287,6 +287,42 @@ export const characters = [{
 		},
 	}
 },{ 
+	name: "candace",
+	element: "hydro",
+	ascension: 0,
+	owned: false,
+	fav: false,
+	talent1: 1,
+	talent2: 1,
+	talent3: 1,
+	properties: {
+		ascension: { 
+			twoStar: { item: "Lazurite Sliver", value: 0 },
+			threeStar: { item: "Lazurite Fragment", value: 0 },
+			fourStar: { item: "Lazurite Chunk", value: 0 },
+			fiveStar: { item: "Lazurite Gemstone", value: 0 },
+		},
+		boss: { item: "Light Guiding Tetrahedron", value: 0 },
+		common: {
+			oneStar: { item: "Faded Red Satin", value: 0 },
+			twoStar: { item: "Trimmed Red Silk", value: 0 },
+			threeStar: { item: "Rich Red Brocade", value: 0 },
+		},
+		region: { item: "Redcrest", value: 0 },
+		crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talent: {
+			twoStar: { item: "Teachings of Admonition", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Guide to Admonition", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			fourStar: { item: "Philosophies of Admonition", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+		talBoss: { item: "Tears of the Calamitous God", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talCommon: {
+			oneStar: { item: "Faded Red Satin", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			twoStar: { item: "Trimmed Red Silk", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Rich Red Brocade", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+	}
+},{ 
 	name: "chongyun",
 	element: "cryo",
 	ascension: 0,
@@ -356,6 +392,42 @@ export const characters = [{
 			oneStar: { item: "Firm Arrowhead", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			twoStar: { item: "Sharp Arrowhead", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			threeStar: { item: "Weathered Arrowhead", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+	}
+},{ 
+	name: "cyno",
+	element: "electro",
+	ascension: 0,
+	owned: false,
+	fav: false,
+	talent1: 1,
+	talent2: 1,
+	talent3: 1,
+	properties: {
+		ascension: { 
+			twoStar: { item: "Amethyst Sliver", value: 0 },
+			threeStar: { item: "Amethyst Fragment", value: 0 },
+			fourStar: { item: "Amethyst Chunk", value: 0 },
+			fiveStar: { item: "Amethyst Gemstone", value: 0 },
+		},
+		boss: { item: "Thunderclap Fruitcore", value: 0 },
+		common: {
+			oneStar: { item: "Divining Scroll", value: 0 },
+			twoStar: { item: "Sealed Scroll", value: 0 },
+			threeStar: { item: "Forbidden Scroll", value: 0 },
+		},
+		region: { item: "Scarab", value: 0 },
+		crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talent: {
+			twoStar: { item: "Teachings of Admonition", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Guide to Admonition", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			fourStar: { item: "Philosophies of Admonition", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+		talBoss: { item: "Mudra of the Malefic General", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talCommon: {
+			oneStar: { item: "Divining Scroll", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			twoStar: { item: "Sealed Scroll", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Forbidden Scroll", value: { tal1: 0, tal2: 0, tal3: 0 }},
 		},
 	}
 },{ 
@@ -430,7 +502,7 @@ export const characters = [{
 			threeStar: { item: "Weathered Arrowhead", value: { tal1: 0, tal2: 0, tal3: 0 }},
 		},
 	}
-},{ 
+}, { 
 	name: "dori",
 	element: "electro",
 	ascension: 0,
@@ -1004,6 +1076,42 @@ export const characters = [{
 			oneStar: { item: "Whopperflower Nectar", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			twoStar: { item: "Shimmering Nectar", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			threeStar: { item: "Energy Nectar", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+	}
+},{ 
+	name: "nilou",
+	element: "hydro",
+	ascension: 0,
+	owned: false,
+	fav: false,
+	talent1: 1,
+	talent2: 1,
+	talent3: 1,
+	properties: {
+		ascension: { 
+			twoStar: { item: "Lazurite Sliver", value: 0 },
+			threeStar: { item: "Lazurite Fragment", value: 0 },
+			fourStar: { item: "Lazurite Chunk", value: 0 },
+			fiveStar: { item: "Lazurite Gemstone", value: 0 },
+		},
+		boss: { item: "Perpetual Caliber", value: 0 },
+		common: {
+			oneStar: { item: "Fungal Spores", value: 0 },
+			twoStar: { item: "Luminescent Pollen", value: 0 },
+			threeStar: { item: "Crystalline Cyst Dust", value: 0 },
+		},
+		region: { item: "Padisarah", value: 0 },
+		crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talent: {
+			twoStar: { item: "Teachings of Praxis", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Guide to Praxis", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			fourStar: { item: "Philosophies of Praxis", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+		talBoss: { item: "Tears of the Calamitous God", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talCommon: {
+			oneStar: { item: "Fungal Spores", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			twoStar: { item: "Luminescent Pollen", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Crystalline Cyst Dust", value: { tal1: 0, tal2: 0, tal3: 0 }},
 		},
 	}
 },{ 
