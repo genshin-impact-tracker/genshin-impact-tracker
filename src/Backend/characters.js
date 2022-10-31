@@ -1007,6 +1007,42 @@ export const characters = [{
 		},
 	}
 },{ 
+	name: "layla",
+	element: "cryo",
+	ascension: 0,
+	owned: false,
+	fav: false,
+	talent1: 1,
+	talent2: 1,
+	talent3: 1,
+	properties: {
+		ascension: { 
+			twoStar: { item: "Jade Sliver", value: 0 },
+			threeStar: { item: "Jade Fragment", value: 0 },
+			fourStar: { item: "Jade Chunk", value: 0 },
+			fiveStar: { item: "Jade Gemstone", value: 0 },
+		},
+		boss: { item: "Perpetual Caliber", value: 0 },
+		common: {
+			oneStar: { item: "Divining Scroll", value: 0 },
+			twoStar: { item: "Sealed Scroll", value: 0 },
+			threeStar: { item: "Forbidden Scroll", value: 0 },
+		},
+		region: { item: "Nilotpala Lotus", value: 0 },
+		crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talent: {
+			twoStar: { item: "Teachings of Ingenuity", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Guide to Ingenuity", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			fourStar: { item: "Philosophies of Ingenuity", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+		talBoss: { item: "Mirror of Mushin", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talCommon: {
+			oneStar: { item: "Divining Scroll", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			twoStar: { item: "Sealed Scroll", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Forbidden Scroll", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+	}
+},{ 
 	name: "lisa",
 	element: "electro",
 	ascension: 0,
@@ -1076,6 +1112,42 @@ export const characters = [{
 			oneStar: { item: "Whopperflower Nectar", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			twoStar: { item: "Shimmering Nectar", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			threeStar: { item: "Energy Nectar", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+	}
+},{ 
+	name: "nahida",
+	element: "dendro",
+	ascension: 0,
+	owned: false,
+	fav: false,
+	talent1: 1,
+	talent2: 1,
+	talent3: 1,
+	properties: {
+		ascension: { 
+			twoStar: { item: "Emerald Sliver", value: 0 },
+			threeStar: { item: "Emerald Fragment", value: 0 },
+			fourStar: { item: "Emerald Chunk", value: 0 },
+			fiveStar: { item: "Emerald Gemstone", value: 0 },
+		},
+		boss: { item: "Quelled Creeper", value: 0 },
+		common: {
+			oneStar: { item: "Fungal Spores", value: 0 },
+			twoStar: { item: "Luminescent Pollen", value: 0 },
+			threeStar: { item: "Crystalline Cyst Dust", value: 0 },
+		},
+		region: { item: "Kalpalata Lotus", value: 0 },
+		crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talent: {
+			twoStar: { item: "Teachings of Ingenuity", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Guide to Ingenuity", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			fourStar: { item: "Philosophies of Ingenuity", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+		talBoss: { item: "Puppet Strings", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talCommon: {
+			oneStar: { item: "Fungal Spores", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			twoStar: { item: "Luminescent Pollen", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Crystalline Cyst Dust", value: { tal1: 0, tal2: 0, tal3: 0 }},
 		},
 	}
 },{ 

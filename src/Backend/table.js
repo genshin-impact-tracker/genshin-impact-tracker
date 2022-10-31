@@ -7,10 +7,10 @@ export const gemChars = [
     { item: "Lazurite Fragment", chars: ["Ayato", "Barbara", "Candace", "Kokomi", "Mona", "Nilou", "Tartaglia", "Xingqiu", "Yelan"]},
     { item: "Lazurite Chunk", chars: ["Ayato", "Barbara", "Candace", "Kokomi", "Mona", "Nilou", "Tartaglia", "Xingqiu", "Yelan"]},
     { item: "Lazurite Gemstone", chars: ["Ayato", "Barbara", "Candace", "Kokomi", "Mona", "Nilou", "Tartaglia", "Xingqiu", "Yelan"]},
-    { item: "Emerald Sliver", chars: ["Collei", "Tighnari"]},
-    { item: "Emerald Fragment", chars: ["Collei", "Tighnari"]},
-    { item: "Emerald Chunk", chars: ["Collei", "Tighnari"]},
-    { item: "Emerald Gemstone", chars: ["Collei", "Tighnari"]},
+    { item: "Emerald Sliver", chars: ["Collei", "Nahida", "Tighnari"]},
+    { item: "Emerald Fragment", chars: ["Collei", "Nahida", "Tighnari"]},
+    { item: "Emerald Chunk", chars: ["Collei", "Nahida", "Tighnari"]},
+    { item: "Emerald Gemstone", chars: ["Collei", "Nahida", "Tighnari"]},
     { item: "Amethyst Sliver", chars: ["Beidou", "Cyno", "Dori", "Fischl", "Keqing", "Lisa", "Raiden", "Razor", "Sara", "Shinobu", "Yae Miko"]},
     { item: "Amethyst Fragment", chars: ["Beidou", "Cyno", "Dori", "Fischl", "Keqing", "Lisa", "Raiden", "Razor", "Sara", "Shinobu", "Yae Miko"]},
     { item: "Amethyst Chunk", chars: ["Beidou", "Cyno", "Dori", "Fischl", "Keqing", "Lisa", "Raiden", "Razor", "Sara", "Shinobu", "Yae Miko"]},
@@ -19,10 +19,10 @@ export const gemChars = [
     { item: "Turquoise Fragment", chars: ["Heizou", "Jean", "Kazuha", "Sayu", "Sucrose", "Venti", "Xiao"]},
     { item: "Turquoise Chunk", chars: ["Heizou", "Jean", "Kazuha", "Sayu", "Sucrose", "Venti", "Xiao"]},
     { item: "Turquoise Gemstone", chars: ["Heizou", "Jean", "Kazuha", "Sayu", "Sucrose", "Venti", "Xiao"]},
-    { item: "Jade Sliver", chars: ["Aloy", "Ayaka", "Chongyun", "Diona", "Eula", "Ganyu", "Kaeya", "Qiqi", "Rosaria", "Shenhe"]},
-    { item: "Jade Fragment", chars: ["Aloy", "Ayaka", "Chongyun", "Diona", "Eula", "Ganyu", "Kaeya", "Qiqi", "Rosaria", "Shenhe"]},
-    { item: "Jade Chunk", chars: ["Aloy", "Ayaka", "Chongyun", "Diona", "Eula", "Ganyu", "Kaeya", "Qiqi", "Rosaria", "Shenhe"]},
-    { item: "Jade Gemstone", chars: ["Aloy", "Ayaka", "Chongyun", "Diona", "Eula", "Ganyu", "Kaeya", "Qiqi", "Rosaria", "Shenhe"]},
+    { item: "Jade Sliver", chars: ["Aloy", "Ayaka", "Chongyun", "Diona", "Eula", "Ganyu", "Kaeya", "Layla", "Qiqi", "Rosaria", "Shenhe"]},
+    { item: "Jade Fragment", chars: ["Aloy", "Ayaka", "Chongyun", "Diona", "Eula", "Ganyu", "Kaeya", "Layla", "Qiqi", "Rosaria", "Shenhe"]},
+    { item: "Jade Chunk", chars: ["Aloy", "Ayaka", "Chongyun", "Diona", "Eula", "Ganyu", "Kaeya", "Layla", "Qiqi", "Rosaria", "Shenhe"]},
+    { item: "Jade Gemstone", chars: ["Aloy", "Ayaka", "Chongyun", "Diona", "Eula", "Ganyu", "Kaeya", "Layla", "Qiqi", "Rosaria", "Shenhe"]},
     { item: "Topaz Sliver", chars: ["Albedo", "Gorou", "Itto", "Ningguang", "Noelle", "Yun Jin", "Zhongli"]},
     { item: "Topaz Fragment", chars: ["Albedo", "Gorou", "Itto", "Ningguang", "Noelle", "Yun Jin", "Zhongli"]},
     { item: "Topaz Chunk", chars: ["Albedo", "Gorou", "Itto", "Ningguang", "Noelle", "Yun Jin", "Zhongli"]},
@@ -61,8 +61,8 @@ export const localSpecialties = [
     { item: "Fluorescent Fungus", chars: ["Thoma"]},
     { item: "Rukkhashava Mushrooms", chars: ["Collei"]},
     { item: "Padisarah", chars: ["Nilou"]},
-    { item: "Nilotpala Lotus", chars: ["Tighnari"]},
-    { item: "Kalpalata Lotus", chars: ["Dori"]},
+    { item: "Nilotpala Lotus", chars: ["Layla", "Tighnari"]},
+    { item: "Kalpalata Lotus", chars: ["Dori", "Nahida"]},
     { item: "Redcrest", chars: ["Candace"]},
     { item: "Scarab", chars: ["Cyno"]},
 ]
@@ -74,9 +74,9 @@ export const commons = [
     { item: "Damaged Mask", chars: ["Aether", "Chongyun", "Eula", "Jean", "Lumine", "Noelle", "Razor", "Sara", "Xingqiu", "Yun Jin"] },
     { item: "Stained Mask", chars: ["Aether", "Chongyun", "Eula", "Jean", "Lumine", "Noelle", "Razor", "Sara", "Xingqiu", "Yun Jin"] },
     { item: "Ominous Mask", chars: ["Aether", "Chongyun", "Eula", "Jean", "Lumine", "Noelle", "Razor", "Sara", "Xingqiu", "Yun Jin"] },
-    { item: "Divining Scroll", chars: ["Albedo", "Barbara", "Cyno", "Klee", "Qiqi", "Yoimiya"] },
-    { item: "Sealed Scroll", chars: ["Albedo", "Barbara", "Cyno", "Klee", "Qiqi", "Yoimiya"] },
-    { item: "Forbidden Scroll", chars: ["Albedo", "Barbara", "Cyno", "Klee", "Qiqi", "Yoimiya"] },
+    { item: "Divining Scroll", chars: ["Albedo", "Barbara", "Cyno", "Klee", "Layla", "Qiqi", "Yoimiya"] },
+    { item: "Sealed Scroll", chars: ["Albedo", "Barbara", "Cyno", "Klee", "Layla", "Qiqi", "Yoimiya"] },
+    { item: "Forbidden Scroll", chars: ["Albedo", "Barbara", "Cyno", "Klee", "Layla", "Qiqi", "Yoimiya"] },
     { item: "Firm Arrowhead", chars: ["Amber", "Collei", "Diona", "Fischl"] },
     { item: "Sharp Arrowhead", chars: ["Amber", "Collei", "Diona", "Fischl"] },
     { item: "Weathered Arrowhead", chars: ["Amber", "Collei", "Diona", "Fischl"] },
@@ -95,9 +95,9 @@ export const commons = [
     { item: "Spectral Husk", chars: ["Aloy", "Gorou", "Kokomi", "Shinobu"] },
     { item: "Spectral Heart", chars: ["Aloy", "Gorou", "Kokomi", "Shinobu"] },
     { item: "Spectral Nucleus", chars: ["Aloy", "Gorou", "Kokomi", "Shinobu"] },
-    { item: "Fungal Spores", chars: ["Nilou", "Tighnari"] },
-    { item: "Luminescent Pollen", chars: ["Nilou", "Tighnari"] },
-    { item: "Crystalline Cyst Dust", chars: ["Nilou", "Tighnari"] },
+    { item: "Fungal Spores", chars: ["Nahida", "Nilou", "Tighnari"] },
+    { item: "Luminescent Pollen", chars: ["Nahida", "Nilou", "Tighnari"] },
+    { item: "Crystalline Cyst Dust", chars: ["Nahida", "Nilou", "Tighnari"] },
     { item: "Faded Red Satin", chars: ["Candace", "Dori"] },
     { item: "Trimmed Red Silk", chars: ["Candace", "Dori"] },
     { item: "Rich Red Brocade", chars: ["Candace", "Dori"] },
@@ -122,8 +122,9 @@ export const bossMats = [
     { item: "Runic Fang", chars: ["Heizou", "Shinobu", "Yelan"] },
     { item: "Majestic Hooked Beak", chars: ["Collei", "Tighnari"] },
     { item: "Thunderclap Fruitcore", chars: ["Cyno", "Dori"] },
-    { item: "Perpetual Caliber", chars: ["Nilou"] },
+    { item: "Perpetual Caliber", chars: ["Layla", "Nilou"] },
     { item: "Light Guiding Tetrahedron", chars: ["Candace"] },
+    { item: "Quelled Creeper", chars: ["Nahida"] },
 ]
 
 export const talCommon = [
@@ -133,9 +134,9 @@ export const talCommon = [
     { item: "Damaged Mask", chars: ["Chongyun", "Eula", "Jean", "Noelle", "Razor", "Sara", "Xingqiu", "Yun Jin"] },
     { item: "Stained Mask", chars: ["Chongyun", "Eula", "Jean", "Noelle", "Razor", "Sara", "Xingqiu", "Yun Jin"] },
     { item: "Ominous Mask", chars: ["Chongyun", "Eula", "Jean", "Noelle", "Razor", "Sara", "Xingqiu", "Yun Jin"] },
-    { item: "Divining Scroll", chars: ["Aether", "Lumine", "Albedo", "Barbara", "Cyno", "Klee", "Qiqi", "Yoimiya"] },
-    { item: "Sealed Scroll", chars: ["Aether", "Lumine", "Albedo", "Barbara", "Cyno", "Klee", "Qiqi", "Yoimiya"] },
-    { item: "Forbidden Scroll", chars: ["Aether", "Lumine", "Albedo", "Barbara", "Cyno", "Klee", "Qiqi", "Yoimiya"] },
+    { item: "Divining Scroll", chars: ["Aether", "Lumine", "Albedo", "Barbara", "Cyno", "Klee", "Layla", "Qiqi", "Yoimiya"] },
+    { item: "Sealed Scroll", chars: ["Aether", "Lumine", "Albedo", "Barbara", "Cyno", "Klee", "Layla", "Qiqi", "Yoimiya"] },
+    { item: "Forbidden Scroll", chars: ["Aether", "Lumine", "Albedo", "Barbara", "Cyno", "Klee", "Layla", "Qiqi", "Yoimiya"] },
     { item: "Firm Arrowhead", chars: ["Aether", "Lumine", "Amber", "Collei", "Diona", "Fischl"] },
     { item: "Sharp Arrowhead", chars: ["Aether", "Lumine", "Amber", "Collei", "Diona", "Fischl"] },
     { item: "Weathered Arrowhead", chars: ["Aether", "Lumine", "Amber", "Collei", "Diona", "Fischl"] },
@@ -154,16 +155,16 @@ export const talCommon = [
     { item: "Spectral Husk", chars: ["Aloy", "Gorou", "Kokomi", "Shinobu"] },
     { item: "Spectral Heart", chars: ["Aloy", "Gorou", "Kokomi", "Shinobu"] },
     { item: "Spectral Nucleus", chars: ["Aloy", "Gorou", "Kokomi", "Shinobu"] },
-    { item: "Fungal Spores", chars: ["Nilou", "Tighnari"] },
-    { item: "Luminescent Pollen", chars: ["Nilou", "Tighnari"] },
-    { item: "Crystalline Cyst Dust", chars: ["Nilou", "Tighnari"] },
+    { item: "Fungal Spores", chars: ["Nahida", "Nilou", "Tighnari"] },
+    { item: "Luminescent Pollen", chars: ["Nahida", "Nilou", "Tighnari"] },
+    { item: "Crystalline Cyst Dust", chars: ["Nahida", "Nilou", "Tighnari"] },
     { item: "Faded Red Satin", chars: ["Candace", "Dori"] },
     { item: "Trimmed Red Silk", chars: ["Candace", "Dori"] },
     { item: "Rich Red Brocade", chars: ["Candace", "Dori"] },
 ]
 
 export const crowns = [
-    { item: "Crown of Sagehood", chars: ["Aether", "Lumine", "Albedo", "Aloy", "Amber", "Ayaka", "Ayato", "Barbara", "Beidou", "Bennett", "Candace", "Chongyun", "Collei", "Cyno", "Diluc", "Diona", "Dori", "Eula", "Fischl", "Ganyu", "Gorou", "Heizou", "Hu Tao", "Itto", "Jean", "Kaeya", "Kazuha", "Keqing", "Klee", "Kokomi", "Shinobu", "Lisa", "Mona", "Nilou", "Ningguang", "Noelle", "Qiqi", "Raiden", "Razor", "Rosaria", "Sara", "Sayu", "Shenhe", "Sucrose", "Tartaglia", "Thoma", "Tighnari", "Venti", "Xiao", "Xiangling", "Xingqiu", "Xinyan", "Yae Miko", "Yanfei", "Yelan", "Yoimiya", "Yun Jin", "Zhongli"]}
+    { item: "Crown of Sagehood", chars: ["Aether", "Lumine", "Albedo", "Aloy", "Amber", "Ayaka", "Ayato", "Barbara", "Beidou", "Bennett", "Candace", "Chongyun", "Collei", "Cyno", "Diluc", "Diona", "Dori", "Eula", "Fischl", "Ganyu", "Gorou", "Heizou", "Hu Tao", "Itto", "Jean", "Kaeya", "Kazuha", "Keqing", "Klee", "Kokomi", "Shinobu", "Layla", "Lisa", "Mona", "Nahida", "Nilou", "Ningguang", "Noelle", "Qiqi", "Raiden", "Razor", "Rosaria", "Sara", "Sayu", "Shenhe", "Sucrose", "Tartaglia", "Thoma", "Tighnari", "Venti", "Xiao", "Xiangling", "Xingqiu", "Xinyan", "Yae Miko", "Yanfei", "Yelan", "Yoimiya", "Yun Jin", "Zhongli"]}
 ]
 
 export const books = [
@@ -197,9 +198,9 @@ export const books = [
     { item: "Teachings of Admonition", chars: ["Aether", "Lumine", "Cyno", "Nilou", "Tighnari"]},
     { item: "Guide to Admonition", chars: ["Aether", "Lumine", "Cyno", "Nilou", "Tighnari"]},
     { item: "Philosophies of Admonition", chars: ["Aether", "Lumine", "Cyno", "Nilou", "Tighnari"]},
-    { item: "Teachings of Ingenuity", chars: ["Dori"]},
-    { item: "Guide to Ingenuity", chars: ["Aether", "Lumine", "Dori"]},
-    { item: "Philosophies of Ingenuity", chars: ["Aether", "Lumine", "Dori"]},
+    { item: "Teachings of Ingenuity", chars: ["Dori", "Layla", "Nahida"]},
+    { item: "Guide to Ingenuity", chars: ["Aether", "Lumine", "Dori", "Layla", "Nahida"]},
+    { item: "Philosophies of Ingenuity", chars: ["Aether", "Lumine", "Dori", "Layla", "Nahida"]},
     { item: "Teachings of Praxis", chars: ["Candace", "Collei"]},
     { item: "Guide to Praxis", chars: ["Aether", "Lumine", "Candace", "Collei"]},
     { item: "Philosophies of Praxis", chars: ["Aether", "Lumine", "Candace", "Collei"]},
@@ -224,6 +225,9 @@ export const talBossMats = [
     { item: "Mudra of the Malefic General", chars: ["Aether", "Lumine", "Ayato", "Cyno"]},
     { item: "Tears of the Calamitous God", chars: ["Candace", "Collei", "Nilou", "Shinobu"]},
     { item: "The Meaning of Aeons", chars: ["Heizou", "Tighnari", "Yae Miko"]},
+    { item: "Puppet Strings", chars: ["Nahida"]},
+    { item: "Mirror of Mushin", chars: ["Layla"]},
+    { item: "Daka's Bell", chars: [""]},
 ]
 
 // Creating all the table data
@@ -357,6 +361,7 @@ export const bossList = [
 	createData("Thunderclap Fruitcore", 0, 0, 0),
 	createData("Perpetual Caliber", 0, 0, 0),
 	createData("Light Guiding Tetrahedron", 0, 0, 0),
+	createData("Quelled Creeper", 0, 0, 0),
 ]
 
 export const bookList = [
@@ -417,6 +422,9 @@ export const talBossList = [
 	createData("Mudra of the Malefic General", 0, 0, 0),
 	createData("Tears of the Calamitous God", 0, 0, 0),	
 	createData("The Meaning of Aeons", 0, 0, 0),
+	createData("Puppet Strings", 0, 0, 0),
+	createData("Mirror of Mushin", 0, 0, 0),	
+	createData("Daka's Bell", 0, 0, 0),
 ]
 
 export const crownList = [
