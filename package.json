@@ -1,6 +1,6 @@
 {
   "name": "genshin-tracker",
-  "version": "2.1.0",
+  "version": "2.3.0",
   "homepage": "http://genshin-impact-tracker.github.io/genshin-impact-tracker",
   "private": true,
   "dependencies": {

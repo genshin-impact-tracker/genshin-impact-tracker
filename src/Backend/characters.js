@@ -35,6 +35,42 @@ export const characters = [{
 		},
 	}
 },{ 
+	name: "alhaitham",
+	element: "dendro",
+	ascension: 0,
+	owned: false,
+	fav: false,
+	talent1: 1,
+	talent2: 1,
+	talent3: 1,
+	properties: {
+		ascension: { 
+			twoStar: { item: "Emerald Sliver", value: 0 },
+			threeStar: { item: "Emerald Fragment", value: 0 },
+			fourStar: { item: "Emerald Chunk", value: 0 },
+			fiveStar: { item: "Emerald Gemstone", value: 0 },
+		},
+		boss: { item: "Pseudo Stamens", value: 0 },
+		common: {
+			oneStar: { item: "Faded Red Satin", value: 0 },
+			twoStar: { item: "Trimmed Red Silk", value: 0 },
+			threeStar: { item: "Rich Red Brocade", value: 0 },
+		},
+		region: { item: "Sand Grease Pupa", value: 0 },
+		crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talent: {
+			twoStar: { item: "Teachings of Ingenuity", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Guide to Ingenuity", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			fourStar: { item: "Philosophies of Ingenuity", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+		talBoss: { item: "Mirror of Mushin", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talCommon: {
+			oneStar: { item: "Faded Red Satin", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			twoStar: { item: "Trimmed Red Silk", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Rich Red Brocade", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+	}
+},{ 
 	name: "aloy",
 	element: "cryo",
 	ascension: 0,
@@ -575,6 +611,42 @@ export const characters = [{
 		},
 	}
 },{ 
+	name: "faruzan",
+	element: "anemo",
+	ascension: 0,
+	owned: false,
+	fav: false,
+	talent1: 1,
+	talent2: 1,
+	talent3: 1,
+	properties: {
+		ascension: { 
+			twoStar: { item: "Turquoise Sliver", value: 0 },
+			threeStar: { item: "Turquoise Fragment", value: 0 },
+			fourStar: { item: "Turquoise Chunk", value: 0 },
+			fiveStar: { item: "Turquoise Gemstone", value: 0 },
+		},
+		boss: { item: "Light Guiding Tetrahedron", value: 0 },
+		common: {
+			oneStar: { item: "Faded Red Satin", value: 0 },
+			twoStar: { item: "Trimmed Red Silk", value: 0 },
+			threeStar: { item: "Rich Red Brocade", value: 0 },
+		},
+		region: { item: "Redcrest", value: 0 },
+		crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talent: {
+			twoStar: { item: "Teachings of Admonition", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Guide to Admonition", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			fourStar: { item: "Philosophies of Admonition", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+		talBoss: { item: "Puppet Strings", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talCommon: {
+			oneStar: { item: "Faded Red Satin", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			twoStar: { item: "Trimmed Red Silk", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Rich Red Brocade", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+	}
+},{ 
 	name: "fischl",
 	element: "electro",
 	ascension: 0,
@@ -610,7 +682,7 @@ export const characters = [{
 			threeStar: { item: "Weathered Arrowhead", value: { tal1: 0, tal2: 0, tal3: 0 }},
 		},
 	}
-}, { 
+},{ 
 	name: "ganyu",
 	element: "cryo",
 	ascension: 0,
@@ -1727,6 +1799,42 @@ export const characters = [{
 		},
 	}
 },{ 
+	name: "wanderer",
+	element: "anemo",
+	ascension: 0,
+	owned: false,
+	fav: false,
+	talent1: 1,
+	talent2: 1,
+	talent3: 1,
+	properties: {
+		ascension: { 
+			twoStar: { item: "Turquoise Sliver", value: 0 },
+			threeStar: { item: "Turquoise Fragment", value: 0 },
+			fourStar: { item: "Turquoise Chunk", value: 0 },
+			fiveStar: { item: "Turquoise Gemstone", value: 0 },
+		},
+		boss: { item: "Perpetual Caliber", value: 0 },
+		common: {
+			oneStar: { item: "Old Handguard", value: 0 },
+			twoStar: { item: "Kageuchi Handguard", value: 0 },
+			threeStar: { item: "Famed Handguard", value: 0 },
+		},
+		region: { item: "Rukkhashava Mushrooms", value: 0 },
+		crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talent: {
+			twoStar: { item: "Teachings of Praxis", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Guide to Praxis", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			fourStar: { item: "Philosophies of Praxis", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+		talBoss: { item: "Daka's Bell", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talCommon: {
+			oneStar: { item: "Old Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			twoStar: { item: "Kageuchi Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Famed Handguard", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+	}
+},{ 
 	name: "xiangling",
 	element: "pyro",
 	ascension: 0,
@@ -1940,6 +2048,42 @@ export const characters = [{
 			oneStar: { item: "Treasure Hoarder Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			twoStar: { item: "Silver Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
 			threeStar: { item: "Golden Raven Insignia", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+	}
+},{ 
+	name: "yaoyao",
+	element: "dendro",
+	ascension: 0,
+	owned: false,
+	fav: false,
+	talent1: 1,
+	talent2: 1,
+	talent3: 1,
+	properties: {
+		ascension: { 
+			twoStar: { item: "Emerald Sliver", value: 0 },
+			threeStar: { item: "Emerald Fragment", value: 0 },
+			fourStar: { item: "Emerald Chunk", value: 0 },
+			fiveStar: { item: "Emerald Gemstone", value: 0 },
+		},
+		boss: { item: "Quelled Creeper", value: 0 },
+		common: {
+			oneStar: { item: "Slime Condensate", value: 0 },
+			twoStar: { item: "Slime Secretions", value: 0 },
+			threeStar: { item: "Slime Concentrate", value: 0 },
+		},
+		region: { item: "Jueyun Chili", value: 0 },
+		crown: { item: "Crown of Sagehood", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talent: {
+			twoStar: { item: "Teachings of Diligence", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Guide to Diligence", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			fourStar: { item: "Philosophies of Diligence", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		},
+		talBoss: { item: "Daka's Bell", value: { tal1: 0, tal2: 0, tal3: 0 }},
+		talCommon: {
+			oneStar: { item: "Slime Condensate", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			twoStar: { item: "Slime Secretions", value: { tal1: 0, tal2: 0, tal3: 0 }},
+			threeStar: { item: "Slime Concentrate", value: { tal1: 0, tal2: 0, tal3: 0 }},
 		},
 	}
 },{ 
